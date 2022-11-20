@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+
+    <meta name ="author" content ="Mateo Rico Iglesias" />
+    <meta name ="description" content ="Calculadora Básica Milán" />
+    <meta name ="keywords" content ="Una calculadora sencilla" />
+
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Milan</title>
+    <link rel="stylesheet" type="text/css" href="estilo/CalculadoraMilan.css"/>
+</head>
+
+<body>
+    <header>
+    <h1>nata by Milan</h1>
+    <section>
+        <input type="text" name="input-calculadora" id="result" readonly>
+    </section>
+    </header>
+    <main>
+        <section>
+            <button type="button" onclick="clr()">C</button>
+            <button type="button" onclick="">CE</button>
+            <button type="button" onclick="">+/-</button>
+            <button type="button" value="Raiz" onclick="solveSqrt()">Raíz</button>
+            <button type="button" onclick="">%</button>
+        </section>
+
+        <section>
+            <button type="button" value="MRC" onclick="display(value)">MRC</button>
+            <button type="button" value="M+" onclick="display(value)">M+</button>
+            <button type="button" value="M-" onclick="display(value)">M-</button>
+            <button type="button" value="/" onclick="solve('/')">/</button>
+            
+            <button type="button" value="7" onclick="display(value)">7</button>
+            <button type="button" value="8" onclick="display(value)">8</button>
+            <button type="button" value="9" onclick="display(value)">9</button>
+            <button type="button" value="*" onclick="solve('*')">*</button>
+
+            <button type="button" value="4" onclick="display(value)">4</button>
+            <button type="button" value="5" onclick="display(value)">5</button>
+            <button type="button" value="6" onclick="display(value)">6</button>
+            <button type="button" value="-" onclick="solve('-')">-</button>
+
+            <button type="button" value="1" onclick="display(value)">1</button>
+            <button type="button" value="2" onclick="display(value)">2</button>
+            <button type="button" value="3" onclick="display(value)">3</button>
+            <button type="button" value="+" onclick="solve('+')">+</button>
+            
+            <button type="button" value="0" onclick="display(value)">0</button>
+            <button type="button" value="." onclick="display(value)">.</button>
+            <button type="button" value="=" onclick="solve('=')">=</button>
+        </section>
+    </main>
+    <script src="CalculadoraMilan.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.write("<h1>Software y Estandares para la web</h1>");
