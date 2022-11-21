@@ -1,5 +1,5 @@
 class Calculator {
-    constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed) {
+    constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed,) {
         this.operators = operators;
         this.displayValue = displayValue;
         this.operatorElements = operatorElements;
@@ -8,6 +8,7 @@ class Calculator {
         this.waitingForOperator = false;
         this.value = null;
         this.operator = null;
+        this.memory = 0;
     };
     // on key up
     onKeyUp(event) {
@@ -87,6 +88,36 @@ class Calculator {
         }
 
     };
+
+    doSqrt(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.sqrt(parseFloat(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    addToMem(){
+        if(this.displayValue != '0') {
+            this.memory = this.displayValue;
+        }
+    }
+
+    clearMem(){
+        if(this.memory != 0){
+            this.memory = 0;
+        }
+    }
+
+    retrieveFromMem(){
+        if(this.memory != 0){
+            this.setNum(this.memory);
+            this.setDisplayNumber(this.memory);
+        }
+    }
+
     // toggle plus/minus sign
     togglePlusMinus() {
 
@@ -142,6 +173,7 @@ class Calculator {
         
 
     };
+
     // delete active class from operator
     resetActiveOperatorStatus() {
 
@@ -166,7 +198,8 @@ const operators = {
     '*': (prevValue, nextValue) => prevValue * nextValue,
     '-': (prevValue, nextValue) => prevValue - nextValue,
     '+': (prevValue, nextValue) => prevValue + nextValue,
-    '=': (prevValue, nextValue) => nextValue
+    '=': (prevValue, nextValue) => nextValue,
+    '%': (prevValue, nextValue) => prevValue % nextValue,
 };
 // where the value should be displayed
 const displayValue = document.getElementById('displayValue').value;
