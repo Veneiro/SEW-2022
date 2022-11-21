@@ -76,11 +76,12 @@ body {
         -webkit-box-shadow: 0 0 2em 0 rgba(50, 50, 50, 0.75);
         box-shadow: 0 0 2em 0 rgba(50, 50, 50, 0.75);
         border-radius: 0.3em;
+        border: black solid 0.2em;
     }
 
     .calculator .display {
         width: 100%;
-        background-color: #8f3589;
+        background-image: linear-gradient(#8f3589, #865f84);
         height: 5em;
         border-radius: 1em;
     }
