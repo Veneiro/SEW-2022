@@ -1,8 +1,10 @@
 //class Calculator{
+   
     var op1 = 0;
     var op2 = 0;
     var prevOperator;
     var prevResult;
+    
     
     function display(val) {
         if(op1 == 0){
@@ -12,6 +14,14 @@
         }
         document.getElementById("result").value += val;
         
+    }
+
+    function key(){
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            alert('keydown event\n\n' + 'key: ' + keyName);
+          });
+    
     }
 
     function solve(operator) {
