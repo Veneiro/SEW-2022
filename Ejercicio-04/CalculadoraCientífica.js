@@ -138,6 +138,38 @@ class Calculator {
         }
     }
 
+    doToSquare(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.pow(parseFloat(this.displayValue), 2);
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    doTenToX(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.pow(10, parseFloat(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    doFactorial(){
+        if(this.displayValue != '0') {
+            this.displayValue = parseFloat(this.displayValue);
+            var i,fact=1;  
+            var number=this.displayValue;//It is the number to calculate factorial    
+            for(i=1;i<=number;i++){    
+                fact=fact*i;    
+            }            
+            this.setDisplayNumber(fact);
+        }
+    }
+
     // toggle plus/minus sign
     togglePlusMinus() {
 
