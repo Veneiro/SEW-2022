@@ -14,38 +14,41 @@
     <link rel="stylesheet" type="text/css" href="estilo/CalculadoraMilán.css"/>
 </head>
 <body>
-    <t1>nata by MILAN</t1>
-    <input id="displayValue" value="0" type="text" disabled />
+    <section name="display">
+        <t1>nata by MILAN</t1>
+        <input id="displayValue" value="0" type="text" disabled />
+    </section>
     <main>
-        <button onClick="calculator.resetOnlyDisplayValue()" class="btn operator">C</button>
-        <button onClick="calculator.resetDisplayValue()" class="btn operator">CE</button>
-        <button onClick="calculator.togglePlusMinus()" class="btn operator">+/-</button>
-        <button onClick="calculator.doSqrt()" class="btn operator">√</button>
-        <button onClick="calculator.setPercent()" class="btn operator">%</button>
-        
-        <button onClick="calculator.setNum('7')" data-num="7" class="btn">7</button>
-        <button onClick="calculator.setNum('8')" data-num="8" class="btn">8</button>
-        <button onClick="calculator.setNum('9')" data-num="9" class="btn">9</button>
-        <button onClick="calculator.calculateWithOperator('*')" data-operator="*" class="btn operator">x</button>
-        <button onClick="calculator.calculateWithOperator('/')" data-operator="/" class="btn operator">÷</button>
+        <section>
+            <button onClick="calculator.resetOnlyDisplayValue()" name="btn operator">C</button>
+            <button onClick="calculator.resetDisplayValue()" name="btn operator">CE</button>
+            <button onClick="calculator.togglePlusMinus()" name="btn operator">+/-</button>
+            <button onClick="calculator.doSqrt()" name="btn operator">√</button>
+            <button onClick="calculator.setPercent()" name="btn operator">%</button>
+            
+            <button onClick="calculator.setNum('7')" data-num="7" name="btn">7</button>
+            <button onClick="calculator.setNum('8')" data-num="8" name="btn">8</button>
+            <button onClick="calculator.setNum('9')" data-num="9" name="btn">9</button>
+            <button onClick="calculator.calculateWithOperator('*')" data-operator="*" name="btn operator">x</button>
+            <button onClick="calculator.calculateWithOperator('/')" data-operator="/" name="btn operator">÷</button>
 
-        <button onClick="calculator.setNum('4')" data-num="4" class="btn">4</button>
-        <button onClick="calculator.setNum('5')" data-num="5" class="btn">5</button>
-        <button onClick="calculator.setNum('6')" data-num="6" class="btn">6</button>
-        <button onClick="calculator.calculateWithOperator('-')" data-operator="-" class="btn operator">-</button>
+            <button onClick="calculator.setNum('4')" data-num="4" name="btn">4</button>
+            <button onClick="calculator.setNum('5')" data-num="5" name="btn">5</button>
+            <button onClick="calculator.setNum('6')" data-num="6" name="btn">6</button>
+            <button onClick="calculator.calculateWithOperator('-')" data-operator="-" name="btn operator">-</button>
 
-        <button onClick="calculator.retrieveFromMem()" class="btn operator">MRC</button>
-        <button onClick="calculator.setNum('1')" data-num="1" class="btn">1</button>
-        <button onClick="calculator.setNum('2')" data-num="2" class="btn">2</button>
-        <button onClick="calculator.setNum('3')" data-num="3" class="btn">3</button>
-        <button onClick="calculator.calculateWithOperator('+')" data-operator="+" class="btn operator">+</button>
-        <button onClick="calculator.clearMem()" class="btn operator">M -</button>
+            <button onClick="calculator.retrieveFromMem()" name="btn operator">MRC</button>
+            <button onClick="calculator.setNum('1')" data-num="1" name="btn">1</button>
+            <button onClick="calculator.setNum('2')" data-num="2" name="btn">2</button>
+            <button onClick="calculator.setNum('3')" data-num="3" name="btn">3</button>
+            <button onClick="calculator.calculateWithOperator('+')" data-operator="+" name="btn operator">+</button>
+            <button onClick="calculator.clearMem()" name="btn operator">M -</button>
 
-        <button onClick="calculator.setNum('0')" data-num="0" class="btn zero">0</button>
-        <button onClick="calculator.setDot()" class="btn">.</button>
-        <button onClick="calculator.calculateWithOperator('=')" data-operator="=" class="btn operator">=</button>
-        <button onClick="calculator.addToMem()" class="btn operator">M +</button>
-
+            <button onClick="calculator.setNum('0')" data-num="0" name="btn zero">0</button>
+            <button onClick="calculator.setDot()" name="btn">.</button>
+            <button onClick="calculator.calculateWithOperator('=')" data-operator="=" name="btn operator">=</button>
+            <button onClick="calculator.addToMem()" name="btn operator">M +</button>
+        </section>
         <script src="CalculadoraMilán.js"></script>
     </main>
 </body>

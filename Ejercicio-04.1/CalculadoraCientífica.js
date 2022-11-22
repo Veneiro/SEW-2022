@@ -1,14 +1,13 @@
 class Calculator {
-    constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed,) {
+    constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed) {
         this.operators = operators;
-        this.displayValue = displayValue;
+        this.displayValue = '';
         this.operatorElements = operatorElements;
         this.keyPressedNumbersAllowed = keyPressedNumbersAllowed;
         this.keyPressedOperatorsAllowed = keyPressedOperatorsAllowed;
         this.waitingForOperator = false;
         this.value = null;
         this.operator = null;
-        this.memory = 0;
     };
     // on key up
     onKeyUp(event) {
@@ -21,8 +20,11 @@ class Calculator {
         
             // Operators /, *, -, +, =
             if(keyPressedOperatorsAllowed.includes(keyName)) {
-                keyName == 'Enter' ? keyName = '=' : keyName = keyName;
-                this.calculateWithOperator(keyName);
+                if(keyName == 'Enter' || keyName == '='){
+                    this.solve();
+                } else{
+                    this.setNum(keyName);
+                }
             }
         
             // Backspace to reset value and display value
@@ -48,7 +50,7 @@ class Calculator {
     
             this.displayValue === '0' ? this.displayValue = clickedValue : this.displayValue = this.displayValue + clickedValue;
             
-         }
+        }
                 
         this.setDisplayNumber(this.displayValue);
     };
@@ -76,18 +78,12 @@ class Calculator {
         this.setDisplayNumber(this.displayValue);
 
     };
-
-    resetOnlyDisplayValue(){
-        this.displayValue = '0';
-        this.setDisplayNumber(this.displayValue);
-    }
-
     // calculate percent of display value
     setPercent() {
 
         if(this.displayValue != '0') {
 
-            this.displayValue = parseFloat(this.displayValue) / 100;
+            this.displayValue = eval(this.displayValue) / 100;
         
             this.setDisplayNumber(this.displayValue);
 
@@ -95,32 +91,85 @@ class Calculator {
 
     };
 
-    doSqrt(){
+    doLog(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.sqrt(parseFloat(this.displayValue));
+            this.displayValue = Math.log(eval(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
         }
     }
 
-    addToMem(){
+    doSin(){
         if(this.displayValue != '0') {
-            this.memory = this.displayValue;
+
+            this.displayValue = Math.sin(eval(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
         }
     }
 
-    clearMem(){
-        if(this.memory != 0){
-            this.memory = 0;
+    doCos(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.cos(eval(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
         }
     }
 
-    retrieveFromMem(){
-        if(this.memory != 0){
-            this.setNum(this.memory);
-            this.setDisplayNumber(this.memory);
+    doTan(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.tan(eval(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    doSqrt(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.sqrt(eval(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    doToSquare(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.pow(eval(this.displayValue), 2);
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    doTenToX(){
+        if(this.displayValue != '0') {
+
+            this.displayValue = Math.pow(10, eval(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
+
+        }
+    }
+
+    doFactorial(){
+        if(this.displayValue != '0') {
+            this.displayValue = eval(this.displayValue);
+            var i,fact=1;  
+            var number=this.displayValue;//It is the number to calculate factorial    
+            for(i=1;i<=number;i++){    
+                fact=fact*i;    
+            }            
+            this.setDisplayNumber(fact);
         }
     }
 
@@ -136,49 +185,7 @@ class Calculator {
         }
 
     };
-    // operate for +,-,*,/
-    calculateWithOperator(typedOperator) {
-
-        let pressedElement;
-        for(let i=0; i < this.operatorElements.length; i++) {
-            if(operatorElements[i].dataset.operator === typedOperator ) {
-                pressedElement = operatorElements[i];
-            }
-        }
-
-        const nextValue = parseFloat(this.displayValue);
-
-        if(!this.value) {
-
-            this.value = nextValue || 0;
-
-        } else if(this.operator) {
-
-            const currentValue = this.value;
-            const computedValue = this.operators[this.operator](currentValue, nextValue);
-
-            this.value = computedValue;
-            this.displayValue = String(computedValue);
-            this.setDisplayNumber(this.displayValue);
-
-        }
-
-        this.waitingForOperator = true;
-        this.operator = typedOperator;
-
-        
-        if(this.operator != '=') {
-
-            pressedElement.classList.add('active');
-
-        } else {
-
-            this.resetActiveOperatorStatus();
-
-        }
-        
-
-    };
+   
 
     // delete active class from operator
     resetActiveOperatorStatus() {
@@ -196,6 +203,13 @@ class Calculator {
         document.getElementById('displayValue').value = String(newDisplayValue);
 
     }
+
+    solve(){
+        if(this.displayValue != '0') {
+            this.displayValue = eval(this.displayValue);
+            this.setDisplayNumber(this.displayValue);
+        }
+    }
 }
 
 // possible operators
@@ -206,9 +220,16 @@ const operators = {
     '+': (prevValue, nextValue) => prevValue + nextValue,
     '=': (prevValue, nextValue) => nextValue,
     '%': (prevValue, nextValue) => prevValue % nextValue,
+    '^':(prevValue, nextValue) => Math.pow(prevValue, nextValue),
+    'exp':(prevValue, nextValue) => {
+        for (let index = 0; index < nextValue; index++) {
+            prevValue = prevValue * 10;
+        }
+        return prevValue;
+    },
 };
 // where the value should be displayed
-const displayValue = document.getElementById('displayValue').value;
+const displayValue = document.getElementsByName('displayValue').value;
 // get all elements with class operator
 const operatorElements = document.getElementsByName('btn operator');
 // Allowed keypress numbers
