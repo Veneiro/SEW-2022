@@ -1,0 +1,2 @@
+Obtengo unos warnings en el CSS debido a que dejo que se herede el color de fondo de unos objetos a otros pero modifico el de primer plano
+Los errores con el grid-row son debidos a que lo redefino para que el botón ocupe más de una casilla del grid y que sea más alto o más ancho

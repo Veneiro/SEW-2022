@@ -1,0 +1,1 @@
+Obtengo unos warnings en el CSS debido a que dejo que se herede el color de fondo de unos objetos a otros pero modifico el de primer plano

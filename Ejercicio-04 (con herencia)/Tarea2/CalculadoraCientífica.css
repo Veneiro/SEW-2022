@@ -26,8 +26,7 @@ button:hover{
     background: #9a9a9a;
 }
 
-body section t1{
-    padding:0.35em;
+body section h2{
     color:antiquewhite;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;

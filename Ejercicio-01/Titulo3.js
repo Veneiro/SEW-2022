@@ -1,1 +1,0 @@
-document.write("<h3>Oviedo</h3>");

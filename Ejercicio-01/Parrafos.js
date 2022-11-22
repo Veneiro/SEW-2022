@@ -1,1 +1,0 @@
-document.write("<p>Esto es un parrafo</p>");

@@ -1,0 +1,2 @@
+document.write('<head><meta charset="UTF-8" /><meta name ="author" content ="Mateo Rico Iglesias" /><meta name ="description" content ="SEW, Ingenieria Informatica del Software, Facultad de Informatica, Universidad de Oviedo, 3º, Mateo Rico Iglesias, UO277172@uniovi.es" /><meta name ="keywords" content ="Javascript" /><meta name ="viewport" content ="width=device-width, initial-scale=1.0" /><title>SEW.JavaScript</title> <link rel="stylesheet" type="text/css" href="../Tarea2/Ejercicio1.css"/></head>');
+
