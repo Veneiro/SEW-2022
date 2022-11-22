@@ -224,7 +224,7 @@ button:nth-child(33){
 }
 button:nth-child(33):hover{
     color: rgb(0, 0, 0);
-    background: #816666;
+    background: #705656;
 }
 button:nth-child(25){
     background: rgb(255, 59, 59);
