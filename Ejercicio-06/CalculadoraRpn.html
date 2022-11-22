@@ -18,8 +18,8 @@
         <t1>Calculadora RPN</t1>
         <textarea name="stack" disabled></textarea> 
         <input name="displayValue" value="" type="text" disabled/>
-    </section>
-    <main> 
+    </section>  
+    <main>
         <section>
             <button onClick="calculator.doToSquare()" name="btn">x^2</button>
             <button onClick="calculator.doPow()" name="btn">x^y</button>
@@ -37,8 +37,8 @@
             <button onClick="calculator.resetDisplayValue()" name="btn">C</button>
             <button onClick="calculator.resetDisplayAndStack()" name="btn">CE</button>
             <button onClick="calculator.togglePlusMinus()" name="btn">+/-</button>
-            <button onClick="calculator.sum()" name="btn">+</button>
-
+            <button onClick="calculator.sum()" name="btn">+</button>            
+            
             <button onClick="calculator.doFactorial()" name="btn">n!</button>
             <button onClick="calculator.setNum('7')" data-num="7" name="btn">7</button>
             <button onClick="calculator.setNum('8')" data-num="8" name="btn">8</button>
@@ -50,7 +50,7 @@
             <button onClick="calculator.setNum('5')" data-num="5" name="btn">5</button>
             <button onClick="calculator.setNum('6')" data-num="6" name="btn">6</button>
             <button onClick="calculator.calculateMul()"name="btn">x</button>
-
+    
             <button onClick="calculator.setNum('1')" data-num="1" name="btn">1</button>
             <button onClick="calculator.setNum('2')" data-num="2" name="btn">2</button>
             <button onClick="calculator.setNum('3')" data-num="3" name="btn">3</button>
@@ -59,7 +59,13 @@
             <button onClick="calculator.setDot()" name="btn">.</button>
             <button onClick="calculator.setNum('0')" data-num="0" name="btn zero">0</button>
             <button onClick="calculator.addToStack()" name="btn">ENTER</button>
+
+            <button onClick="calculator.calculateGeotoUTC()" name="btn">Geo to UTC</button>
+            <button onClick="calculator.calculateDistance()" name="btn">Distance</button>
+            <button onClick="calculator.calculateUTCtoGeo()" name="btn">UTC to Geo</button>
+            
             <script src="CalculadoraRpn.js"></script>
+            <script src="ConversorCoordenadas.js"></script>
         </section>
     </main>
 </body>

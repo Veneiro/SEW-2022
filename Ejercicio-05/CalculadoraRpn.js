@@ -1,450 +1,355 @@
 class Calculator {
-	constructor(){
-		stack = new Array();
-		stackbak = new Array();
-		let und=0;
-		var mode='RAD';
-	}
+    constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed) {
+        this.operators = operators;
+        this.displayValue = "";
+        this.operatorElements = operatorElements;
+        this.keyPressedNumbersAllowed = keyPressedNumbersAllowed;
+        this.keyPressedOperatorsAllowed = keyPressedOperatorsAllowed;
+        this.waitingForOperator = false;
+        this.value = null;
+        this.operator = null;
+        this.stack = new Array();
+    };
+    // on key up
+    onKeyUp(event) {
+        let keyName = event.key;
+        
+            // Numbers 0-9
+            if(keyPressedNumbersAllowed.includes(keyName)) {
+                this.setNum(keyName);
+            }
+        
+            // Operators /, *, -, +, =
+            if(keyPressedOperatorsAllowed.includes(keyName)) {
+                switch(keyName){
+                    case 'Enter' || '=':
+                        this.addToStack();
+                        break;
+                    case '+':
+                        this.sum();
+                        break;
+                    case '-':
+                        this.calculateMinus();
+                        break;
+                    case '*':
+                        this.calculateMul();
+                        break;
+                    case '/':
+                        this.calculateDivision();
+                        break;
+                }
+            }
+        
+            // Backspace to reset value and display value
+            if(keyName == 'Backspace') {
+                this.resetDisplayValue();
+            }
 
-	stacksav(){
-		und=1;
-		while(stackbak.length>0)stackbak.shift();
-		for(var i=stack.length-1;i>=0;i--)stackbak.unshift(stack[i]);
-		stackbak.unshift(document.javacalc.inp1.value);
-		stackbak.unshift(document.javacalc.inp2.value);	
-	}
+            if(keyName == 'Delete') {
+                this.resetDisplayAndStack();
+            }
+        
+            // Dot 
+            if(keyName == ',' || keyName == '.') {
+                this.setDot();
+            }
+    };
+    // set sum to display
+    setNum(clickedValue) {
+        if(this.waitingForOperator) {
+            this.displayValue = clickedValue;
+                
+            this.waitingForOperator = false;
+            
+            this.resetActiveOperatorStatus();
+            
+        } else {
+    
+            this.displayValue === '0' ? this.displayValue = clickedValue : this.displayValue = this.displayValue + clickedValue;
+            
+         }
+                
+        this.setDisplayNumber(this.displayValue);
+    };
+    // set dot to display
+    setDot() {
+        const clickedValue = '.';
 
-	undo(){
-		if(und){
-			document.javacalc.inp2.value=stackbak.shift();
-			document.javacalc.inp1.value=stackbak.shift();
-			while(stack.length>0)stack.shift();
-			for(var i=stackbak.length-1;i>=0;i--)stack.unshift(stackbak[i]);
-			if(document.javacalc.inp2.value=="undefined")document.javacalc.inp2.value="";
-			if(document.javacalc.inp1.value=="undefined")document.javacalc.inp1.value="";
-		}
-		und=0;
-	}
+        if(!this.displayValue.includes(clickedValue)) {
 
-	degmode(){
-		mode='DEG';
-		document.javacalc.deg.value='*DEG';
-		document.javacalc.rad.value='RAD';
-	}
+            this.displayValue = String(this.displayValue) + clickedValue;
+            
+            this.setDisplayNumber(this.displayValue);
 
-	radmode(){
-		mode='RAD';
-		document.javacalc.rad.value='*RAD';
-		document.javacalc.deg.value='DEG';
-	}
+        }      
 
-	push(repeat){
-		if (document.javacalc.inp.value!=''){
-			rex=/\s/;
-			var ind=document.javacalc.inp.value.search(rex);
-			if (ind!=-1){
-				if (document.javacalc.inp.value.slice(0,ind)=="undefined"){
-					document.javacalc.inp.value="";
-					alert("Undefined.");
-					return false;
-				}
-				if (document.javacalc.inp.value.slice(0,ind)=="Infinity"){
-					document.javacalc.inp.value="";
-					alert("Infinity.");
-					return false;
-				}
-				if (document.javacalc.inp.value.slice(0,ind)=="-Infinity"){
-					document.javacalc.inp.value="";
-					alert("Negative Infinity.");
-					return false;
-				}
-				if (isNaN(document.javacalc.inp.value.slice(0,ind))){
-					document.javacalc.inp.value="";
-					alert("Not a number.");
-					return false;
-				}
-				stack.unshift(document.javacalc.inp.value.slice(0,ind));
-				document.javacalc.inp2.value=document.javacalc.inp1.value;
-				document.javacalc.inp1.value=stack[0];
-				document.javacalc.inp.value=document.javacalc.inp.value.slice(ind+1,document.javacalc.inp.value.length);
-				push(0);
-				return true;
-			}
-			else{
-				if (document.javacalc.inp.value=="undefined"){
-					document.javacalc.inp.value="";
-					alert("Undefined.");
-					return false;
-				}
-				if (document.javacalc.inp.value=="Infinity"){
-					document.javacalc.inp.value="";
-					alert("Infinity.");
-					return false;
-				}
-				if (document.javacalc.inp.value=="-Infinity"){
-					document.javacalc.inp.value="";
-					alert("Negative Infinity.");
-					return false;
-				}
-				if (isNaN(document.javacalc.inp.value)){
-					document.javacalc.inp.value="";
-					alert("Not a number.");
-					return false;
-				}
-				stack.unshift(document.javacalc.inp.value);
-				document.javacalc.inp2.value=document.javacalc.inp1.value;
-				document.javacalc.inp1.value=document.javacalc.inp.value;
-				document.javacalc.inp.value='';
-				return true;
-			}
-		}
-		else{
-			if(document.javacalc.inp1.value!=''){
-				if(repeat==1){
-					document.javacalc.inp.value=document.javacalc.inp1.value;
-					push(0);
-				}
-				else return true;
-			}
-			else return false;
-		}
-		return true;
-	}
+    };
+    // reset value and display value
+    resetDisplayValue() {
 
-	pop(){
-		if (stack.length>0)document.javacalc.inp.value=stack.shift();
-		else document.javacalc.inp.value='';
-		if (stack.length>0)document.javacalc.inp1.value=stack[0];
-		else document.javacalc.inp1.value='';
-		if (stack.length>1)document.javacalc.inp2.value=stack[1];
-		else document.javacalc.inp2.value='';
-		return document.javacalc.inp.value;
-	}
+        this.displayValue = '';
+        this.value = null;
 
-	swap(){
-		stacksav();
-		var x,y;
+        this.resetActiveOperatorStatus();
+        
+        this.setDisplayNumber(this.displayValue);
 
-		push(0);
-		x=pop();
-		y=pop();
-		document.javacalc.inp.value=x;
-		push(0);
-		document.javacalc.inp.value=y;
-		push(0);
-	}	
+    };
+    resetDisplayAndStack(){
+        this.displayValue = '';
+        this.value = null;
 
-	clr(){
-		stacksav();
-		document.javacalc.inp.value='';
-		document.javacalc.inp1.value='';
-		document.javacalc.inp2.value='';
-		while(stack.length>0)stack.shift();
-	}
+        this.resetActiveOperatorStatus();
+        
+        this.stack = [];
+        document.getElementsByName('stack')[0].value = '';
+        this.setDisplayNumber(this.displayValue);
+    };
+    // calculate percent of display value
+    setPercent() {
 
-	bkspc(){
-		stacksav();
-		if (document.javacalc.inp.value==''){
-			pop();
-			document.javacalc.inp.value='';
-		}
-		else document.javacalc.inp.value=document.javacalc.inp.value.slice(0,-1);
-	}
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(eval(op1/100));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
 
-	sign(){
-		stacksav();
-		var num=document.javacalc.inp.value!='';
+    };
 
-		push(0);
-		if (num)pop();
-		if (document.javacalc.inp.value!=''){
-			rex=/e/i;
-			var z=document.javacalc.inp.value.search(rex);
-			if (z!=-1){
-				var y=new Number(document.javacalc.inp.value.slice(z+1,document.javacalc.inp.value.length));
-				y*=-1;
-				document.javacalc.inp.value=document.javacalc.inp.value.slice(0,z+1)+y.toString();
-			}
-			else{
-				var x=new Number(document.javacalc.inp.value);
-				x*=-1;
-				document.javacalc.inp.value=x.toString();
-			}
-		}
-		else{
-			pop();
-			if (document.javacalc.inp.value!=''){
-				var x=new Number(document.javacalc.inp.value);
-				x*=-1;
-				document.javacalc.inp.value=x.toString();
-			}
-			push(0);
-		}
-	}
+    doLog(){
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(Math.log(op1));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 
-	pi(){
-		stacksav();
-		push(0);
-		document.javacalc.inp.value=Math.PI.toString();
-		push(0);
-	}
+    doSin(){
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(Math.sin(op1));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 
-	add(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			else num1=new Number(document.javacalc.inp.value);
-			if (document.javacalc.inp1.value!='')num2=new Number(pop());
-			else num2="NaN";
-			if (isNaN(num1)||isNaN(num2))document.javacalc.inp.value='';
-			else document.javacalc.inp.value=(num2+num1).toString();
-			push(0);
-		}
-	}
+    doCos(){
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(Math.cos(op1));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 
-	sub(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (document.javacalc.inp1.value!='')num2=new Number(pop());
-			else num2="NaN";
-			if (isNaN(num1)||isNaN(num2))document.javacalc.inp.value='';
-			else document.javacalc.inp.value=(num2-num1).toString();
-			push(0);
-		}
-	}
+    doTan(){
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(Math.sqrt(op1));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 
-	mul(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (document.javacalc.inp1.value!='')num2=new Number(pop());
-			else num2="NaN";
-			if (isNaN(num1)||isNaN(num2))document.javacalc.inp.value='';
-			else document.javacalc.inp.value=(num2*num1).toString();
-			push(0);
-		}
-	}
+    doSqrt(){
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(Math.sqrt(op1));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 
-	div(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (document.javacalc.inp1.value!='')num2=new Number(pop());
-			else num2="NaN";
-			if (isNaN(num1)||isNaN(num2))document.javacalc.inp.value='';
-			else document.javacalc.inp.value=(num2/num1).toString();
-			push(0);
-		}
-	}
+    doToSquare(){
+        if(this.stack.length >= 1){
+            var op1 = this.stack.pop();
+            this.stack.push(Math.pow(op1, 2));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 
-	sin(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (mode=='DEG')num1=num1*Math.PI/180;
-			document.javacalc.inp.value=Math.sin(num1).toString();
-			push(0);
-		}
-	}
+    doTenToX(){
+        if(this.displayValue != '') {
 
-	cos(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (mode=='DEG')num1=num1*Math.PI/180;
-			document.javacalc.inp.value=Math.cos(num1).toString();
-			push(0);
-		}
-	}
+            this.displayValue = Math.pow(10, parseFloat(this.displayValue));
+        
+            this.setDisplayNumber(this.displayValue);
 
-	tan(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (mode=='DEG')num1=num1*Math.PI/180;
-			document.javacalc.inp.value=Math.tan(num1).toString();
-			push(0);
-		}
-	}
+        }
+    }
 
-	asin(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.asin(num1).toString();
-			if(mode=='DEG')document.javacalc.inp.value=document.javacalc.inp.value*180/Math.PI;
-			push(0);
-		}
-	}
+    doFactorial(){
+        if(this.displayValue != '') {
+            this.displayValue = parseFloat(this.displayValue);
+            var i,fact=1;  
+            var number=this.displayValue;//It is the number to calculate factorial    
+            for(i=1;i<=number;i++){    
+                fact=fact*i;    
+            }            
+            this.setDisplayNumber(fact);
+        }
+    }
 
-	acos(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.acos(num1).toString();
-			if (mode=='DEG')document.javacalc.inp.value=document.javacalc.inp.value*180/Math.PI;
-			push(0);
-		}
-	}
+    // toggle plus/minus sign
+    togglePlusMinus() {
 
-	atan(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.atan(num1).toString();
-			if (mode=='DEG')document.javacalc.inp.value=document.javacalc.inp.value*180/Math.PI;
-			push(0);
-		}
-	}
+        if(this.displayValue != '') {
 
-	sq(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.pow(num1,2).toString();
-			push(0);
-		}
-	}
+            this.displayValue = String(this.displayValue).charAt(0) === '-' ? String(this.displayValue).substr(1) : '-' + String(this.displayValue);
+        
+            this.setDisplayNumber(this.displayValue);
 
-	sqrt(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.sqrt(num1).toString();
-			push(0);
-		}
-	}
+        }
 
-	inv(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=(1/num1).toString();
-			push(0);
-		}
-	}
+    };
+    // delete active class from operator
+    resetActiveOperatorStatus() {
 
-	factorial(num){
-		if (num<=1)return 1;
-		else return num*factorial(num-1);
-	}
+        for (var i = 0; i < this.operatorElements.length; i++) {
 
-	fact(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (Math.round(num1)!=num1)document.javacalc.inp.value='NaN';
-			else{
-				if(num1<0)document.javacalc.inp.value="Infinity";
-				if(num1==0)document.javacalc.inp.value=(0).toString();
-				if((num1<999)&&(num1>0))document.javacalc.inp.value=factorial(num1).toString();
-				if(num1>998)document.javacalc.inp.value="Infinity";
-			}
-			push(0);
-		}
-	}
+            this.operatorElements[i].classList.remove('active');
 
-	tenx(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.pow(10,num1).toString();
-			push(0);
-		}
-	}
+        }
 
-	lg(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=(Math.log(num1)/Math.LN10).toString();
-			push(0);
-		}
-	}
+    };
+    // set display number
+    setDisplayNumber(newDisplayValue) {
+        document.getElementsByName('displayValue')[0].value = String(newDisplayValue);
+    }
 
-	ex(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.exp(num1).toString();
-			push(0);
-		}
-	}
+    resetOnlyDisplayValue() {
 
-	ln(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			document.javacalc.inp.value=Math.log(num1).toString();
-			push(0);
-		}
-	}
+        this.displayValue = '';
+        this.value = null;        
+        this.setDisplayNumber(this.displayValue);
 
-	pw(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (document.javacalc.inp1.value!='')num2=new Number(pop());
-			else num2="NaN";
-			if (isNaN(num1)||isNaN(num2))document.javacalc.inp.value='';
-			else document.javacalc.inp.value=Math.pow(num2,num1).toString();
-			push(0);
-		}
-	}
+    };
 
-	root(){
-		stacksav();
-		if(push(0)){
-			pop();
-			if (document.javacalc.inp.value=='')num1=new Number(pop());
-			if (document.javacalc.inp.value!='')num1=new Number(document.javacalc.inp.value);
-			if (document.javacalc.inp1.value!='')num2=new Number(pop());
-			else num2="NaN";
-			if (isNaN(num1)||isNaN(num2))document.javacalc.inp.value='';
-			else document.javacalc.inp.value=Math.pow(num2,1/num1).toString();
-			push(0);
-		}
-	}
+    addToStack(){
+        if(this.displayValue != '') {
+            var number = parseFloat(this.displayValue);
+            this.stack.push(number);
+            document.getElementsByName("stack")[0].value += (number + "\n");
+            this.resetOnlyDisplayValue();
+        }
+    }
 
-	base(){
-		alert("Func not yet implemented.");
-	}
+    sum(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(eval(op1 + op2));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
+
+    calculateMul(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(op1 * op2);
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
+
+    calculateMinus(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(op1 - op2);
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
+    calculateDivision(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(op1 / op2);
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
+
+    doPow(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(Math.pow(op1,op2));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
+
+    doModule(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(eval(op1%op2));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 }
+
+// possible operators
+const operators = {
+    '/': (prevValue, nextValue) => prevValue / nextValue,
+    '*': (prevValue, nextValue) => prevValue * nextValue,
+    '-': (prevValue, nextValue) => prevValue - nextValue,
+    '+': (prevValue, nextValue) => prevValue + nextValue,
+    'ENTER': (prevValue) => addToStack(prevValue),
+    '%': (prevValue, nextValue) => prevValue % nextValue,
+    '^':(prevValue, nextValue) => Math.pow(prevValue, nextValue),
+    'exp':(prevValue, nextValue) => {
+        for (let index = 0; index < nextValue; index++) {
+            prevValue = prevValue * 10;
+        }
+        return prevValue;
+    },
+};
+// where the value should be displayed
+const displayValue = document.getElementsByName('displayValue').value;
+// get all elements with class operator
+const operatorElements = document.getElementsByName('btn operator');
+// Allowed keypress numbers
+const keyPressedNumbersAllowed = ['0','1','2','3','4','5','6','7','8','9'];
+const keyPressedOperatorsAllowed = ['/', '*', '-', '+', 'Enter', 'Delete'];
+
+const calculator = new Calculator(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed);
+
+// Keyup Event listeners
+document.addEventListener('keyup', (event) => {
+    calculator.onKeyUp(event);
+});

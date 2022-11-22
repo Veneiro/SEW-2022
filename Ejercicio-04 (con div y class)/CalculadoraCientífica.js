@@ -1,7 +1,7 @@
 class Calculator {
     constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed) {
         this.operators = operators;
-        this.displayValue = '';
+        this.displayValue = displayValue;
         this.operatorElements = operatorElements;
         this.keyPressedNumbersAllowed = keyPressedNumbersAllowed;
         this.keyPressedOperatorsAllowed = keyPressedOperatorsAllowed;
@@ -20,11 +20,8 @@ class Calculator {
         
             // Operators /, *, -, +, =
             if(keyPressedOperatorsAllowed.includes(keyName)) {
-                if(keyName == 'Enter' || keyName == '='){
-                    this.solve();
-                } else{
-                    this.setNum(keyName);
-                }
+                keyName == 'Enter' ? keyName = '=' : keyName = keyName;
+                this.calculateWithOperator(keyName);
             }
         
             // Backspace to reset value and display value
@@ -50,7 +47,7 @@ class Calculator {
     
             this.displayValue === '0' ? this.displayValue = clickedValue : this.displayValue = this.displayValue + clickedValue;
             
-        }
+         }
                 
         this.setDisplayNumber(this.displayValue);
     };
@@ -83,7 +80,7 @@ class Calculator {
 
         if(this.displayValue != '0') {
 
-            this.displayValue = eval(this.displayValue) / 100;
+            this.displayValue = parseFloat(this.displayValue) / 100;
         
             this.setDisplayNumber(this.displayValue);
 
@@ -94,7 +91,7 @@ class Calculator {
     doLog(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.log(eval(this.displayValue));
+            this.displayValue = Math.log(parseFloat(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
@@ -104,7 +101,7 @@ class Calculator {
     doSin(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.sin(eval(this.displayValue));
+            this.displayValue = Math.sin(parseFloat(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
@@ -114,7 +111,7 @@ class Calculator {
     doCos(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.cos(eval(this.displayValue));
+            this.displayValue = Math.cos(parseFloat(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
@@ -124,7 +121,7 @@ class Calculator {
     doTan(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.tan(eval(this.displayValue));
+            this.displayValue = Math.tan(parseFloat(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
@@ -134,7 +131,7 @@ class Calculator {
     doSqrt(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.sqrt(eval(this.displayValue));
+            this.displayValue = Math.sqrt(parseFloat(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
@@ -144,7 +141,7 @@ class Calculator {
     doToSquare(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.pow(eval(this.displayValue), 2);
+            this.displayValue = Math.pow(parseFloat(this.displayValue), 2);
         
             this.setDisplayNumber(this.displayValue);
 
@@ -154,7 +151,7 @@ class Calculator {
     doTenToX(){
         if(this.displayValue != '0') {
 
-            this.displayValue = Math.pow(10, eval(this.displayValue));
+            this.displayValue = Math.pow(10, parseFloat(this.displayValue));
         
             this.setDisplayNumber(this.displayValue);
 
@@ -163,7 +160,7 @@ class Calculator {
 
     doFactorial(){
         if(this.displayValue != '0') {
-            this.displayValue = eval(this.displayValue);
+            this.displayValue = parseFloat(this.displayValue);
             var i,fact=1;  
             var number=this.displayValue;//It is the number to calculate factorial    
             for(i=1;i<=number;i++){    
@@ -185,7 +182,49 @@ class Calculator {
         }
 
     };
-   
+    // operate for +,-,*,/
+    calculateWithOperator(typedOperator) {
+        
+        let pressedElement;
+        for(let i=0; i < this.operatorElements.length; i++) {
+            if(operatorElements[i].dataset.operator === typedOperator ) {
+                pressedElement = operatorElements[i];
+            }
+        }
+
+        const nextValue = parseFloat(this.displayValue);
+
+        if(!this.value) {
+
+            this.value = nextValue || 0;
+
+        } else if(this.operator) {
+
+            const currentValue = this.value;
+            const computedValue = this.operators[this.operator](currentValue, nextValue);
+
+            this.value = computedValue;
+            this.displayValue = String(computedValue);
+            this.setDisplayNumber(this.displayValue);
+
+        }
+
+        this.waitingForOperator = true;
+        this.operator = typedOperator;
+
+        
+        if(this.operator != '=') {
+
+            pressedElement.classList.add('active');
+
+        } else {
+
+            this.resetActiveOperatorStatus();
+
+        }
+        
+
+    };
 
     // delete active class from operator
     resetActiveOperatorStatus() {
@@ -202,13 +241,6 @@ class Calculator {
 
         document.getElementById('displayValue').value = String(newDisplayValue);
 
-    }
-
-    solve(){
-        if(this.displayValue != '0') {
-            this.displayValue = eval(this.displayValue);
-            this.setDisplayNumber(this.displayValue);
-        }
     }
 }
 
@@ -229,9 +261,9 @@ const operators = {
     },
 };
 // where the value should be displayed
-const displayValue = document.getElementsByName('displayValue').value;
+const displayValue = document.getElementById('displayValue').value;
 // get all elements with class operator
-const operatorElements = document.getElementsByName('btn operator');
+const operatorElements = document.getElementsByClassName('operator');
 // Allowed keypress numbers
 const keyPressedNumbersAllowed = ['0','1','2','3','4','5','6','7','8','9'];
 const keyPressedOperatorsAllowed = ['/', '*', '-', '+', 'Enter'];

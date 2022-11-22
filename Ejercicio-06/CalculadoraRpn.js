@@ -309,6 +309,76 @@ class Calculator {
             }
         } 
     }
+
+    doModule(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            this.stack.push(eval(op1%op2));
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
+
+    calculateGeotoUTC(){
+        if(this.stack.length > 1){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            var c = new Conversor();
+            if(c.cmdLat2UTM_click(op1, op2, this.stack)){
+                document.getElementsByName("stack")[0].value = '';
+                for(let index = 0; index < this.stack.length; index++){
+                    document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+                }
+            }
+            this.stack.push(op1);
+            this.stack.push(op2);
+        }
+    }
+
+    calculateUTCtoGeo(){
+        if(this.stack.length > 2){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            var op3 = this.stack.pop();
+            var c = new Conversor();
+            if(c.cmdUTM2Lat_click(op1, op2, this.stack, op3)){
+                document.getElementsByName("stack")[0].value = '';
+                for(let index = 0; index < this.stack.length; index++){
+                    document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+                }
+            }
+            this.stack.push(op1);
+            this.stack.push(op2);
+            this.stack.push(op3);
+        }
+    }
+
+    calculateDistance(){
+        if(this.stack.length > 3){
+            var op1 = this.stack.pop();
+            var op2 = this.stack.pop();
+            var op3 = this.stack.pop();
+            var op4 = this.stack.pop();
+            var radioTierra = 6367.45;
+            var rLong = eval(op2 - op4);
+            var rLat = eval(op1 - op3);
+            var semiverLong = Math.sin((rLong)/2)**2;
+            var semiverLat = Math.sin((rLat)/2)**2;
+            var fir = semiverLat;
+            var sec = eval(Math.cos(op1)*Math.cos(op3)*semiverLong);
+            var rH = Math.sqrt((fir) + (sec))
+            var d = eval(2 * radioTierra*(Math.asin(rH)));
+
+            this.stack.push(d);
+            document.getElementsByName("stack")[0].value = '';
+            for(let index = 0; index < this.stack.length; index++){
+                document.getElementsByName("stack")[0].value += (this.stack[index] + "\n");
+            }
+        } 
+    }
 }
 
 // possible operators

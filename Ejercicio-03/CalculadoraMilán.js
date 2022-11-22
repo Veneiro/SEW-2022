@@ -1,4 +1,4 @@
-class Calculator {
+class BasicCalculator {
     constructor(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed,) {
         this.operators = operators;
         this.displayValue = displayValue;
@@ -76,6 +76,12 @@ class Calculator {
         this.setDisplayNumber(this.displayValue);
 
     };
+
+    resetOnlyDisplayValue(){
+        this.displayValue = '0';
+        this.setDisplayNumber(this.displayValue);
+    }
+
     // calculate percent of display value
     setPercent() {
 
@@ -204,12 +210,12 @@ const operators = {
 // where the value should be displayed
 const displayValue = document.getElementById('displayValue').value;
 // get all elements with class operator
-const operatorElements = document.getElementsByClassName('operator');
+const operatorElements = document.getElementsByName('btn operator');
 // Allowed keypress numbers
 const keyPressedNumbersAllowed = ['0','1','2','3','4','5','6','7','8','9'];
 const keyPressedOperatorsAllowed = ['/', '*', '-', '+', 'Enter'];
 
-const calculator = new Calculator(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed);
+const calculator = new BasicCalculator(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed);
 
 // Keyup Event listeners
 document.addEventListener('keyup', (event) => {

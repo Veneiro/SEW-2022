@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+
+    <meta name ="author" content ="Mateo Rico Iglesias" />
+    <meta name ="description" content ="Calculadora Científica" />
+    <meta name ="keywords" content ="Una calculadora científica" />
+
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" type="text/css" href="estilo/CalculadoraCientífica.css"/>
+</head>
+    <body>
+        <section>
+            <t1>Calculadora Científica</t1>
+            <input id="displayValue" value="0" type="text" disabled />
+        </section>
+        <main>
+            <section>
+                <button onClick="scicalculator.doToSquare()" name="btn operator">x^2</button>
+                <button onClick="scicalculator.setNum('**')" name="btn operator">x^y</button>
+                <button onClick="scicalculator.doSin()" name="btn operator">sin</button>
+                <button onClick="scicalculator.doCos()" name="btn operator">cos</button>
+                <button onClick="scicalculator.doTan()" name="btn operator">tan</button>
+
+                <button onClick="scicalculator.doSqrt()" name="btn operator">√</button>
+                <button onClick="scicalculator.doTenToX()" name="btn operator">10^x</button>
+                <button onClick="scicalculator.doLog()" name="btn operator">log</button>
+                <button onClick="scicalculator.setNum('*10**')" name="btn operator">exp</button>
+                <button onClick="scicalculator.setNum('%')" name="btn operator">mod</button>        
+
+                <button onClick="scicalculator.setNum(Math.PI)" data-num=Math.PI name="btn operator">π</button>
+                <button onClick="scicalculator.resetDisplayValue()" name="btn">C</button>
+                <button onClick="scicalculator.togglePlusMinus()" name="btn">+/-</button>
+                <button onClick="scicalculator.setPercent()" name="btn">%</button>
+                <button onClick="scicalculator.setNum('/')" name="btn operator">÷</button>
+
+                <button onClick="scicalculator.doFactorial()" name="btn operator">n!</button>
+                <button onClick="scicalculator.setNum('7')" data-num="7" name="btn">7</button>
+                <button onClick="scicalculator.setNum('8')" data-num="8" name="btn">8</button>
+                <button onClick="scicalculator.setNum('9')" data-num="9" name="btn">9</button>
+                <button onClick="scicalculator.setNum('*')" name="btn operator">x</button>
+
+                <button onClick="scicalculator.setNum('(')" data-num="(" name="btn operator">(</button>
+                <button onClick="scicalculator.setNum('4')" data-num="4" name="btn">4</button>
+                <button onClick="scicalculator.setNum('5')" data-num="5" name="btn">5</button>
+                <button onClick="scicalculator.setNum('6')" data-num="6" name="btn">6</button>
+                <button onClick="scicalculator.setNum('-')" name="btn operator">-</button>
+
+                <button onClick="scicalculator.setNum(')')" data-num=")" name="btn operator">)</button>
+                <button onClick="scicalculator.setNum('1')" data-num="1" name="btn">1</button>
+                <button onClick="scicalculator.setNum('2')" data-num="2" name="btn">2</button>
+                <button onClick="scicalculator.setNum('3')" data-num="3" name="btn">3</button>
+                <button onClick="scicalculator.setNum('+')" name="btn operator">+</button>
+
+                <button onClick="scicalculator.setNum('0')" data-num="0" name="btn zero">0</button>
+                <button onClick="scicalculator.setDot()" name="btn">.</button>
+                <button onClick="scicalculator.solve()" name="btn operator">=</button>
+            </section>
+        </main>
+        <script src="CalculadoraCientífica.js"></script>
+    </body>
+</html>
