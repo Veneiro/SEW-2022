@@ -21,13 +21,32 @@ class Calculator {
         
             // Operators /, *, -, +, =
             if(keyPressedOperatorsAllowed.includes(keyName)) {
-                keyName == 'Enter' ? keyName = '=' : keyName = keyName;
-                this.calculateWithOperator(keyName);
+                switch(keyName){
+                    case 'Enter' || '=':
+                        this.addToStack();
+                        break;
+                    case '+':
+                        this.sum();
+                        break;
+                    case '-':
+                        this.calculateMinus();
+                        break;
+                    case '*':
+                        this.calculateMul();
+                        break;
+                    case '/':
+                        this.calculateDivision();
+                        break;
+                }
             }
         
             // Backspace to reset value and display value
             if(keyName == 'Backspace') {
                 this.resetDisplayValue();
+            }
+
+            if(keyName == 'Delete') {
+                this.resetDisplayAndStack();
             }
         
             // Dot 
@@ -314,7 +333,7 @@ const displayValue = document.getElementsByName('displayValue').value;
 const operatorElements = document.getElementsByName('btn operator');
 // Allowed keypress numbers
 const keyPressedNumbersAllowed = ['0','1','2','3','4','5','6','7','8','9'];
-const keyPressedOperatorsAllowed = ['/', '*', '-', '+', 'Enter'];
+const keyPressedOperatorsAllowed = ['/', '*', '-', '+', 'Enter', 'Delete'];
 
 const calculator = new Calculator(operators, displayValue, operatorElements, keyPressedNumbersAllowed, keyPressedOperatorsAllowed);
 
