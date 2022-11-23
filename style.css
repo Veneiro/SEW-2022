@@ -1,0 +1,53 @@
+.header > div > t1 {
+    background-color: red;
+    border-radius: 2em;
+    text-align: center;
+    font-size: 3em;
+    margin:0.5em;
+}
+.header > div{
+    display: grid;
+}
+
+.Practice > t2 {
+    padding: 1em;
+    color:white;
+    text-align: center;
+    font-size: 2em;
+}
+
+.main {
+    display: grid;
+    padding:1em;
+    margin-left: 2em;
+}
+
+.Exercise{
+    display:grid;
+}
+
+.Exercise > t3{
+    color:white;
+}
+
+.btn.execises{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 4em;
+    color:white;
+    border: 0.2em solid white;
+    background-color: black;
+    width: fit-content;
+
+    cursor:pointer;
+    transition: 0.1s ease-in all;
+}
+
+.btn.execises:hover{
+    color:white;
+    background-color: rgb(48, 47, 47);
+}
+
+body{
+    background-color: rgb(44, 44, 44);
+}

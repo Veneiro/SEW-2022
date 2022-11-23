@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+
+    <meta name ="author" content ="Mateo Rico Iglesias" />
+    <meta name ="description" content ="A page containing all my SEW 2022 Exercises" />
+    <meta name ="keywords" content ="SEW, Exercises, 2022" />
+
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <title>SEW Homework 2022</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./mainPage.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <t1>Exercises SEW 2022</t1>
+        </div>
+    </div>
+    <div class="Practice">
+        <t2>Práctica 3.1</t2>
+    </div>
+    <div class="main">
+        <div class="Exercise">
+            <t3>Ejercicio 1</t3>
+            <input class="btn execises" type="button" Value= "Ir al Ejercicio 1" onclick="index.ejercicio1()"/>
+        </div>
+
+        <div class="Exercise">
+            <t3>Ejercicio 2</t3>
+            <input class="btn execises" type="button" Value= "Ir al Ejercicio 2" onclick="index.ejercicio2()"/>
+        </div>
+
+        <div class="Exercise">
+            <t3>Ejercicio 3</t3>
+            <input class="btn execises" type="button" Value= "Ir al Ejercicio 3" onclick="index.ejercicio3()"/>
+        </div>
+
+        <div class="Exercise">
+            <t3>Ejercicio 4</t3>
+            <input class="btn execises" type="button" Value= "Ir al Ejercicio 4" onclick="index.ejercicio4()"/>
+        </div>
+
+        <div class="Exercise">
+            <t3>Ejercicio 5</t3>
+            <input class="btn execises" type="button" Value= "Ir al Ejercicio 5" onclick="index.ejercicio5()"/>
+        </div>
+
+        <div class="Exercise">
+            <t3>Ejercicio 6</t3>
+            <input class="btn execises" type="button" Value= "Ir al Ejercicio 6" onclick="index.ejercicio6()"/>
+        </div>
+        <input type="file" id="fileToLoad" onclick="index.exercise1Code()">
+        <input id="code1" class="btn execises" type="button" Value= "Codigo" onclick="index.exercise1Code2()"/>
+        <textarea id=Exercise1Txt class="code" disabled></textarea>
+    </div>
+</body>
+</html>
