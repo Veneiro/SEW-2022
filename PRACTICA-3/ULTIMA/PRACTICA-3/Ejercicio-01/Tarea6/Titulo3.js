@@ -1,0 +1,1 @@
+document.write("<h3>Escuela de ingeniería informática</h3>");
