@@ -37,7 +37,7 @@ class Index{
     exercise1Code2(){
         var doc = new XMLHttpRequest("html");
         doc.Visible = false;
-        doc.open('GET', './Práctica-3.1/Ejercicio-01/Tarea1/Ejercicio1.html');
+        doc.open('GET', 'https://veneiro.github.io/SEW-2022/Pr%C3%A1ctica-3.1/Ejercicio-01/Tarea1/Ejercicio1.html');
 
         var txt = doc.responseText;
         document.getElementById("Exercise1Txt").value = txt;
