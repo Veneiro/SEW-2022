@@ -1,9 +1,10 @@
 // 108-GeolocalizacionMapaDinamicoGoogle.js
 // VersiÃ³n 1.0 20/noviembre/2018. Juan Manuel Cueva Lovelle. Universidad de Oviedo
 //Version 1.1 23/10/2021 
+"use strict"
 class Mapa{
   constructor(){
-    this.url="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=miMapa.initMap";
+    this.url="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback";
   }
   initMap(){
     $.ajax({
