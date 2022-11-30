@@ -18,6 +18,8 @@ class Meteo {
                 $("pre").text(JSON.stringify(datos, null, 2)); //muestra el json en un elemento pre
                 //Presentación de los datos contenidos en JSON
                 var stringDatos = "<ul><li>Ciudad: " + datos.name + "</li>";
+                var aux = '"http://openweathermap.org/img/wn/' + datos.weather[0].icon;
+                stringDatos = "<img src= " + aux  + '@2x.png"' + "/>";
                 stringDatos += "<li>País: " + datos.sys.country + "</li>";
                 stringDatos += "<li>Latitud: " + datos.coord.lat + " grados</li>";
                 stringDatos += "<li>Longitud: " + datos.coord.lon + " grados</li>";
