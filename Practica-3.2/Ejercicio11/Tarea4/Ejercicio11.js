@@ -1,7 +1,6 @@
 // 107-objetoMapaDinamicoGoogle.js
 // VersiÃ³n 2.0 18/noviembre/2018. Juan Manuel Cueva Lovelle. Universidad de Oviedo
 //Version 2.1 23/10/2021 
-var mapaDinamicoGoogle = new Object();
 class MapaDinamico {
     constructor (){
         navigator.geolocation.getCurrentPosition(this.getPosicion.bind(this), this.verErrores.bind(this));
@@ -40,4 +39,3 @@ class MapaDinamico {
     }
 }
 var map = new MapaDinamico();
-mapaDinamicoGoogle.initMap = map.initMap();
