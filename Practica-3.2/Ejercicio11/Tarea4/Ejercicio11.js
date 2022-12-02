@@ -2,9 +2,6 @@
 // VersiÃ³n 2.0 18/noviembre/2018. Juan Manuel Cueva Lovelle. Universidad de Oviedo
 //Version 2.1 23/10/2021 
 class MapaDinamico {
-    constructor (){
-        navigator.geolocation.getCurrentPosition(this.getPosicion.bind(this), this.verErrores.bind(this));
-    }
     initMap(){
         var oviedo = {lat: 43.3672702, lng: -5.8502461};
         var mapaOviedo = new google.maps.Map(document.getElementById('mapa'),{zoom: 8,center:oviedo});
