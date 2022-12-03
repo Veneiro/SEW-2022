@@ -1,0 +1,19 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    -6.535092272806634,
+                    43.54346143884969
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Luarca",
+                "name": " Mateo Rico Iglesias "
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}

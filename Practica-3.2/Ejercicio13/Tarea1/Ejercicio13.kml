@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+    <Document>
+        <Placemark>
+            <name> Mateo Rico Iglesias </name>
+            <description> Luarca </description>
+            <Point>
+                <coordinates>
+ -6.535092272806634, 43.54346143884969, 0.
+                </coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <Placemark>
+                <name> Luis Lopez Garcia </name>
+                <description> Oviedo </description>
+                <Point>
+                    <coordinates>
+ -5.848486559535893, 43.36586255897024, 0.
+                    </coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Benemérito Anacleto Piernavieja </name>
+                    <description> Cangas de Narcea </description>
+                    <Point>
+                        <coordinates>
+ -6.550104357409675, 43.17804303219015, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Melito Sacamoco Parahoy </name>
+                    <description> Chilecito, Argentina </description>
+                    <Point>
+                        <coordinates>
+ -67.496638235799, -29.157483656699927, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Tomás Socorro Del Pozo </name>
+                    <description> Gijón </description>
+                    <Point>
+                        <coordinates>
+ -5.662457016986879, 43.545138651650305, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+        </Placemark>
+        <Placemark>
+            <Placemark>
+                <name> Deseado Sin Tenedor </name>
+                <description> Avilés </description>
+                <Point>
+                    <coordinates>
+ -5.925058936037406, 43.559778064949036, 0.
+                    </coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Dombina García Garcia </name>
+                    <description> EEUU </description>
+                    <Point>
+                        <coordinates>
+ -94.43422808465574, 39.127292071569286, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Nicomeda Zuzunaga Garcia </name>
+                    <description> Barcia </description>
+                    <Point>
+                        <coordinates>
+ -6.523314120922505, 43.534093513630154, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Simplicia Piesplanos Parraverde </name>
+                    <description> Marruecos </description>
+                    <Point>
+                        <coordinates>
+ -6.840077544207857, 33.96109225832617, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+        </Placemark>
+        <Placemark>
+            <Placemark>
+                <name> Vitores Feo Alcoholado </name>
+                <description> Cadavedo </description>
+                <Point>
+                    <coordinates>
+ -6.387731889748422, 43.54602659970272, 0.
+                    </coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Armelinda Víbora Sorda </name>
+                    <description> Navelgas </description>
+                    <Point>
+                        <coordinates>
+ -6.5451999999999995, 43.404795715061766, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Tesifonte Sin Fajardo </name>
+                    <description> Barcelona </description>
+                    <Point>
+                        <coordinates>
+ 2.1313203730163597, 41.388083838141604, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+            <Placemark>
+                <Placemark>
+                    <name> Galán Anacleto Parahoy </name>
+                    <description> Madrid </description>
+                    <Point>
+                        <coordinates>
+ -3.63146727116394, 40.40921803167939, 0.
+                        </coordinates>
+                    </Point>
+                </Placemark>
+            </Placemark>
+        </Placemark>
+    </Document>
+</kml>
