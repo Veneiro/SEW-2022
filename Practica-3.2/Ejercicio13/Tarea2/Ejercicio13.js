@@ -1,39 +1,33 @@
 "use strict";
 class KML {
+  initMap(files) {
+    let archivo = files[0];
 
-  initMap(){
-    var oviedo = {lat: 43.3672702, lng: -5.8502461};
-    var mapaOviedo = new google.maps.Map(document.querySelector('main'),{zoom: 8,center:oviedo});
-    this.lugares.forEach(function(place){
-      let coords = place.toString().split(",");
-      let livingIn = {lat: (Number)(coords[1]), lng: (Number)(coords[0])};
-      var marcador = new google.maps.Marker({position:livingIn,map:mapaOviedo});
-    }.bind(this));
-  }
+    if (archivo.name.match(/.GeoJSON/)) {
+      // Leemos el archivo...
+      var oviedo = { lat: 43.3672702, lng: -5.8502461 };
+      var mapaOviedo = new google.maps.Map(document.querySelector("main"), {
+        zoom: 8,
+        center: oviedo,
+      });
+      // Creamos el infoWindow para poder mostrar el contenido...
+      let infoWindow = new google.maps.InfoWindow();
 
-  processData(data){
-    let coordenadas = [];
+      let reader = new FileReader();
+      reader.onload = function () {
+        mapaOviedo.data.addGeoJson(JSON.parse(reader.result));
+      };
+      reader.readAsText(archivo);
 
-    let parser = new DOMParser();
-    let dom = parser.parseFromString(data, "text/xml");
-    let domCoord = dom.getElementsByTagName("coordinates");
-
-    for (let element of domCoord)
-        coordenadas.push(element.innerHTML.trim());
-    
-    this.lugares = coordenadas.map(conjunto => conjunto.split(" "))
-
-    this.initMap();
-  }
-
-  load(files){
-    let archive = files[0];
-    let reader = new FileReader();
-    if(archive.name.match(/.kml/)){
-      reader.onload = e => this.processData(reader.result);
-      reader.readAsText(archive);
-    } else {
-      $('p').text('El archivo seleccionado no es de un tipo válido')
+      // Mostramos el nombre del lugar al hacer click
+      mapaOviedo.data.addListener("click", function (event) {
+        infoWindow.setPosition(event.feature.getGeometry().get());
+        infoWindow.setContent(event.feature.getProperty("name"));
+        infoWindow.open(mapaOviedo);
+      });
+    } // Si el archivo no es GeoJSON...
+    else {
+      $("main").text("El archivo seleccionado no es de un tipo válido");
     }
   }
 }
