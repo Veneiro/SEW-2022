@@ -14,13 +14,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SEW Homework 2022</title>
+    <link rel="stylesheet" href="./MapaGeoJSON.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="./Ejercicio9.js"></script>
+    <script src="./MapaGeoJSON.js"></script>
   </head>
   <body>
-    <p></p>
-    <button name="Mostrar" onclick="meteo.cargarDatos()">
-      Mostrar Datos Meteorológicos
-    </button>
+    <input type="file" onchange="kml.initMap(this.files)" />
+    <main name="map"></main>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALEss8OgvHZF979WXvKyPrMSDxAX6SZwE&libraries=places"></script>
   </body>
 </html>

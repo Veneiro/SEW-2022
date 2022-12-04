@@ -1,0 +1,116 @@
+body {
+  color: Black;
+  background-color: grey;
+  margin: 1em;
+}
+
+/*Especificidad: 001*/
+main {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.651);
+  border-top-left-radius: 0.3em;
+  width: 100%;
+  height: 25em;
+  padding-top: 1em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+main > section {
+  text-align: left;
+}
+
+section {
+  text-align: center;
+}
+
+button {
+  font-size: 1.5em;
+  background-color: rgb(99, 99, 99);
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  text-align: center;
+  padding: 0.4em;
+  border: 0.1em;
+  padding: 0.4em;
+  border-bottom: 0.1em groove;
+  border-right: 0.1em groove;
+  border-left: 0.1em groove;
+  padding: 0.8em;
+  height: 3em;
+  width: 3em;
+}
+
+button:hover {
+  background-color: rgb(146, 146, 146);
+}
+
+button:nth-child(1){
+  font-size: 1.5em;
+  background-color: red;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  text-align: center;
+  color: black;
+  padding: 0.4em;
+  border: 0.1em;
+  padding: 0.4em;
+  border-bottom: 0.1em groove;
+  border-right: 0.1em groove;
+  border-left: 0.1em groove;
+  padding: 1em;
+  height: 3em;
+  width: 5em;
+}
+
+button:hover:nth-child(1) {
+  background-color: rgba(255, 0, 0, 0.774);
+  color:white;
+}
+
+button:disabled:nth-child(1) {
+  background-color: rgba(255, 0, 0, 0.336);
+  color:white;
+}
+
+button:nth-child(6){
+  font-size: 1.5em;
+  background-color: greenyellow;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  text-align: center;
+  color: black;
+  padding: 0.4em;
+  border: 0.1em;
+  padding: 0.4em;
+  border-bottom: 0.1em groove;
+  border-right: 0.1em groove;
+  border-left: 0.1em groove;
+  padding: 1em;
+  height: 3em;
+  width: 5em;
+}
+
+button:hover:nth-child(6) {
+  background-color: rgba(0, 255, 0, 0.774);
+  color:black;
+}
+
+button:disabled:nth-child(6) {
+  background-color: rgba(9, 255, 0, 0.336);
+  color:white;
+}
+
+button:disabled {
+  background-color: rgb(75, 75, 75);
+}
+
+input[type=range] {
+  background-color: aliceblue;
+}
+
+input:disabled[type=range] {
+  background-color: aliceblue;
+}
