@@ -75,6 +75,10 @@ class Index{
         window.location.href = './Practica-3.2/Ejercicio-14/Tarea1/Ejercicio14.html';
     }
 
+    ejercicioMusicPlayer(){
+        window.location.href = './Practica-3.2/Ejercicio-14/Tarea1/Ejercicio14.html';
+    }
+
     exercise1Code(){
         var tag_id = document.getElementById('html');
         document.getElementById("Exercise1Txt").value = tag_id.innerHTML;
