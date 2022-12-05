@@ -1,6 +1,14 @@
 "use strict";
+
 class Player {
   constructor() {
+    Storage.prototype.setObj = function(key, obj) {
+      return window.localStorage.setItem(key, obj);
+    }
+    Storage.prototype.getObj = function(key) {
+      var value = this.getItem(key);
+      return JSON.parse(value);
+    }
     this.on = false;
     this.created = false;
     this.blob = window.URL || window.webkitURL;
@@ -17,18 +25,34 @@ class Player {
       var res = JSON.parse(aux1);
       this.playlistSongNames = res;
 
-      let aux2 = window.localStorage.getItem("playlist");
-      console.log(aux2);
-      //var res2 = JSON.parse(aux2);
-      //this.playlist = res2;
+      let res4 = window.localStorage.getObj("files");
+      this.files = res4;
+
+      for(let i = 0; i < this.files.length; i++){
+
+        this.fileData = new LocalFileData(files[i]);
+        this.archive = constructFileFromLocalFileData(this.fileData);
+        
+        var fileURL = this.blob.createObjectURL(this.archive);
+        this.playlist.push(fileURL);
+        $("main").append("<section>" + this.archive.name + "</section>");
+      }
+
 
       let aux3 = window.localStorage.getItem("index");
-      //var res3 = JSON.parse(aux3);
-      //this.playlistIndex = res3;
+      var res3 = JSON.parse(aux3);
+      this.playlistIndex = res3;
+
+      //$("main").html(window.localStorage.getItem("main"));
+      console.log(window.localStorage.getItem("song"));
+      $(document.getElementsByName("Actual-Song")).html(window.localStorage.getItem("song"));
+      document.getElementsByName("Power")[0].disabled = false;
+      
     } else {
       this.playlistSongNames = [];
       this.playlist = [];
       this.playlistIndex = 0;
+      this.files = [];
     }
     this.cloudSave = false;
   }
@@ -149,7 +173,7 @@ class Player {
     var fileURL = this.blob.createObjectURL(this.archive);
     this.playlistSongNames.push(this.archive.name);
     this.playlist.push(fileURL);
-    console.log(this.playlist);
+    this.files.push(this.archive.path);
     $(document.getElementsByName("Actual-Song")[0]).html(
       '<audio crossorigin="anonymous" name="audio" src="' +
         this.playlist[this.playlistIndex] +
@@ -188,13 +212,15 @@ class Player {
   }
 
   save() {
+    console.log(this.playlist[0])
     window.localStorage.setItem(
       "song",
       document.getElementsByName("Actual-Song")[0].innerHTML
     );
     window.localStorage.setItem("names", JSON.stringify(this.playlistSongNames));
-    window.localStorage.setObject("playlist", JSON.stringify(this.playlist));
-    window.localStorage.setObject("index", JSON.stringify(this.playlistIndex));
+    window.localStorage.setObj("playlist", JSON.stringify(this.playlist));
+    window.localStorage.setObj("index", JSON.stringify(this.playlistIndex));
+    window.localStorage.setObj("files", JSON.stringify(this.files));
     window.localStorage.setItem(
       "main",
       document.getElementsByName("songs")[0].innerHTML
@@ -212,25 +238,27 @@ class Player {
         window.localStorage.getItem("main")
       );
     }
+    
   }
 
-  arraySave(){
-    Storage.prototype.setObj = function(key, obj) {
-      return window.localStorage.setItem(key, JSON.stringify(obj))
-    }
-    Storage.prototype.getObj = function(key) {
-        return JSON.parse(window.localStorage.getItem(key))
-    }
-  }
+//  arraySave(){
+//    Storage.prototype.setObj = function(key, obj) {
+//      return window.localStorage.setItem(key, JSON.stringify(obj))
+//    }
+//    Storage.prototype.getObj = function(key) {
+//        return JSON.parse(window.localStorage.getItem(key))
+//    }
+//  }
 
   clear() {
-    window.localStorage.removeItem("song");
-    window.localStorage.removeItem("names");
-    window.localStorage.removeItem("playlist");
-    window.localStorage.removeItem("index");
-    window.localStorage.removeItem("main");
-    window.localStorage.removeItem("saved");
-    this.cloudSave = false;
+    window.localStorage.clear();
+    //window.localStorage.removeItem("song");
+    //window.localStorage.removeItem("names");
+    //window.localStorage.removeItem("playlist");
+    //window.localStorage.removeItem("index");
+    //window.localStorage.removeItem("main");
+    //window.localStorage.removeItem("saved");
+    //this.cloudSave = false;
   }
 }
 
