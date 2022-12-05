@@ -1,14 +1,16 @@
-class Ej7{
-    removeParagraph(){
-        $(document).ready(function(){
-            $("*").each(function() {
-                for(var i = 0; i<($(this).parents().length); i += 1){
-                    var aux = ($(this).parents()[i]).attr('name');
-                }
-                $("p").html(aux);
-            });
-        });
-    }
+class Ej7 {
+  removeParagraph() {
+    $("*").each(function () {
+      for (var i = 0; i < $(this).parents().length; i += 1) {
+        if ($(this)[i] != undefined) {
+          $("p").append("<section>------------------------</section>");
+          $("p").append("<section>Padre: " + $(this).parents()[i] + "</section>");
+          $("p").append("<section>Hijo: " + $(this)[i] + "</section>");
+          $("p").append("<section>------------------------</section>");
+        }
+      }
+    });
+  }
 }
 
 ej7 = new Ej7();

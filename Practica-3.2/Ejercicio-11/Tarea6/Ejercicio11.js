@@ -1,6 +1,3 @@
-// 107-objetoMapaDinamicoGoogle.js
-// VersiÃ³n 2.0 18/noviembre/2018. Juan Manuel Cueva Lovelle. Universidad de Oviedo
-//Version 2.1 23/10/2021
 "use strict";
 class MapaDinamico {
   constructor() {
@@ -45,45 +42,57 @@ class MapaDinamico {
             pos.coords.longitude
           );
 
-          // Creamos el mapa con la configuración establecida anteriormente
           let mapa = new google.maps.Map(document.querySelector("main"), {
             zoom: 14,
             center: posActual,
             mapTypeId: google.maps.MapTypeId.SATELLITE,
           });
 
-          // Creamos el info window
           let infoWindow = new google.maps.InfoWindow();
 
-          // Indicamos que queremos buscar las gasolineras más cercanas en un radio
           let request = {
             location: posActual,
             radius: 100000,
-            types: ["supermarket"], // si cambias este valor: cambia el tipo de lugar
+            types: ["pharmacy"],
           };
 
-          // Creamos el servicio para que haga la petición
           let service = new google.maps.places.PlacesService(mapa);
           service.nearbySearch(request, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK)
               for (let i = 0; i < results.length; i++) {
-                // Creamos el marcador
                 var marcador = new google.maps.Marker({
                   map: mapa,
                   position: results[i].geometry.location,
                 });
 
-                // Mostramos el nombre del lugar al hacer click
                 google.maps.event.addListener(marcador, "click", function () {
                   infoWindow.setContent(results[i].name);
                   infoWindow.open(mapa, this);
                 });
               }
+              var svgMarker = {
+                path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+                fillColor: "cyan",
+                fillOpacity: 1,
+                strokeWeight: 0,
+                rotation: 0,
+                scale: 2,
+                anchor: new google.maps.Point(15, 30),
+              };
+              var marcador = new google.maps.Marker({
+                position: posActual,
+                map: mapa,
+                icon: svgMarker,
+              });
+              google.maps.event.addListener(marcador, "click", function () {
+                infoWindow.setContent("Posición actual");
+                infoWindow.open(mapa, this);
+              });
           });
-        }, // si falla algo...
+        }, 
         (e) => this.handleLocationError(true, mapa, infoWindow, map.getCenter())
       );
-    } // El navegador no soporta GEOLOCATION
+    } 
     else this.creaMarcador(false, mapa, infoWindow, map.getCenter());
   }
 }
