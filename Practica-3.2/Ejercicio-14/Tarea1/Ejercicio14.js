@@ -2,13 +2,13 @@
 
 class Player {
   constructor() {
-    Storage.prototype.setObj = function(key, obj) {
+    Storage.prototype.setObj = function (key, obj) {
       return window.localStorage.setItem(key, obj);
-    }
-    Storage.prototype.getObj = function(key) {
+    };
+    Storage.prototype.getObj = function (key) {
       var value = this.getItem(key);
       return JSON.parse(value);
-    }
+    };
     this.on = false;
     this.created = false;
     this.blob = window.URL || window.webkitURL;
@@ -16,46 +16,36 @@ class Player {
       console.log("Your browser does not support Blob URLs :(");
       return;
     }
-    //window.localStorage.clear();
     this.cloudSave = window.localStorage.getItem("saved");
-    console.log(this.cloudSave);
-    this.load();
-    if (this.cloudSave) {
-      let aux1 = window.localStorage.getItem("names");
-      var res = JSON.parse(aux1);
-      this.playlistSongNames = res;
+    if(this.cloudSave){
+      this.files = window.localStorage.getItem("files");
+        let aux1 = window.localStorage.getItem("names");
+        var res = JSON.parse(aux1);
+        this.playlistSongNames = res;
 
-      let res4 = window.localStorage.getObj("files");
-      this.files = res4;
+        let aux3 = window.localStorage.getItem("index");
+        var res3 = JSON.parse(aux3);
+        this.playlistIndex = res3;
 
-      for(let i = 0; i < this.files.length; i++){
-
-        this.fileData = new LocalFileData(files[i]);
-        this.archive = constructFileFromLocalFileData(this.fileData);
+        let res2 = window.localStorage.getObj("playlist");
+        this.playlist = res2;
         
-        var fileURL = this.blob.createObjectURL(this.archive);
-        this.playlist.push(fileURL);
-        $("main").append("<section>" + this.archive.name + "</section>");
-      }
+        $(document.getElementsByName("Actual-Song")[0]).html(
+          '<audio crossorigin="anonymous" name="audio" src="' +
+            this.playlist[this.playlistIndex] +
+            '"></audio>'
+        );
 
-
-      let aux3 = window.localStorage.getItem("index");
-      var res3 = JSON.parse(aux3);
-      this.playlistIndex = res3;
-
-      //$("main").html(window.localStorage.getItem("main"));
-      console.log(window.localStorage.getItem("song"));
-      $(document.getElementsByName("Actual-Song")).html(window.localStorage.getItem("song"));
-      document.getElementsByName("Power")[0].disabled = false;
-      
+        document.getElementsByName("Power")[0].disabled = false;
+        this.load();
     } else {
       this.playlistSongNames = [];
       this.playlist = [];
       this.playlistIndex = 0;
       this.files = [];
     }
-    this.cloudSave = false;
   }
+
   powerOn() {
     if (this.on === false) {
       $("label").html("🟩");
@@ -148,6 +138,7 @@ class Player {
     if (this.on === true) {
       // Play or pause track depending on state
       if (this.playButton.dataset.playing === "false") {
+        console.log(this.audioElement);
         this.audioElement.play();
         $(document.getElementsByName("CurrentPlaying")[0]).html(
           "Playing: " + this.playlistSongNames[this.playlistIndex]
@@ -173,7 +164,11 @@ class Player {
     var fileURL = this.blob.createObjectURL(this.archive);
     this.playlistSongNames.push(this.archive.name);
     this.playlist.push(fileURL);
-    this.files.push(this.archive.path);
+    console.log(fileURL);
+    this.files.push(this.archive);
+
+    console.log(fileURL);
+
     $(document.getElementsByName("Actual-Song")[0]).html(
       '<audio crossorigin="anonymous" name="audio" src="' +
         this.playlist[this.playlistIndex] +
@@ -212,15 +207,18 @@ class Player {
   }
 
   save() {
-    console.log(this.playlist[0])
+    console.log(this.playlist[0]);
     window.localStorage.setItem(
       "song",
       document.getElementsByName("Actual-Song")[0].innerHTML
     );
-    window.localStorage.setItem("names", JSON.stringify(this.playlistSongNames));
+    window.localStorage.setItem(
+      "names",
+      JSON.stringify(this.playlistSongNames)
+    );
     window.localStorage.setObj("playlist", JSON.stringify(this.playlist));
     window.localStorage.setObj("index", JSON.stringify(this.playlistIndex));
-    window.localStorage.setObj("files", JSON.stringify(this.files));
+    window.localStorage.setObj("files", this.files);
     window.localStorage.setItem(
       "main",
       document.getElementsByName("songs")[0].innerHTML
@@ -231,24 +229,14 @@ class Player {
 
   load() {
     if (this.cloudSave) {
-      $(document.getElementsByName("Actual-Song")[0]).html(
-        window.localStorage.getItem("song")
-      );
+      //$(document.getElementsByName("Actual-Song")[0]).html(
+      //  window.localStorage.getItem("song")
+      //);
       $(document.getElementsByName("songs")[0]).html(
         window.localStorage.getItem("main")
       );
     }
-    
   }
-
-//  arraySave(){
-//    Storage.prototype.setObj = function(key, obj) {
-//      return window.localStorage.setItem(key, JSON.stringify(obj))
-//    }
-//    Storage.prototype.getObj = function(key) {
-//        return JSON.parse(window.localStorage.getItem(key))
-//    }
-//  }
 
   clear() {
     window.localStorage.clear();
