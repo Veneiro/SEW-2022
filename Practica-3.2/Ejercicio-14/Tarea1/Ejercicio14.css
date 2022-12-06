@@ -43,22 +43,21 @@ section {
 button {
   font-size: 1.5em;
   background-color: rgb(99, 99, 99);
+  color:white;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   text-align: center;
-  padding: 0.4em;
-  border: 0.1em;
-  padding: 0.4em;
   border-bottom: 0.1em groove;
   border-right: 0.1em groove;
   border-left: 0.1em groove;
-  padding: 0.8em;
+  padding:0.9em;
   height: 3em;
   width: 3em;
 }
 
 button:hover {
   background-color: rgb(146, 146, 146);
+  color:black;
 }
 
 button:nth-child(1){
@@ -68,9 +67,6 @@ button:nth-child(1){
   border-bottom-right-radius: 0.5em;
   text-align: center;
   color: black;
-  padding: 0.4em;
-  border: 0.1em;
-  padding: 0.4em;
   border-bottom: 0.1em groove;
   border-right: 0.1em groove;
   border-left: 0.1em groove;
@@ -96,13 +92,10 @@ button:nth-child(6){
   border-bottom-right-radius: 0.5em;
   text-align: center;
   color: black;
-  padding: 0.4em;
-  border: 0.1em;
-  padding: 0.4em;
   border-bottom: 0.1em groove;
   border-right: 0.1em groove;
   border-left: 0.1em groove;
-  padding: 1em;
+  padding: 1.1em;
   height: 3em;
   width: 5em;
 }
@@ -119,6 +112,7 @@ button:disabled:nth-child(6) {
 
 button:disabled {
   background-color: rgb(75, 75, 75);
+  color: rgba(255, 255, 255, 0.295);
 }
 
 input[type=file]{
