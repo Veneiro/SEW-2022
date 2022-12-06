@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="es" name="html">
+<html lang="es">
   <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
 
     <meta name="author" content="Mateo Rico Iglesias" />
-    <meta
-      name="description"
-      content="A page containing Exercise 14"
-    />
+    <meta name="description" content="A page containing Exercise 14" />
     <meta name="keywords" content="SEW, Exercises, 2022" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,13 +14,20 @@
     <link rel="stylesheet" href="./Ejercicio14.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
+
   <body name="Player">
+    <h1>Music Player</h1>
     <label name="power">🟥</label>
-    <input name="Importer" type="file" onchange="player.addSong(this.files)" />
+    <label>
+      Import a song:
+      <input
+        name="Importer"
+        type="file"
+        onchange="player.addSong(this.files)"
+      />
+    </label>
     <p name="CurrentPlaying">Playing:</p>
-    <main name="songs">
-      
-    </main>
+    <main name="songs"></main>
     <section>
       <button name="Power" onclick="player.powerOn()" disabled>OFF</button>
       <button name="Backward" onclick="player.previous()" disabled>⏮️</button>
@@ -38,17 +42,20 @@
         ⏯️
       </button>
       <button name="Forward" onclick="player.next()" disabled>⏭️</button>
-      <input
-        name="volume"
-        type="range"
-        name="volume"
-        onchange="player.volume()"
-        step="0.01"
-        min="0"
-        max="2"
-        value="1"
-        disabled
-      />
+      <label
+        >Volume
+        <input
+          name="volume"
+          type="range"
+          name="volume"
+          onchange="player.volume()"
+          step="0.01"
+          min="0"
+          max="2"
+          value="1"
+          disabled
+        />
+      </label>
       <button name="clear" onclick="player.clear()">Clear</button>
       <p name="Actual-Song"></p>
     </section>

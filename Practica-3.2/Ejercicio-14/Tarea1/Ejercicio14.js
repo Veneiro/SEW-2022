@@ -82,7 +82,7 @@ class Player {
 
   powerOn() {
     if (this.on === false) {
-      $("label").html("🟩");
+      $(document.getElementsByName("power")[0]).html("🟩");
       this.on = true;
       if (this.created == false) {
         this.init();
@@ -94,7 +94,7 @@ class Player {
       document.getElementsByName("Forward")[0].disabled = false;
       document.getElementsByName("volume")[0].disabled = false;
     } else if (this.on === true) {
-      $("label").html("🟥");
+      $(document.getElementsByName("power")[0]).html("🟥");
       this.on = false;
       if (this.created == true) {
         if (this.playButton.dataset.playing === "true") {
@@ -241,7 +241,7 @@ class Player {
         this.play();
         this.initAfterNext();
         this.play();
-      } else{
+      } else {
         this.playlistIndex = 0;
         $(document.getElementsByName("Actual-Song")[0]).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
@@ -260,10 +260,10 @@ class Player {
             '"></audio>'
         );
         this.playlistIndex += 1;
-        
+
         this.initAfterNext();
         this.play();
-      } else{
+      } else {
         this.play();
       }
     }
@@ -281,8 +281,7 @@ class Player {
         this.play();
         this.initAfterNext();
         this.play();
-      }
-      else{
+      } else {
         this.play();
       }
     } else if (this.playButton.dataset.playing === "false") {
@@ -295,8 +294,7 @@ class Player {
         this.playlistIndex -= 1;
         this.initAfterNext();
         this.play();
-      }
-      else{
+      } else {
         this.play();
       }
     }
