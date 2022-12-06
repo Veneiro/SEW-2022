@@ -62,12 +62,12 @@ class Player {
           this.playlistSongNames = names;
           let aux3 = window.localStorage.getObj("index");
           this.playlistIndex = aux3;
-          $(document.getElementsByName("Actual-Song")[0]).html(
+          $(document.querySelector("p:nth-child(7)")).html(
             '<audio crossorigin="anonymous" name="audio" src="' +
               this.playlist[this.playlistIndex] +
               '"></audio>'
           );
-          $(document.getElementsByName("CurrentPlaying")[0]).html(
+          $(document.querySelector("nth:child(4)")).html(
             "Playing: " + this.playlistSongNames[this.playlistIndex]
           );
         };
@@ -82,7 +82,8 @@ class Player {
 
   powerOn() {
     if (this.on === false) {
-      $(document.getElementsByName("power")[0]).html("🟩");
+      
+      $(document.querySelector('label:nth-child(2)')).html("🟩");
       this.on = true;
       if (this.created == false) {
         this.init();
@@ -94,7 +95,7 @@ class Player {
       document.getElementsByName("Forward")[0].disabled = false;
       document.getElementsByName("volume")[0].disabled = false;
     } else if (this.on === true) {
-      $(document.getElementsByName("power")[0]).html("🟥");
+      $(document.querySelector('label:nth-child(2)')).html("🟥");
       this.on = false;
       if (this.created == true) {
         if (this.playButton.dataset.playing === "true") {
@@ -175,7 +176,7 @@ class Player {
       // Play or pause track depending on state
       if (this.playButton.dataset.playing === "false") {
         this.audioElement.play();
-        $(document.getElementsByName("CurrentPlaying")[0]).html(
+        $(document.querySelector("nth:child(4)")).html(
           "Playing: " + this.playlistSongNames[this.playlistIndex]
         );
         this.playButton.dataset.playing = "true";
@@ -213,7 +214,7 @@ class Player {
           songObjectStore.add(song);
         });
 
-        $(document.getElementsByName("Actual-Song")[0]).html(
+        $(document.querySelector("p:nth-child(7)")).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
             this.playlist[this.playlistIndex] +
             '"></audio>'
@@ -232,7 +233,7 @@ class Player {
   next() {
     if (this.playButton.dataset.playing === "true") {
       if (this.playlistIndex + 1 < this.playlist.length) {
-        $(document.getElementsByName("Actual-Song")[0]).html(
+        $(document.querySelector("p:nth-child(7)")).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
             this.playlist[this.playlistIndex + 1] +
             '"></audio>'
@@ -243,7 +244,7 @@ class Player {
         this.play();
       } else {
         this.playlistIndex = 0;
-        $(document.getElementsByName("Actual-Song")[0]).html(
+        $(document.querySelector("p:nth-child(7)")).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
             this.playlist[this.playlistIndex] +
             '"></audio>'
@@ -254,7 +255,7 @@ class Player {
       }
     } else if (this.playButton.dataset.playing === "false") {
       if (this.playlistIndex + 1 < this.playlist.length) {
-        $(document.getElementsByName("Actual-Song")[0]).html(
+        $(document.querySelector("p:nth-child(7)")).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
             this.playlist[this.playlistIndex + 1] +
             '"></audio>'
@@ -272,7 +273,7 @@ class Player {
   previous() {
     if (this.playButton.dataset.playing === "true") {
       if (this.playlistIndex - 1 >= 0) {
-        $(document.getElementsByName("Actual-Song")[0]).html(
+        $(document.querySelector("p:nth-child(7)")).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
             this.playlist[this.playlistIndex - 1] +
             '"></audio>'
@@ -286,7 +287,7 @@ class Player {
       }
     } else if (this.playButton.dataset.playing === "false") {
       if (this.playlistIndex - 1 >= 0) {
-        $(document.getElementsByName("Actual-Song")[0]).html(
+        $(document.querySelector("p:nth-child(7)")).html(
           '<audio crossorigin="anonymous" name="audio" src="' +
             this.playlist[this.playlistIndex - 1] +
             '"></audio>'
@@ -308,7 +309,7 @@ class Player {
     window.localStorage.setObj("index", JSON.stringify(this.playlistIndex));
     window.localStorage.setItem(
       "main",
-      document.getElementsByName("songs")[0].innerHTML
+      document.querySelector("main").innerHTML
     );
     this.cloudSave = true;
     window.localStorage.setItem("saved", this.cloudSave);

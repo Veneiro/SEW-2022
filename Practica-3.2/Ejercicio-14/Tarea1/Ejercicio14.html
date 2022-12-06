@@ -15,9 +15,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
 
-  <body name="Player">
+  <body>
     <h1>Music Player</h1>
-    <label name="power">🟥</label>
+    <label>🟥</label>
     <label>
       Import a song:
       <input
@@ -26,12 +26,13 @@
         onchange="player.addSong(this.files)"
       />
     </label>
-    <p name="CurrentPlaying">Playing:</p>
-    <main name="songs"></main>
+    <p>Playing:</p>
+    <main></main>
     <section>
       <button name="Power" onclick="player.powerOn()" disabled>OFF</button>
       <button name="Backward" onclick="player.previous()" disabled>⏮️</button>
       <button
+        type="button"
         data-playing="false"
         role="switch"
         aria-checked="false"
@@ -47,7 +48,6 @@
         <input
           name="volume"
           type="range"
-          name="volume"
           onchange="player.volume()"
           step="0.01"
           min="0"
@@ -57,8 +57,9 @@
         />
       </label>
       <button name="clear" onclick="player.clear()">Clear</button>
-      <p name="Actual-Song"></p>
+      <p></p>
+      <h6>Music Player By Mateo Rico Iglesias</h6>
     </section>
+    <script src="./Ejercicio14.js"></script>
   </body>
-  <script src="./Ejercicio14.js"></script>
 </html>
