@@ -4,6 +4,30 @@ body {
   margin: 1em;
 }
 
+input[type=range] {
+  -webkit-appearance: none;
+  background:rgb(255, 255, 255);
+  box-shadow: 0em 0em 1.5em 0.1em black;
+  border:0.1em solid black;
+  height:7px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background:black;
+  border: 0.3em solid white;
+  height:1.5em;
+  width:1.5em;
+  border-radius: 1em;
+}
+
+input:disabled[type=range] {
+  color: blue;
+}
+
+p:nth-child(3){
+  font-weight: bold;
+}
+
 /*Especificidad: 001*/
 main {
   color: white;
@@ -77,34 +101,6 @@ button:disabled:nth-child(1) {
 
 button:nth-child(6){
   font-size: 1.5em;
-  background-color: greenyellow;
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  text-align: center;
-  color: black;
-  padding: 0.4em;
-  border: 0.1em;
-  padding: 0.4em;
-  border-bottom: 0.1em groove;
-  border-right: 0.1em groove;
-  border-left: 0.1em groove;
-  padding: 1em;
-  height: 3em;
-  width: 5em;
-}
-
-button:hover:nth-child(6) {
-  background-color: rgba(0, 255, 0, 0.774);
-  color:black;
-}
-
-button:disabled:nth-child(6) {
-  background-color: rgba(9, 255, 0, 0.336);
-  color:white;
-}
-
-button:nth-child(7){
-  font-size: 1.5em;
   background-color: orange;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
@@ -121,26 +117,18 @@ button:nth-child(7){
   width: 5em;
 }
 
-button:hover:nth-child(7) {
+button:hover:nth-child(6) {
   background-color: rgba(255, 145, 0, 0.774);
   color:black;
 }
 
-button:disabled:nth-child(7) {
+button:disabled:nth-child(6) {
   background-color: rgba(255, 166, 0, 0.336);
   color:white;
 }
 
 button:disabled {
   background-color: rgb(75, 75, 75);
-}
-
-input[type=range] {
-  background-color: aliceblue;
-}
-
-input:disabled[type=range] {
-  background-color: aliceblue;
 }
 
 input[type=file]{
