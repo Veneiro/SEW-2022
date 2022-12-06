@@ -14,14 +14,26 @@ input[type=range] {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background:black;
-  border: 0.3em solid white;
-  height:1.5em;
-  width:1.5em;
+  border: 0.1em solid white;
+  height:1.3em;
+  width:1.3em;
   border-radius: 1em;
 }
 
 input:disabled[type=range] {
-  color: blue;
+  -webkit-appearance: none;
+  background:rgb(32, 32, 32);
+  box-shadow: 0em 0em 1.5em 0.1em black;
+  border:0.1em solid black;
+  height:7px;
+}
+input:disabled[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background:rgb(192, 192, 192);
+  border: 0.1em solid rgb(161, 161, 161);
+  height:1.3em;
+  width:1.3em;
+  border-radius: 1em;
 }
 
 p:nth-child(3){
