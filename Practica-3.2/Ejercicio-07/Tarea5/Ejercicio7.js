@@ -1,5 +1,5 @@
 class Ej7 {
-  removeParagraph() {
+  show() {
     $("*").each(function () {
       for (var i = 0; i < $(this).parents().length; i += 1) {
         if ($(this)[i] != undefined) {

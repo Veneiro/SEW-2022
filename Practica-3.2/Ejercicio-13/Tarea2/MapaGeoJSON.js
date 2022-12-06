@@ -1,5 +1,5 @@
 "use strict";
-class KML {
+class GeoJSON {
   initMap(files) {
     let archivo = files[0];
 
@@ -16,7 +16,6 @@ class KML {
         mapaOviedo.data.addGeoJson(JSON.parse(reader.result));
       };
       reader.readAsText(archivo);
-      
       mapaOviedo.data.addListener("click", function (event) {
         infoWindow.setPosition(event.feature.getGeometry().get());
         infoWindow.setContent(event.feature.getProperty("name"));
@@ -29,4 +28,4 @@ class KML {
   }
 }
 
-var kml = new KML();
+var geo = new GeoJSON();

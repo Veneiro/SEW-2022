@@ -13,6 +13,162 @@
                 "name": " Mateo Rico Iglesias "
             },
             "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -5.848486559535893, 43.36586255897024
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Oviedo",
+                "name": " Luis Lopez Garcia "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -6.550104357409675, 43.17804303219015
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cangas de Narcea",
+                "name": " Benemérito Anacleto Piernavieja "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -67.496638235799, -29.157483656699927
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Chilecito, Argentina",
+                "name": " Melito Sacamoco Parahoy "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -5.662457016986879, 43.545138651650305
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Gijón",
+                "name": " Tomás Socorro Del Pozo "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -5.925058936037406, 43.559778064949036
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Avilés",
+                "name": " Deseado Sin Tenedor "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -94.43422808465574, 39.127292071569286
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "EEUU",
+                "name": " Dombina García Garcia "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -6.523314120922505, 43.534093513630154
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Barcia",
+                "name": " Nicomeda Zuzunaga Garcia "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -6.840077544207857, 33.96109225832617
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Marruecos",
+                "name": " Simplicia Piesplanos Parraverde "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -6.387731889748422, 43.54602659970272
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cadavedo",
+                "name": " Vitores Feo Alcoholado "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -6.5451999999999995, 43.404795715061766
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Navelgas",
+                "name": " Armelinda Víbora Sorda "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    2.1313203730163597, 41.388083838141604
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Barcelona",
+                "name": " Tesifonte Sin Fajardo "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -3.63146727116394, 40.40921803167939
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Madrid",
+                "name": " Galán Anacleto Parahoy "
+            },
+            "type": "Feature"
         }
     ],
     "type": "FeatureCollection"

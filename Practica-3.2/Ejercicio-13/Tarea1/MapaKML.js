@@ -6,7 +6,6 @@ class KML {
       zoom: 8,
       center: oviedo,
     });
-    let infoWindow = new google.maps.InfoWindow();
     this.lugares.forEach(
       function (place) {
         var coords = place.toString().split(",");
