@@ -1,0 +1,56 @@
+/*Especificidad: 001*/
+body {
+  color: black;
+  background-color: orange;
+}
+
+/*Especificidad: 011*/
+input[type="text"] {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+
+  color: black;
+  background-color: #bccd95;
+
+  text-align: center;
+  text-overflow: ellipsis;
+
+  grid-column-end: span 5;
+  grid-row-end: span 2;
+}
+
+/*Especificidad: 011*/
+input[type="submit"] {
+  text-align: center;
+  background: #d6d6d6;
+  font-size: 1.5em;
+  margin: 0.05em;
+  cursor: pointer;
+  transition: 0.2s ease-in all;
+  border-radius: 0.5em;
+  border: 0.1em solid black;
+}
+
+/*Especificidad: 021*/
+input[type="submit"]:hover{
+    background: #9a9a9a;
+}
+
+/*Especificidad: 001*/
+form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: fit-content;
+  margin: auto;
+  padding: 1em;
+}
+
+/*Especificidad: 011*/
+input[value="C"] {
+  grid-column-end: span 2;
+}
+
+/*Especificidad: 011*/
+input[value="+"] {
+  grid-row-end: span 2;
+}
