@@ -11,16 +11,12 @@
     // 100-CodigoPHP.php
     // Versión 1.0 10/12/2017 Juan Manuel Cueva Lovelle. Universidad de Oviedo
 
-    $apikey = "47b790fd0fc41878c80c57c9846132cb";
-    $ciudad = "Oviedo";
-    $codigoPais = "ES";
-    $unidades = "&units=metric";
-    $idioma = "&lang=es";
-    $url = "http://api.openweathermap.org/data/2.5/weather?q=" . $ciudad . "," . $codigoPais . $unidades . $idioma . "&APPID=" . $apikey;
+    $apikey = "d204d0030eb6607d27cc0fd1569ca4f7";
+    $url = "https://api.metalpriceapi.com/v1/latest?api_key=" . $apikey . "&base=USD
+    &currencies=EUR,XAU,XAG";
 
     // Se solicita el archivo JSON de la url que se pasa como parámetro y se recibe como un string
     $datos = file_get_contents($url);
-
     echo "<h2>JSON recibido</h2>";
 
     // Muestra el archivo JSON recibido como string maquetado en bonito
@@ -39,7 +35,7 @@
     }
 
     # Datos contenidos en el JSON
-    $estacion = $json->name;
+    $estacion = $json->carat;
     $pais = $json->sys->country;
     $lat = $json->coord->lat;
     $lon = $json->coord->lon;
