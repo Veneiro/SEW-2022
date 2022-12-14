@@ -76,6 +76,7 @@ porque sin duda alguna,
 aunque no aplique del todo al pie de la letra para tu sitio,
 sí creo que te ayudan muchísimo el tenerlas en mente
 justamente para priorizar al usuario.
+
 Así que te menciono estas dos reglas y espero que te sirvan
 para que siempre las tengas ahí presentes en temas de usabilidad.
 La primera es la regla de los cinco segundos.
@@ -83,6 +84,7 @@ Esta regla, si bien, como les explico,
 no es de ley que aplique para todos,
 nos viene bien porque lo que nos indica es que tenemos cinco segundos
 para impactar al usuario o al visitante que llega a nuestra página.
+
 Si nosotros queremos que el usuario se mantenga en nuestro sitio,
 tenemos este reto de tratar de captar su atención
 con claridad, con sencillez y con coherencia

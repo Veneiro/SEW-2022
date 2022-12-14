@@ -124,19 +124,19 @@ La introducción de la tecnología de la nube ha obligado a todos a reevaluar la
 #### UO acabado en 2 : Comentar 3 videos sobre la mala usabilidad en la Web y 3 sobre las buenas prácticas en la Web
 
 - Mala Usabilidad
->Video 1: https://www.youtube.com/watch?v=cIjNWxYDSFU - En este video se nos comentan ciertos errores relacionados a la usabilidad en la web como son el **uso de url demasiado largas o complejas** en caso de la estructura web, **utilizar imagenes o recursos sobredimensionados o contar con servidores de baja calidad** en caso de la velocidad, **No usar elementos adecuados para responsive o no adaptarlos correctamente a todos los navegadores o dispositivos** en caso de responsive, **el uso de estructuras como h1, h2... y no facilitar las conductas más fáciles como encontrar la dirección, el telefono** en caso de la estructura de contenido, **web no adecuada al lenguja que usará el usuario final** en caso de la adaptabilidad al lenguaje. Me parece un video sencillo, corto y que va directamente a los principales fallos que nos podemos encontrar para poder evitarlos de manera que pueda ser comprendido de una manera más sencilla.
+><a href="https://www.youtube.com/watch?v=cIjNWxYDSFU">Video 1</a>: En este video se nos comentan ciertos errores relacionados a la usabilidad en la web como son el **uso de url demasiado largas o complejas** en caso de la estructura web, **utilizar imagenes o recursos sobredimensionados o contar con servidores de baja calidad** en caso de la velocidad, **No usar elementos adecuados para responsive o no adaptarlos correctamente a todos los navegadores o dispositivos** en caso de responsive, **el uso de estructuras como h1, h2... y no facilitar las conductas más fáciles como encontrar la dirección, el telefono** en caso de la estructura de contenido, **web no adecuada al lenguja que usará el usuario final** en caso de la adaptabilidad al lenguaje. Me parece un video sencillo, corto y que va directamente a los principales fallos que nos podemos encontrar para poder evitarlos de manera que pueda ser comprendido de una manera más sencilla.
 
->Video 2: https://www.youtube.com/watch?v=p9o13k54GIA - 
+><a href="https://www.youtube.com/shorts/2H3wzz6enm8">Video 2</a>: En este video corto se nos presenta de una manera sencilla y clara que es la usabilidad web, acompañando esto de las 3 principales desventajas de tener una mala usabilidad en nuestra aplicación web.
 
->Video 3: https://www.youtube.com/watch?v=Ehot67NX4o0 - 
+><a href="https://www.youtube.com/watch?v=Ehot67NX4o0">Video 3</a>: En este video se nos presentan diversos errores relacionados con la usabilidad móvil y recursos bloqueados y las soluciones posibles de los mismos.
 
 - Buena Usabilidad
 
->Video 1:
+><a href="https://www.youtube.com/watch?v=p9o13k54GIA">Video 1</a>: Este segundo video nos habla sobre buesnas practicas que debemos de tener para nuestras aplicaciones web con el fin de que el usuario tenga una buena experiencia en la página además de sentir que tiene el control de lo que está haciendo en todo momento. En el video se nos nombran dos reglas principales a seguir como son: Tratar de captar la atención del usuario manteniendo la claridad, la sencillez y la coherencia en lo que queremos transmitir ya que los primeros segundos serán los cruciales para decidir si un usuario se quedará o no. La segunda regla nos dice que mientras menos clics haga el usuario para llegar a donde quieras que llegue más exitosa podrá ser la aplicación y la experiencia dentro de la misma. En el video también se nos muestran diversos tips de cara a aplicar en nuestros proyectos para mantener siempre una buena usabilidad.
 
->Video 2:
+><a href="https://www.youtube.com/watch?v=KLluZGWPyO4">Video 2</a>: En este video/master class se nos presenta de manera más desarrollada los principales conceptos o principios de usabilidad en una aplicación web así como posteriormente en base a esos conceptos se hace una exploración por diversos sitios web para identificar prácticas a destacar, recomendar o que deberían utilizarse.
 
->Video 3:
+><a href="https://www.youtube.com/watch?v=aMs1Gjq03Pc">Video 3</a>: Este video del propio canal de google nos muestra una serie de prácticas de usabilidad importantes de cara al uso de la aplicación web en dispositivos móviles. Es un video corto sencillo y que va directo a los puntos principales a tratar de cara a la usabilidad en dispositivos móviles.
 
 ### Trabajo 2
 ### Resumen del libro "No me hagas pensar" 3ª edición
@@ -176,27 +176,123 @@ No me hagas pensar de Steve Krug es un libro increíble sobre el diseño de inte
 ## Fecha - 21 / 10 / 2022
 ### Trabajo 1 : Entrada a la bitácora sobre adaptabilidad
 #### UO acabado en 2 : Buscar y comentar 3 artículos en revistas especializadas en adaptabilidad Web
->Artículo 1:
+><a href="https://sauvage-atelier.com/adaptabilidad-en-website/">Artículo 1</a>: En este artículo se nos habla sobre diversos puntos de la adaptabilidad web de cara a porqué deberías implementarla en tu sitio web y cómo deberías hacerlo. En estos puntos pasamos desde cómo y porqué realizar esta transición a la adaptabilidad hasta cuales son las ventajas y desventajas de esta aplicación. Concluye todo esto recordándonos la importancia de la adaptabilidad por el creciente uso de dispositivos móviles además de advertirnos de que las páginas adaptables siempre tendrán preferencia y estarán mejor posicionadas de cara a las búsquedas.
 
->Artículo 2:
+><a href="https://business.tutsplus.com/es/tutorials/what-is-responsive-web-design-definition-examples--cms-30843">Artículo 2</a>: En este artículo se nos da un repaso general a lo que sería un diseño web adaptable. En este artículo podremos encontrar los siguientes puntos de importancia:
+> - Principios básicos del diseño web adaptable
+> - Como funciona el diseño web adaptable en la vida real
+> - Por qué necesitamos un diseño web adaptable en nuestras aplicaciones web
+> - Por donde empezar para hacer un diseño web adaptable
+> 
+> En cada una de las partes que he mencionado con anterioridad el articulo nos muestra los diferentes puntos contenidos dentro de estas proveyéndonos de una pequeña explicación de cada uno de ellos. En el artículo se concluye diciéndo que el diseño web adaptable es algo que ha llegado para quedarse y que tiene muchas ventajas que pueden beneficiar al balance final de cualquier negocio.
 
->Artículo 3:
+><a href="https://www.latevaweb.com/diseno-web-adaptable">Artículo 3</a>: En este tercer artículo se nos presenta la adaptabilidad web centrada principalmente en el creciente uso de los dispositivos móviles de manera cotidiana. Comienza dando un repaso por cómo la web ha pasado de estar centrada pricipalmente en el uso del ordenador a cómo a día de hoy el uso del dispositivo móvil es el principal modo de consultar la misma por la comodidad que este proporciona. Seguido de lo anterior nos explica de manera sencilla lo que es el diseño web y como no surgió con el principal motivo de adaptar las páginas web a los dispositivos móviles. También menciona algunas técnicas que se utilizaban antes para representar las web en los diversos dispositivos.
+>
+>A continuación nos presenta las características principales de un diseño web adaptable analizándolas de manera sencilla y breve. Nos presenta también las diferencias entre un diseño web responsivo y uno adaptable aclarando la principal difenrecia entre estos métodos. Por último nos presenta la herramienta de Google la cual nos permite verificar si nuestro sitio web está adaptado de manera correcta a dispositivos móviles.
 ### Trabajo 2 : Búsqueda de herramientas de adaptabilidad
 #### Escribir una entrada sobre 3 herramientas de adaptabilida Web
 
+*Uso y opinión de las herramientas:*
+
+- <a href="https://www.bing.com/webmaster/tools/mobile-friendliness">Bing-mobile friendliness test tool</a>: Esta herramienta nos permite comprobar de manera sencilla la adaptabilidad de nuestro sitio web dándonos unas pequeñas indicaciones de los posibles fallos que se puedan estar produciendo. Su funcionamiento es sencillo, simplemente introducir el enlace de nuestra pagina en el cuadro de texto y tras unos instantes se nos mostrará el resultado de la prueba.
+- <a href="http://responsivetesttool.com/">Responsive Tool</a>: Esta herramienta nos permite visualizar en diferentes dispositivos nuestra pagina web para comprobar si se adapta de manera correcta a estos. El funcionamiento es sencillo, tras poner la url en el cuadro de texto se nos mostrará la pagina en el dispositivo mostrado por defecto. Arriba a la izquierda podremos modificar los dispositivos o resoluciones para poder comprobar la adaptabilidad en distintos tamaños de pantalla o dispositivos. El único problema es que no tiene ninguna función a parte de la visualización en dispositivos.
+- <a href="https://developer.chrome.com/docs/devtools/">Dev Tools</a>: Esta herramienta es la más sencilla debido a que viene por defecto con cualquier navegador. Nos mostrará, al igual que la anterior, una previsualización de la página en difentes dispositivos a nuestra elección. El problema de esta es el mismo que el de la anterior, más allá de tener una previsualización no tenemos más funciones ni de comprobación ni nada. Para usarla deberemos hacer los siguiente:
+  - Hacer clic derecho en la página y seleccionar la opción de inspeccionar
+  - En esta vista hacer clic en el botón que se encuentra arriba a la izquierda de la herramienta y que tiene un icono representando un telefono móvil y una tablet
+  - Por último sobre la vista de la derecha tendremos un desplegable que nos permitirá cambiar entre las vistas de diferentes dispositivos.
+#### Prueba de las herramientas anteriores
+*Herramienta de Bing:*
+
+Esta herramienta es útil pero bastante sencilla ya que no muestra mucho detalle de los errores. Solo tenemos comprobación de cuatro puntos principales y no nos da demasiada información cuando fallan.
+
+PUNTUACIÓN: 7
+
+<img src="./Multimedia/Fotos/Screenshot_8.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_11.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_15.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_19.png"/>
+
+*Herramienta de Responsive Tool:*
+
+Esta herramienta es sencilla pero efectiva de cara a comprobar la adaptabilidad en un gran número de dispositivos. A pesar de esto la herramienta es bastante simple y no proporciona información de errores. Incluso, como se puede ver en la página del principado de asturias, en ciertos casos no es capaz de cargar la página.
+
+PUNTUACIÓN: 6
+
+<img src="./Multimedia/Fotos/Screenshot_9.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_12.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_16.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_20.png"/>
+
+*Herramientas de Dev Tools:*
+
+Las Dev Tools de los navegadores son fáciles de usar y no requieren entrar a ninguna página externa, podríamos decir que se puede hacer una comprobación rápida en caliente de la adaptabilidad. Los problemas principales son la falta de comprobación de errores y que no hay muchos dispositivos disponibles a probar a pesar de que tenemos la opción de redimensionar a placer veo de más utilidad tener tamaños de dispositivos concretos.
+
+PUNTUACIÓN: 5
+
+<img src="./Multimedia/Fotos/Screenshot_10.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_13.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_17.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_21.png"/>
+
+*Herramienta de Google (Usada a modo de comparación):*
+
+Esta herramienta la he puesto más que nada como comparación ya que es la herramienta propuesta en el propio seminario y la que usamos en nuestras prácticas de laboratorio. Creo que es un buen ejemplo de herramienta. Podemos comprobar que no coincide exactamente con la de Bing en los errores obtenidos ya que cada una nos da errores en una página diferente. La principal diferencia está en como muestra los errores. A diferencia de la de Bing esta nos da los errores con más detalles como podemos ver en el ejemplo de la página del concejo de Valdés en la que la herramienta de google nos da varios errores.
+
+<img src="./Multimedia/Fotos/Screenshot_7.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_14.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_18.png"/>
+
+<img src="./Multimedia/Fotos/Screenshot_22.png"/>
+
+*Comparativa de características*:
+
+|                             | Herramienta de Bing | Responsive Tool | DevTools | Herramienta de Google |
+|-----------------------------|:-------------------:|:---------------:|:--------:|:---------------------:|
+| Muestra errores             |         SI          |         NO      |    NO    |          SI           |
+| Ofrece soluciones           |         SI          |         NO      |    NO    |          SI           |
+| Visionado en dispositivos   |         SI          |         SI      |    SI    |          SI           |
+
 ### Trabajo 3 : Comprobar la adaptabilidad
 #### Escribir una entrada sobre la comprobación de adaptabilidad del ejercicio de la calculadora RPN
+El único cambio necesario de cara a que sea adaptable es el de añadir:
+- ```height: fit-content``` a la zona de la botonera dentro del css
+- ```max-width: max-content;margin: auto;``` a la zona del body para que se centre de manera correcta en todos los dispositivos cosa que antes de esta modificación no funcionaba siempre.
+><a href="">Herramienta de Google</a>: La primera herramienta propuesta nos da que la página web es perfectamente adaptable
+<img src="./Multimedia/Fotos/Screenshot_6.png" alt="Herramienta de Google"/>
+
+><a href="https://www.w3.org/2016/11/mobile-checker-disabled/">Herramienta del W3</a> Esta página, que es la de la segunda herramienta propuesta, se encuentra aún desabilidata por lo que es imposible realizar la comprobación.
+
+><a href="https://www.bing.com/webmaster/tools/mobile-friendliness">Herramienta 1</a>: 
+La primera herramienta usada es la propia herramienta Bing de Microsoft, después de hacer un pequeño cambio en el comportamiento de los botones de la calculadora pasa sin problema.
+<img src="./Multimedia/Fotos/Screenshot_685.png" alt="Primera herramienta propuesta, Bing"/>
+
+><a href="http://responsivetesttool.com/">Herramienta 2</a>: La segunda herramienta no nos da una descripción de los errores pero si nos permite ver la adaptabilidad de nuestra pagina en diferentes dispositivos, por lo que he podido revisar es perfectamente adaptable a estos.
+<img src="./Multimedia/Fotos/Screenshot_4.png" alt="Segunda herramienta propuesta, Responsive Tool"/>
+
+><a href="https://developer.chrome.com/docs/devtools/">Herramienta 3</a>: Las propias Dev Tools de los navegadores mismamente nos permiten también realizar una comprobación de adaptabilidad y en este caso la calculadora también pasa la prueba de manera exitosa.
+<img src="./Multimedia/Fotos/Screenshot_5.png" alt="Tercera herramienta propuesta, Dev Tools"/>
 
 # Seminario 4
 
 ## Fecha - 04 / 11 / 2022
 ### Trabajo 1 : Entrada a la bitácora sobre "Accesibilidad en la Web"
 #### UO acabado en 2 : Entrada sobre 3 sitios Web especializados en accesibilidad en la Web
->Página 1: https://sauvage-atelier.com/adaptabilidad-en-website/
+>Página 1: 
 
->Página 2:
+>Página 2: 
 
->Página 3:
+>Página 3: 
 ### Trabajo 2 : Sitio web de una comunidad o ciudad autónoma
 #### UO acabado en 2: Escribir una entrada sobre la web de Asturias
 
