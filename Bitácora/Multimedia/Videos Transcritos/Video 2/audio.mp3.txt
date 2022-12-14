@@ -1,0 +1,389 @@
+Definitivamente, no hay nada más frustrante que entrar a una página web y no poder navegarla.
+O peor aún, no encontrar lo que estás buscando.
+¿Sabes qué es la usabilidad web?
+¿Qué acciones puedes llevar a cabo para mejorarla?
+¿Qué errores debes evitar?
+Esto y mucho más en este siguiente video.
+¡No te lo pierdas!
+Hola, mi nombre es Israel Mezquita.
+Bienvenido una vez a mi canal.
+Si eres alguien que te gusta todo lo que tiene que ver con las páginas web y cómo mejorarlas,
+no te pierdas este próximo video y la serie que hemos venido haciendo respecto a este tema.
+Te invito a que te suscribas y que actives las notificaciones
+para que te llegue de primera mano cada que publique un video de esta serie.
+Así que vamos a ello, vamos a darle.
+Para hablar de usabilidad web, lo primero que quiero hacer es definir qué es esto de una forma clara y sencilla.
+La usabilidad web no es otra cosa más que la facilidad que tiene un usuario
+para interactuar con una página y usarla.
+Es decir, navegarla, comprenderla o aún mejor realizar una acción
+a través de lo que llamamos Call to Actions o CTAs que se hayan diseñado estratégicamente en nuestra página
+para lograr un objetivo.
+Si no sabes a qué me refiero con el tema de llamados a la acción o Call to Actions,
+te invito a que veas el video que te dejo aquí arriba en la tarjeta
+para que puedas comprender de manera detallada qué es un CTA
+y cómo aplicarlos de manera exitosa en tu página web.
+Recuerda, mientras más fácil le hagas la vida al usuario, mejor usabilidad tendrá tu página web.
+No hagas pensar tanto al usuario.
+Mejor hazle sentir para que pueda actuar conforme a lo que sean tus objetivos.
+Algunas de las principales ventajas de la usabilidad web son
+mejorar la satisfacción de tus usuarios.
+Esto impacta directamente en lo que llamamos experiencia de usuario.
+Conseguir más tráfico.
+Esto, sin duda alguna, beneficia al tema del SEO o lo que llamamos posicionamiento orgánico,
+así como al tráfico referenciado, ya que cuando logras tener una buena usabilidad en tu página,
+los usuarios van a tender a recomendar la misma.
+Aumenta la duración de la navegación de un visitante.
+Esto, por ende, reduce el rebote y afecta también directamente de manera positiva
+al tema del posicionamiento orgánico.
+También te ayuda a convertir visitas en usuarios recurrentes,
+usuarios recurrentes en prospectos potenciales, y lo mejor de todo, prospectos potenciales en clientes.
+Por último, una buena usabilidad te va a ayudar a que sea una página
+que genere recomendaciones con otros usuarios, pero lo más importante de todo
+te va a ayudar a convertir según sean tus objetivos o vender.
+Venga, venga, venga, venga, venga, venga, venga.
+El principal fundamento para una correcta usabilidad web es pensar siempre en el usuario,
+antes que nada.
+Si tú sacas al usuario del centro de usuario,
+realmente estás perdido en cuanto a temas de usabilidad.
+El usuario debe tener el control.
+Se debe sentir completamente libre dentro de tu sitio.
+Es decir, él tiene que poder decidir a dónde picarle, a qué sección entrar,
+qué acción realizar dentro de tu sitio.
+Esto es sumamente importante.
+Nunca, nunca debe sentirse perdido en tu sitio.
+La correcta usabilidad te ayudará a que el usuario siempre tenga claro
+en qué sección está o a qué sección tiene que ir.
+Un error fatal en este fundamento de centrarnos en el usuario
+es querer obligarle qué es lo que tiene que hacer o hacia dónde se tiene que dirigir.
+Es muy molesto, muy molesto para los usuarios que les obligues a algo
+y que les hagas perder su tiempo en ello.
+Y esto me lleva al siguiente punto.
+Debes evitar acciones intrusivas, es decir,
+abusar de los famosos pop-ups o imágenes que saltan constantemente en tu página
+o, por ejemplo, audios o músicas que se reproducen de manera automática
+sin que el usuario así lo desee.
+O peor aún,
+ventanas de chat que estén brincando e invadiendo
+cada que el usuario cambia de sección, aún cuando él ya decidió cerrarlo.
+Todo este tipo de acciones intrusivas generan una muy mala experiencia
+y provocan que tu usuario abandone el sitio
+y no solo lo abandone, sino que se quede con una mala referencia de él.
+Existen dos reglas que se han vuelto muy populares en el mundo de internet.
+Sin embargo, no son reglas que estén científicamente comprobadas
+ni que apliquen para todo tipo de páginas.
+Sin embargo, creo que es importante mencionárselas
+porque sin duda alguna,
+aunque no aplique del todo al pie de la letra para tu sitio,
+sí creo que te ayudan muchísimo el tenerlas en mente
+justamente para priorizar al usuario.
+Así que te menciono estas dos reglas y espero que te sirvan
+para que siempre las tengas ahí presentes en temas de usabilidad.
+La primera es la regla de los cinco segundos.
+Esta regla, si bien, como les explico,
+no es de ley que aplique para todos,
+nos viene bien porque lo que nos indica es que tenemos cinco segundos
+para impactar al usuario o al visitante que llega a nuestra página.
+Si nosotros queremos que el usuario se mantenga en nuestro sitio,
+tenemos este reto de tratar de captar su atención
+con claridad, con sencillez y con coherencia
+de lo que queremos transmitir, venderle o de lo que queremos lograr
+en solo los primeros cinco segundos.
+La segunda de ellas es la regla de los tres clics.
+Esta regla al igual tiene sus variantes dependiendo el tipo de sitio,
+pero nos ayuda a entender muy bien el concepto de pensar.
+Mientras menos clics le tome a mi visitante, a mi usuario,
+llegar a donde yo quiero que llegue,
+más exitosa va a ser mi conversión
+y más exitosa va a ser la experiencia de navegación dentro de mi página.
+Así que ya sabes, sé concreto y que no sean demasiados clics
+que le tome a tu visita llegar a donde tú quieres que llegue.
+Y a continuación, te quiero dejar unos tips muy concretos
+para que puedas ir mejorando cada vez más la usabilidad de tu página web.
+El primero de ellos es la velocidad de carga de tu sitio.
+Recuerda, a mayor velocidad de carga, mayor retención de usuarios,
+por lo tanto, mejor experiencia e impactamos en el tema del posicionamiento orgánico.
+Acuérdate de optimizar muy bien todos los elementos que vayas a meter en tu página,
+sean fotos, videos, gráficos, banners, call to action,
+todo, todo tiene que ir súper optimizado
+para que la página cargue lo más rápido posible.
+Segundo tip tiene que ver con los menús de navegación.
+Estos tienen que ser muy claros y muy sencillos de usar.
+Un consejo muy importante en este tema es que evites meter demasiados subniveles
+o submenús en un sitio para que tu usuario llegue a algo.
+Es decir, cuando tú tiendes a hacer menús demasiado largos y con demasiada profundidad,
+corres el riesgo de que tu usuario se pierda en la misma navegación.
+Otro punto importante es la ubicación de los menús y el tamaño.
+Tienen que ser lo suficientemente visibles y muy bien ubicados
+para que el usuario pueda acceder a ellos de manera práctica.
+Yo sé que a veces queremos ser súper creativos
+y creo que hay páginas donde nos podemos permitir esto.
+Pero, pero aún así en la mayoría de los sitios,
+trata de que tus menús estén ubicados en lugares
+donde el usuario está acostumbrado a acceder a ellos.
+Esto, sin duda alguna, mejorará mucho la experiencia
+y logrará retener al usuario mucho más tiempo en tu sitio.
+Y otro punto respecto a los menús es la jerarquización.
+Tienes que priorizar la calidad por encima de la cantidad o la saturación.
+A veces me he encontrado con sitios que quieren poner menús demasiado grandes
+o no saben jerarquizarlos y hay secciones que tal vez no son tan importantes
+y pueden ir ubicadas al final de la página en lo que le llamamos footer
+o pueden ir ubicadas en un nivel a un tamaño más reducido, en un segundo nivel.
+Y no, simplemente lo ponen todo al mismo nivel, del mismo tamaño.
+Y claro, quedan menús súper saturados y súper extensos
+que lejos de ayudar confunden completamente a los visitantes.
+Otro gran tip que te puedo dar es el uso de colores de forma correcta
+o lo que podamos decir, que haya una armonía en el uso de ellos.
+Sin duda alguna, un correcto uso del color garantiza una muy buena experiencia
+y sobre todo que tu contenido sea consumido de una manera agradable para el usuario.
+Evita los contrastes ilegibles.
+He visto casos donde ponen fondos azules con texto rojo, por ejemplo,
+o ponen un fondo amarillo así súper chillón con un texto verde casi fosforecente
+o el contrario, ponen texto rojo sobre fondos muy oscuros como negros o azules
+y de verdad hagan la prueba, pónganse a leer estos textos si son complicadísimos de leer
+sientes que la vista se te mueve.
+¿Por qué? Porque no hay un contraste bueno para cumplir con lo que es la lectura.
+Así que sean súper cuidadosos en los contrastes que elijan
+al elegir su paleta de colores para temas de lectura dentro de su sitio web.
+Otro punto importante en el uso del color dentro de una web
+es que tenga las proporciones correctas la paleta que elijas.
+Que estén alineados primeramente al branding de tu marca,
+o sea que tengan coherencia con lo que es tu imagen.
+Dos, que estén bien bien equilibrados los tonos que vayas a poner.
+Y para esto hay una regla que nosotros en la agencia de marketing a veces utilizamos.
+No quiero decir que todas las ocasiones, pero sí en muchas de ellas
+la hemos usado y nos funciona muy bien.
+No es una regla exclusiva de la web, la usan muchísimo los decoradores de interiores
+para justamente armonizar espacios, pero ayuda bastante.
+Y es la famosa regla que se llama 60-30-10.
+Esto quiere decir que el 60% de tu página tenga un color dominante.
+Ya sea el fondo blanco, por ejemplo, o si es una imagen negra, fondo negro.
+El 60% de la proporción del color dominante tiene que estar presente en tu página.
+El otro 30% tiene que ser el color complementario o color secundario de tu marca.
+Y el otro 10% tiene que ver con el color que usamos
+para acentuar cosas o resaltar ciertas elementos como pueden ser nuestros llamados a la acción.
+Por eso se le llama la regla del 60-30-10.
+Un tip también respecto al color que puede parecer no tan importante,
+pero ahí sí hay estudios que lo demuestran.
+Es el tema de cuando ponemos links dentro de nuestro párrafo.
+Viene bien de pronto poner enlaces dentro de un mismo texto.
+Ahí mi recomendación es que los pongan en azul,
+en el azul tradicional de cuando vemos un hipervínculo.
+Esto es porque la asociación del usuario automáticamente identifica
+que es algo que se le puede dar clic y además que es algo que te va a llevar a otro sitio o a otra página.
+Yo sé que a veces por tema de diseño no se ve tan agradable,
+pero es una recomendación que nos hemos dado cuenta que cuando metemos links dentro del propio texto,
+viene bien que se marquen en azul.
+Si ustedes se dan cuenta, todas las plataformas que hay, redes sociales,
+cuando ustedes ponen un link se los pone en este color.
+Tiene que ver justamente con un tema de asociación y usabilidad del usuario.
+Otro punto bien importante a considerar es el tema de los textos.
+Puedes decir qué tienen que ver los textos con la usabilidad
+y realmente tienen que ver mucho. Es muy importante.
+Primer punto es respecto al tamaño.
+Procura no poner textos demasiado, demasiado pequeños.
+Esto es un error muy común en muchas páginas.
+Recuerda que no todos tienen la misma vista que tú.
+Eso pensando que tú tengas muy buena vista.
+Así que procura no exagerar con el tamaño de tus contenidos.
+Otro punto importante respecto al tamaño es que recuerdes
+que el mismo Google lo puede interpretar de otra manera
+y por ahí te puede generar alguna penalización
+porque piense que estás tratando de engañarle
+con poner ciertas palabras clave a un tamaño muy reducido.
+Así que tanto por el tema de practicidad
+como por el tema de ser cuidadosos con los algoritmos de Google
+no te recomiendo que uses textos demasiado pequeños
+que se conviertan prácticamente ilegibles o ilegibles.
+Otro tema relacionado al texto y que tiene que ver con la usabilidad
+es la cantidad de texto que utilizas en tus páginas web.
+Elimina lo que sobra. Así de fácil.
+No metas texto por simplemente meter
+y que creas que por meter más vas a lograr una mejor experiencia
+o peor aún, que creas que por meterle mucho texto
+vas a lograr un mejor posicionamiento orgánico.
+Justamente en los temas de SEO, en los nuevos algoritmos de Google
+estos se centran no en la cantidad
+sino en la calidad de los contenidos.
+Otro tema importante que quiero hablar
+y que sé que hay opiniones súper divididas en esto
+pero bueno, les hablo desde mi experiencia
+y lo que he ido viendo con el paso de los años
+es el tema del famoso scroll.
+Es esta acción que nosotros podamos hacer con el mouse
+para navegar una página hacia arriba o hacia abajo
+o la famosa barrita que nos aparece para poder movernos de manera vertical
+o incluso en algunas ocasiones horizontal dentro de los sitios.
+Hoy en día recuerda que muchos usuarios
+gracias a los dispositivos móviles y a las pantallas táctiles
+están acostumbrados al uso del scroll.
+Así que úsalo a tu favor dentro de tu página web.
+Un punto súper importante cuando consideres meter scrolls
+o lo que llamamos scroll down
+para que la gente pueda ir bajando, bajando dentro de tu sitio
+es que no pierdas de foco que lo más importante
+que quieras transmitir de primera mano en la sección que llegue el usuario
+tiene que estar visible en el primer encuadre
+o en la primera parte de tu página.
+Esto justamente para captar su atención
+y que fomente la navegación hacia abajo.
+El scroll bien aplicado, o sea, cuando lo hacemos bien de manera ordenada
+agradable a la vista, realmente ayuda mucho a presentar información larga
+o cuando tenemos contenidos más extensos o más densos de transmitir o digerir
+nos ayuda mucho para hacerlo de una manera amigable y ordenada.
+Y claro, aquí entra muchísimo la creatividad de cómo vayas presentando el contenido
+mientras el usuario va navegando vertical o horizontalmente.
+Y aunque, como les decía, los usuarios están muy acostumbrados al tema del scroll
+por la misma navegación que hacen en los dispositivos móviles
+a través de gestos táctiles, hay que tener mucho cuidado
+en no cometer errores dentro de la propia funcionalidad del scroll.
+Y un tip que te va a ayudar muchísimo
+si a ti te gusta implementar páginas con bastante scroll
+es que dejes tu menú principal, o sea, es decir,
+donde estén tus secciones más importantes o que más te interese que consuman los usuarios
+lo dejes lo que llamamos fixed o lo dejes anclado
+en la parte de arriba de la pantalla si es que tu menú está arriba.
+Es decir, de manera que el usuario, por más scroll que haga
+y por mucho que haya bajado o descendido dentro de la página
+siempre, siempre le des la opción de poder irse a cualquiera de las secciones que más te interesa
+sin importar en qué punto de tu sitio se encuentre.
+Así que este tip no lo olvides, es muy, muy bueno
+para que en todo momento el usuario pueda tomar decisiones de navegación.
+Otro tip muy importante en temas de usabilidad, sobre todo en sitios de medianos a grandes.
+Me refiero a medianos a grandes en cuanto a cantidad de secciones, estructura y cantidad de información.
+Son los famosos breadcrumbs o migas de pan como le llaman.
+Estos son los enlaces o textos que vas encontrando en alguna ubicación de tu sitio.
+Normalmente siempre vienen pues en la partecita de arriba o abajo de tu menú principal.
+Mientras tú vas ingresando a una sección, subsección, subsección
+te va apareciendo como las carpetas cómo está estructurada tu navegación
+y cómo has ido adentrándote en niveles más profundos.
+Estas son las llamadas migas de pan.
+Entonces, estas nos ayudan muchísimo a que el usuario siempre en todo momento sepa
+uno, en qué sección se encuentra
+y dos, qué tan profundo está en cuanto a su navegación o los clics que fue dando
+y tres, que pueda regresar en cualquier momento a cualquiera de los niveles superiores de esta.
+Otro tema no menos importante es el tema de los famosos buscadores internos.
+Es decir, los buscadores que integramos dentro de nuestro sitio web.
+Es importante en este punto entender que si no logras implementar e integrar un buen buscador
+dentro de tu sitio, va a generarle muchísima, muchísima frustración a tus usuarios
+y se van a terminar saliendo de tu página.
+Primero que nada, un buscador interno tiene que estar muy bien ubicado,
+es decir, de manera muy accesible en cualquier momento de la navegación
+y dos, tiene que estar presente durante todo tu sitio.
+No solo lo debes ubicar en algunas secciones, ya que justamente la función de un buscador
+es poder acceder en cualquier momento para hacer una consulta dentro de algún contenido de tu sitio.
+Y lo que sin duda alguna es más importante y que puede sonar un poco obvio,
+pero lamentablemente, híjole, creo que más del 50% de las personas que implementan buscadores
+no lo contemplan, es que éste arroje resultados reales, fiables y de manera amigable.
+Una recomendación es que tus buscadores los hagas muy semánticos y autocompletables.
+De esta manera te aseguras que cuando el usuario empiece a teclear,
+sí o sí lo va a llevar a un resultado, a una búsqueda o a una página
+que sí existe dentro de tu propio sitio.
+Y pues bueno, en este punto no está de más recordarles que solo lo implementes si realmente vale la pena.
+Acuérdense que hemos estado viendo en videos pasados cómo estructurar un sitio web,
+cómo debe estar nuestra jerarquía de menús, en fin, todo lo que hemos ido aprendiendo
+yo te pido que lo apliques justamente en este tipo de decisiones.
+Si realmente mi sitio amerita tener un buscador, porque si tú tienes una página
+donde únicamente tienes cinco productos, tres, diez productos,
+realmente no creo que valga la pena desperdiciar un espacio
+que sí podrías utilizar de una manera más creativa para meter un buscador.
+Así que no lo olvides, analiza muy, muy bien si realmente vale la pena
+meter un buscador interno dentro de tu página web.
+Y el último punto que te quiero compartir respecto a temas de usabilidad como tips
+tiene que ver con el tema que llamamos responsive design o diseño responsivo.
+Esto es justamente que tu página web, que el diseño de la misma se vea bien
+y que sobre todo sea funcional en cualquier tipo de pantalla, resolución o dispositivo,
+sea computadora, sea un teléfono móvil, sea una tablet o aún como ahora está muy de moda,
+incluso en las famosas Smart TVs que también ahí se puede navegar bien.
+Un tip importante a considerar aquí, sobre todo en la parte de funcionalidad
+que le vas dando a tu sitio, tiene que ver con el tema de los botones.
+En la versión responsiva a dispositivos móviles hay que acordarnos que no existe
+lo que nosotros llamamos over, es decir, si tú en tu computadora pasas el mouse
+sobre algún botón o sobre algún banner, normalmente lo que tiene, lo más común
+es que haya un cambio de color, un cambio de imagen, que haga alguna animación,
+algún movimiento. Esto no existe en las versiones o de tabletas o de dispositivos móviles.
+Entonces es bien importante que lo tengas en cuenta a la hora que adaptes,
+a la hora que adaptes tus diseños a estas versiones, consideras que no existe este tipo de acciones
+porque al final ahí solo existe el click o lo que llamamos el touch.
+Otro punto importante hablando de diseño responsivo es que debes estructurar muy bien
+y diseñar muy bien con tu área de UI design o con tu área web.
+Tienes que diseñar muy bien cómo se van a desplegar tus menús, tus submenús
+o tus secciones principales en tus páginas web en estas versiones para dispositivos y tabletas.
+También es importante dónde vas a ubicar estos menús, es decir,
+no siempre tienen que estar ubicados en la misma posición,
+sí tienen que guardar una relación en cuanto a que el usuario no sienta que está navegando otro sitio,
+que no es el que él vio en la versión a la mejor de escritorio,
+pero sí puedes darle cierta usabilidad.
+De hecho he visto que últimamente hay muchas páginas, no he visto tantas,
+pero sí he visto por ejemplo muchas aplicaciones como Gmail,
+donde el redactar un nuevo correo ya no viene arriba, ya viene abajo en una esquina
+y es lo más común y es el alcance más rápido que un usuario tiene con el dedo
+para darle ahí redactar un nuevo correo.
+Entonces piensa en este tipo de cosas, piensa que en un entorno móvil
+sí vas a tener que adaptar tanto el despliegue de tus menús y secciones principales
+como la ubicación de ciertos elementos.
+Y por último, algo que va a mejorar muchísimo
+y que es un error que muchos todavía siguen cometiendo aún hoy,
+a pesar de que la mayor cantidad de usuarios ya proviene de dispositivos móviles,
+justamente en este tema de diseño responsivo
+es el espaciado o el espacio que ponemos entre un elemento y otro.
+Por ejemplo, es muy común que abres un menú en una versión de teléfono
+y están muy pegadas los botones o las secciones.
+Entonces claro, considerando el tamaño de un dedo, de pronto es complicado darle clic
+porque le picas a dos o le picas al que no era.
+Así que tengan mucho esto en cuenta.
+Chequen muy bien los espacios y los tamaños que ponen entre sus elementos
+en las versiones móviles y verán que si logran hacer pruebas de usabilidad
+donde ustedes mismos jueguen y hagan estos testings de navegación,
+se van a dar cuenta que van a mejorar muchísimo
+y esto se va a reflejar automáticamente en todos sus analytics y sus estadísticas
+de todos los visitantes que llegan a su sitio.
+Venga, vamos a acabar.
+Por último, les dejo algunos puntos a manera de conclusión
+para cerrar este tema, esperando que de verdad, de verdad,
+todo lo que les platiqué sea de gran ayuda
+y lo puedan aplicar en sus proyectos web o con sus equipos de trabajo
+o si están por iniciar algo, que los tengan desde ahorita considerados
+para que la experiencia de sus visitantes sea muy buena
+y esto se refleje en sus objetivos comerciales.
+Primero y muy importante es no olvides quién es tu usuario, quién es tu cliente, ¿vale?
+Es decir, no pierdas este foco, tu cliente no son tus compañeros de trabajo,
+tu cliente no es el diseñador que está haciendo tu página,
+tu cliente no es la agencia que contrataste para hacer tu página,
+así que no pierdas el enfoque de quién es tu usuario y quién es tu cliente.
+Recuerda que tu cliente no necesariamente tiene que procesar o entender las cosas
+como tú las entiendes, así que acuérdate de hacer muy buenas investigaciones
+para saber qué le gusta y cómo le gusta consumir los contenidos de tu sector o de tu nicho.
+Recuerda, es muy simple, si no es usable, es decir, si no se puede usar, simplemente no sirve,
+no le busques más, si es complicado, no sirve.
+Para respaldar esto último, hay una frase que me encanta que dice
+las personas ignoran el diseño que ignoran las personas.
+Creo que nada más acertado para representar esto.
+El gran Steve Jobs también dejó en su legado una frase que me encanta para explicar esto.
+Y él decía que el diseño no es sólo lo que se siente o lo que parece,
+sino que el diseño es cómo funciona.
+Así que acuérdate, realmente no sólo tiene que ver un tema estético, un tema armónico,
+tiene que ser un tema 100% funcional.
+Y recuerda que cuando nos referimos al diseño funcional, a la usabilidad web,
+no nos estamos refiriendo al diseño estético, ¿vale?
+No nos estamos refiriendo, ese es otro tema, no nos estamos refiriendo a la apariencia estética,
+nos estamos refiriendo a si algo dentro de su planeación y de su diseño, de su estructura,
+realmente, realmente va a funcionar para cumplir nuestros objetivos.
+Así que todo lo que te estuve compartiendo anteriormente en este video
+tiene que ver justamente con este punto.
+Que sea fácil de usar, que sea fácil de entender y fácil de interpretar
+por los visitantes que van a llegar a tu página web, ¿vale?
+Así que bueno, espero que te haya gustado este tema
+y de verdad espero que puedas empezar a implementarlo de inmediato en cualquier proyecto.
+Y sin más por el momento, de verdad te invito a que me dejes tus comentarios
+con dudas, sugerencias, si hay algún punto que no quedó claro
+o que te gustaría que profundizara más, déjamelo ahí, con gusto lo leo,
+con gusto lo tomaré en cuenta para siguientes videos.
+Y no olvides suscribirte, activar la campanita
+y si te gustó este video, yo te agradecería muchísimo que le des like,
+que le des manita arriba, porque también así me ayudas a que esto llegue a mucho más personas
+y claro, obviamente ayudamos a más personas que es la finalidad de este canal.
+Y pues bueno, hasta aquí este video. Muchas gracias, muchas gracias por tu tiempo.
+Muchas gracias si llegaste hasta este punto.
+Nos vemos en el siguiente video. No te lo pierdas.
+Será un tema súper interesante, así que hasta la próxima.
+Bye.

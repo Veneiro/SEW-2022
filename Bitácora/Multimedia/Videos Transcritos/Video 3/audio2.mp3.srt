@@ -1,0 +1,1568 @@
+1
+00:00:00,000 --> 00:00:05,640
+¿Qué tal a todos? Muy buenas y bienvenidos. Soy Armando Salvador y en el vídeo de hoy y siguiendo con el curso de
+
+2
+00:00:05,640 --> 00:00:06,720
+Search Console
+
+3
+00:00:06,720 --> 00:00:09,800
+vamos a continuar con el apartado de mejoras. Además,
+
+4
+00:00:09,800 --> 00:00:13,160
+una de las cosas interesantes a la hora de estar tocando y modificando lo que
+
+5
+00:00:13,160 --> 00:00:14,320
+sería Search Console
+
+6
+00:00:14,320 --> 00:00:17,920
+es que Google te rastrea de una manera más continua y además te va a dar información
+
+7
+00:00:17,920 --> 00:00:21,560
+bastante importante como justamente la que vamos a ver que tenemos hoy
+
+8
+00:00:21,560 --> 00:00:24,000
+referente a los elementos de usabilidad móvil
+
+9
+00:00:24,000 --> 00:00:26,560
+que al principio no parecían ser ningún problema
+
+10
+00:00:26,560 --> 00:00:30,400
+pero que han aparecido al volver a registrarse, en este caso el sidemap como
+
+11
+00:00:30,400 --> 00:00:32,000
+hicimos en el vídeo anterior
+
+12
+00:00:32,000 --> 00:00:33,440
+y te dejo por aquí
+
+13
+00:00:33,440 --> 00:00:37,720
+y si es tu primer vídeo y ya te dejo también por aquí el vídeo desde el
+
+14
+00:00:37,720 --> 00:00:40,560
+principio, es decir para que puedas configurar tu página y llevar a cabo
+
+15
+00:00:40,560 --> 00:00:41,040
+todo
+
+16
+00:00:41,040 --> 00:00:44,040
+hoy nos vamos a centrar en lo que es el apartado justamente
+
+17
+00:00:44,040 --> 00:00:46,040
+de las mejoras dentro de lo que es
+
+18
+00:00:46,040 --> 00:00:48,000
+el sitio web, es decir
+
+19
+00:00:48,000 --> 00:00:51,680
+dentro de lo que es Search Console nos comenta que deberíamos llevar a cabo
+
+20
+00:00:51,680 --> 00:00:54,880
+así que con esto nos vamos a poner manos a la obra, no sin antes recordaros
+
+21
+00:00:54,880 --> 00:00:57,040
+que os suscribáis al canal y le deis a la campanita
+
+22
+00:00:57,040 --> 00:00:59,840
+para estar informados a todas las novedades que estoy trayendo con este
+
+23
+00:00:59,840 --> 00:01:00,320
+curso
+
+24
+00:01:00,320 --> 00:01:03,240
+que poco a poco nos va a dejar justamente Search Console
+
+25
+00:01:03,240 --> 00:01:06,360
+completamente informado para que podamos hacerlo en cada una de vuestras
+
+26
+00:01:06,360 --> 00:01:08,920
+páginas y también invitaros como ya estés haciendo
+
+27
+00:01:08,920 --> 00:01:09,960
+muchos y muchas
+
+28
+00:01:09,960 --> 00:01:13,160
+a escribirme en la descripción y hacerme preguntas relacionadas con lo que estéis
+
+29
+00:01:13,160 --> 00:01:15,360
+encontrando dentro de vuestros Search Courses
+
+30
+00:01:15,360 --> 00:01:17,440
+que nos está ayudando a todos nosotros
+
+31
+00:01:17,440 --> 00:01:19,280
+al final a poder coger y mejorar
+
+32
+00:01:19,280 --> 00:01:20,800
+cada una de nuestras páginas
+
+33
+00:01:20,800 --> 00:01:24,080
+así que no perdamos más tiempo vamos a ponernos ya manos a la obra y como
+
+34
+00:01:24,080 --> 00:01:24,800
+podéis ver
+
+35
+00:01:24,800 --> 00:01:27,000
+os voy a compartir ya la pantalla
+
+36
+00:01:27,000 --> 00:01:29,360
+como podéis ver una de las cosas que tenemos
+
+37
+00:01:29,360 --> 00:01:33,360
+precisamente es bueno pues ese perfil de rendimiento que se va modificando
+
+38
+00:01:33,360 --> 00:01:36,560
+que se va actualizando y ya en la parte de abajo y si recordes de vídeos
+
+39
+00:01:36,560 --> 00:01:38,760
+anteriores que no teníamos esta información
+
+40
+00:01:38,760 --> 00:01:42,800
+nos ha aparecido dentro de Usabilidad Móvil la detección de doce de once
+
+41
+00:01:42,800 --> 00:01:44,200
+urles en este caso
+
+42
+00:01:44,200 --> 00:01:47,320
+es decir de las once páginas validadas
+
+43
+00:01:47,320 --> 00:01:50,920
+de las treinta y seis que tenemos en la parte de arriba y que aparecen si
+
+44
+00:01:50,920 --> 00:01:54,680
+pulsamos en el informe de mejoras
+
+45
+00:01:54,680 --> 00:01:58,480
+tenemos de ellas once que a pesar de haber sido validadas
+
+46
+00:01:58,480 --> 00:02:02,080
+tenemos que hay algún tipo de problema ves aquí tenéis distintas que están ya
+
+47
+00:02:02,080 --> 00:02:06,280
+funcionando correctamente que nos confundan estas sucede algo que
+
+48
+00:02:06,280 --> 00:02:09,040
+pues sucede que el texto es demasiado pequeño para leerlo
+
+49
+00:02:09,040 --> 00:02:10,200
+o los elementos
+
+50
+00:02:10,200 --> 00:02:13,880
+en que se puede hacer clic están demasiado unidos unos de los otros pero
+
+51
+00:02:13,880 --> 00:02:15,920
+fijaos una cosa que es interesante
+
+52
+00:02:15,920 --> 00:02:19,520
+antes había dado como todo que estaba bien parecía que no había
+
+53
+00:02:19,520 --> 00:02:22,880
+en ningún problema y no quería decir esto esto me habéis escrito muchos y
+
+54
+00:02:22,880 --> 00:02:25,960
+muchas y es importante simplemente que tener en cuenta
+
+55
+00:02:25,960 --> 00:02:28,800
+que lo que está sucediendo es que vuestra página va siendo recorrida y en
+
+56
+00:02:28,800 --> 00:02:29,600
+este caso
+
+57
+00:02:29,600 --> 00:02:33,040
+aunque parezca que son los mismos elementos no son once
+
+58
+00:02:33,040 --> 00:02:36,760
+colas que tenemos que están validadas y en este caso tenemos aquí justamente
+
+59
+00:02:36,760 --> 00:02:39,520
+que hay once que tiene algún tipo de error
+
+60
+00:02:39,520 --> 00:02:42,920
+pero antes de ello lo que vamos a hacer es verificar cada uno de ellos y vamos a
+
+61
+00:02:42,920 --> 00:02:43,600
+clicar
+
+62
+00:02:43,600 --> 00:02:47,000
+en el texto es demasiado pequeño para leerlo con lo cual
+
+63
+00:02:47,000 --> 00:02:52,320
+veremos que en este caso google nos va informando de cada una de las páginas
+
+64
+00:02:52,320 --> 00:02:55,480
+que ha detectado en este caso pues unas en el once de abril
+
+65
+00:02:55,480 --> 00:02:58,560
+otras el diez de abril y otras el nueve o el uno de abril
+
+66
+00:02:58,560 --> 00:03:02,440
+que justamente tienen alguna incidencia en este caso es una incidencia creo que
+
+67
+00:03:02,440 --> 00:03:05,560
+bastante evidente y bastante fácil de corregir
+
+68
+00:03:05,560 --> 00:03:09,000
+simplemente nos comenta que la página pues bueno tiene uno de los problemas
+
+69
+00:03:09,000 --> 00:03:12,360
+que es que en este caso es demasiado pequeñito
+
+70
+00:03:12,360 --> 00:03:15,840
+lo que sería el texto esto es algo que yo ya había detectado y que esperaba
+
+71
+00:03:15,840 --> 00:03:19,160
+justamente que google nos estuviera avisando y por lo cual
+
+72
+00:03:19,160 --> 00:03:22,640
+simplemente arreglando el primer elemento en el que tenemos el texto
+
+73
+00:03:22,640 --> 00:03:23,520
+demasiado pequeño
+
+74
+00:03:23,520 --> 00:03:26,880
+corregiríamos pero cuidado porque hay uno que sí que es un poquito más
+
+75
+00:03:26,880 --> 00:03:28,360
+complejo y a nivel de
+
+76
+00:03:28,360 --> 00:03:31,880
+estructura de páginas va a costar un poquito más de recuperar que es el caso
+
+77
+00:03:31,880 --> 00:03:34,000
+de los elementos en los que puedes hacer clic
+
+78
+00:03:34,000 --> 00:03:37,520
+están demasiado juntos unos de otros esto de que sucede
+
+79
+00:03:37,520 --> 00:03:40,720
+esto sucede porque cuando tenemos el html
+
+80
+00:03:40,720 --> 00:03:45,400
+voy a darle a probar la url
+
+81
+00:03:45,400 --> 00:03:48,880
+se nos ha detectado que hay seguramente algún elemento de menú
+
+82
+00:03:48,880 --> 00:03:52,080
+o algún elemento concreto en m psicoterapia
+
+83
+00:03:52,080 --> 00:03:55,200
+que la hora de los móviles están demasiado juntos
+
+84
+00:03:55,200 --> 00:03:59,240
+esto que sucede sucede que al final tienes que acabar corrigiéndolo
+
+85
+00:03:59,240 --> 00:04:02,640
+y sucede especialmente en apartados como son el área del menú
+
+86
+00:04:02,640 --> 00:04:06,280
+etcétera etcétera como podéis ver fijaos si esto es algo que me interesa
+
+87
+00:04:06,280 --> 00:04:08,320
+muchísimo quería llegar a este punto
+
+88
+00:04:08,320 --> 00:04:11,520
+porque creo que es de los más interesantes como habéis visto lo que
+
+89
+00:04:11,520 --> 00:04:13,400
+he hecho para que no nos perdamos
+
+90
+00:04:13,400 --> 00:04:17,040
+he ido a los mensajes de desde la descripción general ha ido hacia la
+
+91
+00:04:17,040 --> 00:04:19,320
+usabilidad móvil al apartado de mejoras
+
+92
+00:04:19,320 --> 00:04:23,120
+una vez en ellos he detectado pues que teníamos el texto pequeño
+
+93
+00:04:23,120 --> 00:04:26,000
+y he entrado en una de las páginas cualquiera
+
+94
+00:04:26,000 --> 00:04:29,480
+muchos de vosotros os quedáis aquí y esto me ha sucedido en otras ocasiones y
+
+95
+00:04:29,480 --> 00:04:31,520
+cuando da otras sesiones de formación
+
+96
+00:04:31,520 --> 00:04:34,600
+que me dicen ostres Armando pero y cómo puedo conseguir saber
+
+97
+00:04:34,600 --> 00:04:38,600
+qué es lo que está pasando que es aquello que google está viendo de mi
+
+98
+00:04:38,600 --> 00:04:40,440
+página para eso google
+
+99
+00:04:40,440 --> 00:04:44,560
+y añadiendo estos enlaces o clicando aquí nos presenta la opción de captura
+
+100
+00:04:44,560 --> 00:04:46,560
+de pantalla de lo que ve
+
+101
+00:04:46,560 --> 00:04:49,560
+creéis que esta es la página que tiene en psicoterapia
+
+102
+00:04:49,560 --> 00:04:50,600
+para nada
+
+103
+00:04:50,600 --> 00:04:53,760
+esta página es la típica página con el error
+
+104
+00:04:53,760 --> 00:04:56,520
+que llamamos recursos bloqueados
+
+105
+00:04:56,520 --> 00:05:01,600
+qué significa esto los recursos bloqueados son ficheros que en este caso
+
+106
+00:05:01,600 --> 00:05:06,640
+google no consigue detectar porque seguramente el robots que tenemos
+
+107
+00:05:06,640 --> 00:05:10,160
+los está bloqueando esto es algo muy habitual en wordpress y en muchos
+
+108
+00:05:10,160 --> 00:05:12,400
+proyectos como prestashop o magento
+
+109
+00:05:12,400 --> 00:05:16,520
+por lo tanto debemos de tenerlo muy en cuenta y debemos estar muy atentos
+
+110
+00:05:16,520 --> 00:05:20,960
+a conocer exactamente qué es lo que ve de nuestra página
+
+111
+00:05:20,960 --> 00:05:24,960
+porque en este caso lo que podemos ver es que ningún fichero de estilo se ha
+
+112
+00:05:24,960 --> 00:05:25,720
+cargado
+
+113
+00:05:25,720 --> 00:05:26,920
+como presenta aquí
+
+114
+00:05:26,920 --> 00:05:30,640
+sin ningún fichero de estilo se ha cargado es porque tenemos un problema
+
+115
+00:05:30,640 --> 00:05:33,880
+a nivel de recursos bloqueados y por tanto
+
+116
+00:05:33,880 --> 00:05:37,680
+a pesar de que el primer mensaje del texto es demasiado pequeño para leerlo
+
+117
+00:05:37,680 --> 00:05:38,920
+sí que es coherente
+
+118
+00:05:38,920 --> 00:05:42,480
+seguramente los elementos en los que puede hacer clic están demasiado
+
+119
+00:05:42,480 --> 00:05:46,880
+juntos claro es habitual fijaos que elementos más raros están saliendo esta
+
+120
+00:05:46,880 --> 00:05:53,880
+página no se ve así ni mucho menos si yo copio esta url
+
+121
+00:05:54,360 --> 00:05:56,320
+me voy al navegador
+
+122
+00:05:56,320 --> 00:05:58,800
+la pego y la abro
+
+123
+00:05:58,800 --> 00:06:03,360
+por supuesto aquí vais a tener la visualización a nivel de ordenador
+
+124
+00:06:03,360 --> 00:06:06,280
+pero lo interesante es que si haces botón derecho en cualquier lugar y
+
+125
+00:06:06,280 --> 00:06:09,760
+estando en cromo en firefox y le dais a inspeccionar
+
+126
+00:06:09,760 --> 00:06:12,600
+vais a poder visualizar el resultado en responsive
+
+127
+00:06:12,600 --> 00:06:17,360
+para ello simplemente debéis pulsar en este botón que hay en la parte izquierda
+
+128
+00:06:17,360 --> 00:06:18,520
+y al pulsar en él
+
+129
+00:06:18,520 --> 00:06:21,400
+os dice en qué dispositivo deseáis cargarlo
+
+130
+00:06:21,400 --> 00:06:24,840
+en un galaxy, en un pixel 2, un iphone x etc
+
+131
+00:06:24,840 --> 00:06:27,800
+la verdad es que el móvil en sí no es tan relevante lo importante es que una
+
+132
+00:06:27,800 --> 00:06:30,040
+vez la haya desactivado le deis
+
+133
+00:06:30,040 --> 00:06:32,400
+a en este caso actualizar
+
+134
+00:06:32,400 --> 00:06:34,840
+de esta forma sí que veréis realmente lo que se ve
+
+135
+00:06:34,840 --> 00:06:38,520
+como podéis ver entre lo que estamos viendo aquí que sí que es cierto que
+
+136
+00:06:38,520 --> 00:06:42,640
+tiene un texto pequeño y tal vez lo que estamos viendo la captura de pantalla
+
+137
+00:06:42,640 --> 00:06:44,960
+que nos está presentando en este caso google
+
+138
+00:06:44,960 --> 00:06:46,760
+hay una diferencia abismal
+
+139
+00:06:46,760 --> 00:06:47,800
+y esto sucede
+
+140
+00:06:47,800 --> 00:06:52,640
+porque google no está accediendo a lo que llamamos recursos bloqueados
+
+141
+00:06:52,640 --> 00:06:55,520
+esto es un problema directo del robots txt
+
+142
+00:06:55,520 --> 00:06:57,000
+y que deberemos inspeccionar
+
+143
+00:06:57,000 --> 00:06:58,640
+pero por ahora ya tenemos
+
+144
+00:06:58,640 --> 00:07:02,560
+que la problemática entre elementos seguramente no exista y que casi todos
+
+145
+00:07:02,560 --> 00:07:05,480
+los elementos que se pueden clicar por así decirlo
+
+146
+00:07:05,480 --> 00:07:09,040
+de alguna manera u otra voy a hacer todo el scroll para que lo veis pues tienen
+
+147
+00:07:09,040 --> 00:07:12,040
+un espaciado coherente lo digo porque muchas veces
+
+148
+00:07:12,040 --> 00:07:15,640
+en vez de hacer esta revisión que he hecho yo nos volvemos locos o locas en coger
+
+149
+00:07:15,640 --> 00:07:20,280
+y empezar a buscar a buscar a buscar y a inventarnos que es lo que puede haber
+
+150
+00:07:20,280 --> 00:07:23,160
+siempre validando los elementos de acuerdo
+
+151
+00:07:23,160 --> 00:07:26,440
+una vez tenemos esto podréis ver el html que se muestra aquí
+
+152
+00:07:26,440 --> 00:07:30,200
+y además más información acerca de algo clave
+
+153
+00:07:30,200 --> 00:07:34,680
+como son los recursos de la página estos son los recursos bloqueados y si
+
+154
+00:07:34,680 --> 00:07:37,240
+estáis entrando en este en esta visualización
+
+155
+00:07:37,240 --> 00:07:40,320
+y a través de una página web o tenéis una página web en prestashop
+
+156
+00:07:40,320 --> 00:07:44,000
+os dejo justamente que aparece ahora por arriba tema de recursos bloqueados sobre
+
+157
+00:07:44,000 --> 00:07:46,920
+prestashop para que reparéis en este caso el robots txt
+
+158
+00:07:46,920 --> 00:07:47,720
+de acuerdo
+
+159
+00:07:47,720 --> 00:07:50,600
+en el que es en este caso si estáis trabajando en wordpress
+
+160
+00:07:50,600 --> 00:07:52,040
+también os dejo otro vídeo
+
+161
+00:07:52,040 --> 00:07:55,680
+con el que vais a poder ver cómo reparar o corregir en esta exactamente
+
+162
+00:07:55,680 --> 00:07:58,000
+el robots txt o el fichero
+
+163
+00:07:58,000 --> 00:08:00,960
+que por así decirlo le hice a google donde puede acceder o no
+
+164
+00:08:00,960 --> 00:08:04,920
+para que estos problemas no sucedan porque mirad lo que nos está diciendo
+
+165
+00:08:04,920 --> 00:08:05,840
+armando
+
+166
+00:08:05,840 --> 00:08:07,240
+recursos de la página
+
+167
+00:08:07,240 --> 00:08:08,960
+sé que son 68
+
+168
+00:08:08,960 --> 00:08:10,640
+pero sabes que sólo he podido cargar
+
+169
+00:08:10,640 --> 00:08:14,160
+38 es que estamos hablando de casi la mitad
+
+170
+00:08:14,160 --> 00:08:17,240
+si pulsamos en él nos damos cuentas de cosas como
+
+171
+00:08:17,240 --> 00:08:20,360
+dice oye mira ha habido un error de redirección como es un
+
+172
+00:08:20,360 --> 00:08:23,680
+fichero externo veis veo que la url es externa no es problema
+
+173
+00:08:23,680 --> 00:08:26,480
+pero por lo contrario me encuentro en cosas como esta dice oye
+
+174
+00:08:26,480 --> 00:08:29,480
+sabes que me he encontrado que el fichero robots tuyo
+
+175
+00:08:29,480 --> 00:08:32,680
+es decir tu fichero robots de m psicoterapia os lo abro aquí
+
+176
+00:08:32,680 --> 00:08:36,600
+me está diciendo que no puede acceder al área de vp content plugins
+
+177
+00:08:36,600 --> 00:08:39,680
+y tampoco al área de vp content plugins asesores
+
+178
+00:08:39,680 --> 00:08:42,560
+todo lo que tiene que estar dentro de plugins y que son veis
+
+179
+00:08:42,560 --> 00:08:43,800
+ficheros de estilo
+
+180
+00:08:43,800 --> 00:08:46,400
+no está funcionando por lo tanto que problema tenemos
+
+181
+00:08:46,400 --> 00:08:49,480
+que google es que no va a interpretar correctamente nuestra página
+
+182
+00:08:49,480 --> 00:08:51,480
+es excelente que nos haya pasado esto
+
+183
+00:08:51,480 --> 00:08:54,520
+m psicoterapia para que lo podáis ver en un ejemplo real
+
+184
+00:08:54,520 --> 00:08:55,320
+si sigo
+
+185
+00:08:55,320 --> 00:08:59,000
+me di cuenta que la carpeta plugins justamente una carpeta que en este
+
+186
+00:08:59,000 --> 00:09:00,920
+caso en el tema que se está utilizando
+
+187
+00:09:00,920 --> 00:09:03,800
+tiene un montón de elementos no ha cargado
+
+188
+00:09:03,800 --> 00:09:06,040
+pero para para no solamente en ello
+
+189
+00:09:06,040 --> 00:09:10,000
+es que todo aquello que está dentro de la carpeta temas y este caso que se
+
+190
+00:09:10,000 --> 00:09:11,280
+llama yoga estudio
+
+191
+00:09:11,280 --> 00:09:15,440
+y la información del fichero css y cada una de las cosas que tiene
+
+192
+00:09:15,440 --> 00:09:17,520
+de nuevo están bloqueados
+
+193
+00:09:17,520 --> 00:09:19,200
+como va a entender nada google
+
+194
+00:09:19,200 --> 00:09:20,120
+imposible
+
+195
+00:09:20,120 --> 00:09:20,960
+por lo tanto
+
+196
+00:09:20,960 --> 00:09:23,440
+fijaos que si abrimos como he hecho yo
+
+197
+00:09:23,440 --> 00:09:25,640
+el fichero robots txt
+
+198
+00:09:25,640 --> 00:09:29,880
+podré mirar que seguramente haya algo que los está bloqueando y no le está
+
+199
+00:09:29,880 --> 00:09:31,480
+permitiendo acceder
+
+200
+00:09:31,480 --> 00:09:35,840
+por lo tanto miraremos un poquito sus reglas y las podréis validar
+
+201
+00:09:35,840 --> 00:09:39,520
+una de las cosas más interesantes o para mí creo que es interesante que lo
+
+202
+00:09:39,520 --> 00:09:40,280
+hagamos es
+
+203
+00:09:40,280 --> 00:09:43,480
+si cogéis a guardaros algunas de estas u rl
+
+204
+00:09:43,480 --> 00:09:46,400
+en cualquier sitio en cualquier editor lo que sea
+
+205
+00:09:46,400 --> 00:09:49,200
+para que podáis coger y tener las apuntadas
+
+206
+00:09:49,200 --> 00:09:52,160
+porque porque de esta forma vais a poder revisarla
+
+207
+00:09:52,160 --> 00:09:55,440
+cuál sería la forma de hacerlo más sencillo bueno pues mira justamente aquí
+
+208
+00:09:55,440 --> 00:09:57,960
+me di cuenta que pone vp content dems
+
+209
+00:09:57,960 --> 00:10:01,000
+y en este caso me di cuenta que por lo que sea no ha podido entrar
+
+210
+00:10:01,000 --> 00:10:02,080
+pues me vengo aquí
+
+211
+00:10:02,080 --> 00:10:05,680
+y tengo en este caso un fichero robots que dice oye mira dentro de lo que esté
+
+212
+00:10:05,680 --> 00:10:07,440
+dentro de vp contents
+
+213
+00:10:07,440 --> 00:10:09,200
+asterisco js
+
+214
+00:10:09,200 --> 00:10:13,320
+intenta coger lo que necesite y diréis ostras almando parece ser
+
+215
+00:10:13,320 --> 00:10:14,400
+que está correcto
+
+216
+00:10:14,400 --> 00:10:15,680
+pues no hay problema
+
+217
+00:10:15,680 --> 00:10:18,440
+si google nos dice que no será que no lo está
+
+218
+00:10:18,440 --> 00:10:19,280
+así que
+
+219
+00:10:19,280 --> 00:10:20,360
+pulsamos aquí
+
+220
+00:10:20,360 --> 00:10:25,240
+y nos podemos ir a hacer validaciones o validar el fichero robots txt
+
+221
+00:10:25,240 --> 00:10:25,760
+vale
+
+222
+00:10:25,760 --> 00:10:29,160
+hay una herramienta que eran herramientas antiguas vale sobre
+
+223
+00:10:29,160 --> 00:10:31,680
+herramientas de rastreo o paramedización
+
+224
+00:10:31,680 --> 00:10:34,640
+que era justamente donde teníamos todos estos elementos
+
+225
+00:10:34,640 --> 00:10:38,440
+muy bien que es lo que tenemos como veis pues este listado de opciones que nos
+
+226
+00:10:38,440 --> 00:10:39,480
+está dando aquí
+
+227
+00:10:39,480 --> 00:10:43,120
+necesitamos un validador de robots yo es una de las cosas que he hecho más de
+
+228
+00:10:43,120 --> 00:10:45,480
+menos dentro de lo que sería el
+
+229
+00:10:45,480 --> 00:10:46,800
+search console
+
+230
+00:10:46,800 --> 00:10:49,960
+o la actualización nueva de search console pero atención mira
+
+231
+00:10:49,960 --> 00:10:52,360
+os he compartido os he dejado aquí abierto
+
+232
+00:10:52,360 --> 00:10:53,920
+había compartido ya
+
+233
+00:10:53,920 --> 00:10:57,680
+hace un rato entonces justamente os lo he dejado dentro de lo que sería
+
+234
+00:10:57,680 --> 00:11:01,320
+vuestra en la descripción de este vídeo para que podáis acceder y ver un
+
+235
+00:11:01,320 --> 00:11:04,280
+poquito información acerca de qué era esto de comprobar
+
+236
+00:11:04,280 --> 00:11:08,120
+la herramienta o abrir la herramienta del probador de robots txt lo que hará es
+
+237
+00:11:08,120 --> 00:11:09,640
+abrirse vuestra página
+
+238
+00:11:09,640 --> 00:11:12,760
+y justamente en la parte superior os dirá si queréis esto es un poco ha
+
+239
+00:11:12,760 --> 00:11:15,960
+quedado bastante obsoleto esta es la versión antigua de
+
+240
+00:11:15,960 --> 00:11:19,920
+de ese console podéis darle justamente aquí y podéis entrar dentro de la página
+
+241
+00:11:19,920 --> 00:11:23,520
+entonces como tenemos hay una url que le hemos copiado antes
+
+242
+00:11:23,520 --> 00:11:26,200
+vale que era esta aquí que era una de las que había arriba y decía que el
+
+243
+00:11:26,200 --> 00:11:30,400
+fichero wp contendemns yoga studio css responsive css
+
+244
+00:11:30,400 --> 00:11:33,480
+no estaba funcionando y diréis ostras armando veo que tienes unas reglas aquí
+
+245
+00:11:33,480 --> 00:11:35,520
+que parece que sí que lo van a permitir
+
+246
+00:11:35,520 --> 00:11:38,680
+bueno pues vamos a ver si realmente estas reglas estaban tan bien o no
+
+247
+00:11:38,680 --> 00:11:42,040
+y si a lo mejor necesitan alguna corrección especial justamente para esta
+
+248
+00:11:42,040 --> 00:11:42,720
+página
+
+249
+00:11:42,720 --> 00:11:44,080
+al darle a probar
+
+250
+00:11:44,080 --> 00:11:46,480
+atención lo que nos dice dice hey
+
+251
+00:11:46,480 --> 00:11:51,160
+nos encontramos que wp contendemns está bloqueado y en este caso el
+
+252
+00:11:51,160 --> 00:11:54,720
+responsive css no nos lo está permitiendo por lo tanto
+
+253
+00:11:54,720 --> 00:11:59,160
+el halo que tenemos aquí arriba no está funcionando correctamente
+
+254
+00:11:59,160 --> 00:12:03,160
+mirad para que veáis cómo funciona voy a coger y voy a eliminar este elemento
+
+255
+00:12:03,160 --> 00:12:06,080
+vale y al eliminarlo y darle a probar
+
+256
+00:12:06,080 --> 00:12:08,520
+podéis ver que me salta el superior
+
+257
+00:12:08,520 --> 00:12:12,560
+vale entonces esto es una forma de poder que comprobar que vuestra página
+
+258
+00:12:12,560 --> 00:12:16,120
+está correctamente indexada o que tiene los valores correctos vale si yo por
+
+259
+00:12:16,120 --> 00:12:20,720
+ejemplo hago esta parte de aquí
+
+260
+00:12:20,720 --> 00:12:23,360
+ay lo estoy dando a guardar perdonad
+
+261
+00:12:23,360 --> 00:12:26,280
+me pienso ya que estoy citando el fichero y le vuelvo a dar a probar
+
+262
+00:12:26,280 --> 00:12:30,840
+veis me encuentro este caso de aquí y dice hey tengo un caso que lo está
+
+263
+00:12:30,840 --> 00:12:34,920
+no permitiendo y un caso permitiendo vale por lo tanto podéis ver que podéis
+
+264
+00:12:34,920 --> 00:12:40,080
+jugar con el enviado el el testear descargar el fichero robots etcétera en
+
+265
+00:12:40,080 --> 00:12:43,000
+mi caso encontrado que hay un error y el error está en la carpeta de
+
+266
+00:12:43,000 --> 00:12:47,040
+disallowedems bueno pues dejándolo de esta manera sé que puedo validar este
+
+267
+00:12:47,040 --> 00:12:48,160
+primer elemento
+
+268
+00:12:48,160 --> 00:12:50,600
+pero además he visto justamente
+
+269
+00:12:50,600 --> 00:12:53,960
+que había si me voy otra vez a la parte de osabilidad móvil no sólo uno
+
+270
+00:12:53,960 --> 00:12:57,440
+relacionado con el tema que se podría decir que ya lo hemos corregido sino
+
+271
+00:12:57,440 --> 00:13:01,800
+otros relacionados justamente me para arriba con los plugins así que cojo y
+
+272
+00:13:01,800 --> 00:13:03,640
+copio este por ejemplo
+
+273
+00:13:03,640 --> 00:13:08,440
+regreso aquí cuidado porque recordad que solamente necesitáis lo que viene justo
+
+274
+00:13:08,440 --> 00:13:11,840
+después de la url del dominio y le doy a probar
+
+275
+00:13:11,840 --> 00:13:15,400
+este me dice ey atención tienes un caso aquí en el que le estás diciendo de
+
+276
+00:13:15,400 --> 00:13:19,400
+nuevo que hay un disallow y no está funcionando pues podría eliminarlo
+
+277
+00:13:19,400 --> 00:13:21,000
+podría probarlo
+
+278
+00:13:21,000 --> 00:13:24,280
+me dice que todo está funcionando correctamente que va a salir justamente
+
+279
+00:13:24,280 --> 00:13:25,480
+por aquí
+
+280
+00:13:25,480 --> 00:13:29,360
+y que en este caso para estar funcionando y justamente habiendo
+
+281
+00:13:29,360 --> 00:13:32,280
+validado esta acción porque lo que tenemos en las reglas repetidas
+
+282
+00:13:32,280 --> 00:13:36,480
+puedo ver que el único que puede quedar así es el uve p well includes pues
+
+283
+00:13:36,480 --> 00:13:40,520
+vamos a ver si veis este caso de aquí que por un uve p incluides tiene alguna
+
+284
+00:13:40,520 --> 00:13:41,840
+relación más
+
+285
+00:13:41,840 --> 00:13:43,400
+si nos venimos por aquí
+
+286
+00:13:43,400 --> 00:13:45,400
+conten conten
+
+287
+00:13:45,400 --> 00:13:50,800
+perdonar por el scroll conten uve p conten uve p conten a priori en el uve p
+
+288
+00:13:50,800 --> 00:13:54,600
+incluides dentro de este elemento no hay ninguno pero siguiendo la norma me vais
+
+289
+00:13:54,600 --> 00:13:59,160
+a permitir coger y dejarlo ya de la misma forma así que eliminaré el uve p
+
+290
+00:13:59,160 --> 00:14:01,360
+includes elements que tengo aquí
+
+291
+00:14:01,360 --> 00:14:05,880
+lo dejo justo aquí guardado y ya tengo justamente los valores primeros y los
+
+292
+00:14:05,880 --> 00:14:07,920
+segundos le puedo dar a probarlo
+
+293
+00:14:07,920 --> 00:14:11,840
+o incluso que sepáis por si alguna vez tenéis
+
+294
+00:14:11,840 --> 00:14:13,680
+dudas
+
+295
+00:14:13,680 --> 00:14:17,880
+podéis hacer uve p includes inventaros un fichero que no existe como que
+
+296
+00:14:17,880 --> 00:14:19,280
+exista como este
+
+297
+00:14:19,280 --> 00:14:20,880
+y decir hoy este funcionaría
+
+298
+00:14:20,880 --> 00:14:24,360
+si está permitido a perfecto y si es css
+
+299
+00:14:24,360 --> 00:14:27,200
+veis que en realidad no estoy probando fichas a ver lo que tiene sentido es
+
+300
+00:14:27,200 --> 00:14:28,440
+probar ficheros reales
+
+301
+00:14:28,440 --> 00:14:31,560
+pero de esta manera validáis vuestros escuelos así que os dejo esta herramienta
+
+302
+00:14:31,560 --> 00:14:32,360
+justamente
+
+303
+00:14:32,360 --> 00:14:36,000
+para que lo podáis descargar vale y una de las cosas más importantes es cuando
+
+304
+00:14:36,000 --> 00:14:38,120
+le dais a enviar dices esto que hace
+
+305
+00:14:38,120 --> 00:14:42,360
+realmente lo que te permite es descargar el fichero actualizado y
+
+306
+00:14:42,360 --> 00:14:46,680
+automáticamente se me ha bajado un fichero robots txt que en unos minutos ya
+
+307
+00:14:46,680 --> 00:14:48,440
+subiré a través de ftp
+
+308
+00:14:48,440 --> 00:14:50,480
+justamente dentro de la página
+
+309
+00:14:50,480 --> 00:14:53,360
+por tanto con esto habremos corregido uno de los problemas de que los
+
+310
+00:14:53,360 --> 00:14:57,400
+elementos están juntos y también de que el texto se ve demasiado pequeño con
+
+311
+00:14:57,400 --> 00:15:01,240
+esto podremos ver si la página por tanto tiene esa corrección y editando en
+
+312
+00:15:01,240 --> 00:15:04,720
+este caso ficheros css podríamos jugar con ello de acuerdo
+
+313
+00:15:04,720 --> 00:15:08,840
+este apartado que estamos conociéndose el apartado de usabilidad con lo que
+
+314
+00:15:08,840 --> 00:15:12,800
+vamos a hacer y subiendo el robots txt estoy seguro que estos 11 errores que
+
+315
+00:15:12,800 --> 00:15:16,360
+se han presentado que han empezado a aparecer aquí empezaron a disminuir y
+
+316
+00:15:16,360 --> 00:15:19,080
+justamente quedarán perfectamente controlados
+
+317
+00:15:19,080 --> 00:15:22,080
+además tenéis un valor en la parte superior que son los valores de
+
+318
+00:15:22,080 --> 00:15:26,200
+experimental ese valor de experimental cuando tienes un proyecto como es el de
+
+319
+00:15:26,200 --> 00:15:27,880
+caso de psicoterapia
+
+320
+00:15:27,880 --> 00:15:31,600
+que hace poquito que lo hemos activado como podéis ver pues no hará ni un medio
+
+321
+00:15:31,600 --> 00:15:35,160
+mes vale pues una de las cosas que tenemos aquí es que te permite ver los
+
+322
+00:15:35,160 --> 00:15:38,400
+informes de cada uno pero no hay ningún informe por ello vale
+
+323
+00:15:38,400 --> 00:15:41,440
+no os apuréis porque si queréis ver además de que es experimental siempre
+
+324
+00:15:41,440 --> 00:15:44,160
+podéis ir al apartado de probar page speed
+
+325
+00:15:44,160 --> 00:15:47,920
+el sistema automáticamente va a intentar validar vuestra url
+
+326
+00:15:47,920 --> 00:15:50,920
+y lo que va a hacer es intentar descargarse la página y hacer el
+
+327
+00:15:50,920 --> 00:15:54,080
+validación y el testeo de todos los elementos
+
+328
+00:15:54,080 --> 00:15:58,160
+en estas ocasiones y si eres un profesional o si estás trabajando con
+
+329
+00:15:58,160 --> 00:16:02,520
+clientes te encontrarás que muchos de ellos te exigen la corrección de valores
+
+330
+00:16:02,520 --> 00:16:03,520
+claves aquí
+
+331
+00:16:03,520 --> 00:16:07,440
+mi recomendación es que este punto lo tengas como información para poder
+
+332
+00:16:07,440 --> 00:16:10,080
+coger y solventar cualquiera de los problemas
+
+333
+00:16:10,080 --> 00:16:14,280
+ver si hay alguna incidencia y podéis hacer o activar alguna mejora pero que
+
+334
+00:16:14,280 --> 00:16:18,120
+no os apuréis y os dejo un vídeo que va a salir por la parte superior en los
+
+335
+00:16:18,120 --> 00:16:22,400
+cuales google incluso hago referencia a un vídeo que google creo hablando de
+
+336
+00:16:22,400 --> 00:16:26,360
+que estas herramientas hay que tomarlas con cuidado porque ciertamente no todas
+
+337
+00:16:26,360 --> 00:16:30,800
+las páginas están con los valores de forma coherente no obstante cuanto más
+
+338
+00:16:30,800 --> 00:16:35,320
+próximo a los 90 o 100 puntos estéis mejor será a nivel de rendimiento
+
+339
+00:16:35,320 --> 00:16:37,800
+vuestra página para google
+
+340
+00:16:37,800 --> 00:16:41,800
+y por último en el elemento que tenemos aquí es el cuadro de búsqueda del enlace
+
+341
+00:16:41,800 --> 00:16:45,480
+vale mucha gente duda sobre estos elementos hablan sobre la
+
+342
+00:16:45,480 --> 00:16:49,360
+yo lo comentaba veces sobre el cuadro de búsqueda etc. hay distintos valores
+
+343
+00:16:49,360 --> 00:16:54,480
+vale yo cuando dije en el vídeo anterior cuadro de búsqueda me refería a la
+
+344
+00:16:54,480 --> 00:16:58,000
+caja de búsqueda propia puede tener una página y a lo mejor algunos
+
+345
+00:16:58,000 --> 00:17:01,160
+interpretaste es que es que la página de mexico terapia tenía esa cuadro de
+
+346
+00:17:01,160 --> 00:17:02,600
+búsqueda o esa caja dentro
+
+347
+00:17:02,600 --> 00:17:07,400
+no cuidado si os interesa leer más os invito a que cojáis esto porque
+
+348
+00:17:07,400 --> 00:17:11,200
+realmente no o sea no es que sea sólo sobre el cuadro de búsqueda sino que
+
+349
+00:17:11,200 --> 00:17:14,960
+los elementos del cuadro de búsqueda sólo que le llaman los side links es
+
+350
+00:17:14,960 --> 00:17:19,720
+decir desde 2014 como podéis ver aquí google lo que permite escoger y hacer
+
+351
+00:17:19,720 --> 00:17:24,200
+como pre búsquedas del contenido que hay dentro de tu página es decir que
+
+352
+00:17:24,200 --> 00:17:28,520
+google haga de buscador esto lo veréis en muchos casos sobre todo aparece en
+
+353
+00:17:28,520 --> 00:17:32,400
+páginas bastante potentes en los que el propio buscador tiene un buscador es
+
+354
+00:17:32,400 --> 00:17:35,720
+decir en un resultado de google ya te aparece para hacer una búsqueda dentro
+
+355
+00:17:35,720 --> 00:17:39,200
+de google que aparece como por la parte de aquí abajo vale y esto es debido a
+
+356
+00:17:39,200 --> 00:17:44,640
+que justamente pues eso el buscador lo interpreta correctamente no obstante
+
+357
+00:17:44,640 --> 00:17:49,280
+cara a nosotros y cara a esta página pues que haya detectado que hay 22 urls
+
+358
+00:17:49,280 --> 00:17:53,320
+por las cuales los elementos pueden ser comprendidos y pueden ser buscados o
+
+359
+00:17:53,320 --> 00:17:57,400
+filtrados dentro de google es uno de los valores muy interesantes y al final
+
+360
+00:17:57,400 --> 00:18:02,040
+nos permite por así decirlo pues conocer esa información para poder saber que
+
+361
+00:18:02,040 --> 00:18:06,200
+está correctamente así que con esto hemos visto saltando desde la descripción
+
+362
+00:18:06,200 --> 00:18:09,840
+general la parte de usabilidad móvil que solventaremos con esta modificación
+
+363
+00:18:09,840 --> 00:18:14,280
+del fichero robots que hemos conocido la parte de velocidad que hemos visto que
+
+364
+00:18:14,280 --> 00:18:18,680
+con page speed inside en este caso de google vamos a poder validarlo y por
+
+365
+00:18:18,680 --> 00:18:22,800
+último este cuadro de búsqueda o el hecho de que la página facilite a lo
+
+366
+00:18:22,800 --> 00:18:25,880
+que sería los robots de google la posibilidad y en este caso a los
+
+367
+00:18:25,880 --> 00:18:29,960
+usuarios de buscar en el propio buscador muy bien pues habéis visto ya lo tenemos
+
+368
+00:18:29,960 --> 00:18:33,600
+todo justamente hemos visto el bloque de mejoras y con él además hemos
+
+369
+00:18:33,600 --> 00:18:37,440
+detectado una incidencia que había en m psicoterapia vamos a poder corregir
+
+370
+00:18:37,440 --> 00:18:41,040
+mucho mejor como google comprende nuestra página y en este caso además
+
+371
+00:18:41,040 --> 00:18:45,440
+vamos a ayudarle a posicionar y indexar correctamente esos resultados así que
+
+372
+00:18:45,440 --> 00:18:48,960
+como podéis ver todo lo que estamos haciendo a nivel de seis console está
+
+373
+00:18:48,960 --> 00:18:52,520
+influyendo directamente a todas las estrategias se o que podéis seguir y
+
+374
+00:18:52,520 --> 00:18:56,160
+precisamente os está dando información muy valiosa de qué es lo que está
+
+375
+00:18:56,160 --> 00:18:59,520
+comprendiendo google de vuestra página y en este caso como lo estáis
+
+376
+00:18:59,520 --> 00:19:03,400
+informando a google de si es o no correcta este valor así que con esto lo
+
+377
+00:19:03,400 --> 00:19:06,640
+tenemos todo por hoy te invito simplemente a que le des al canal y te
+
+378
+00:19:06,640 --> 00:19:10,480
+suscribas a la campanita y estés atenta a todas las novedades que voy teniendo
+
+379
+00:19:10,480 --> 00:19:13,680
+justamente estos días desearte que estés muy bien en estos días de
+
+380
+00:19:13,680 --> 00:19:17,400
+confinamiento que poquito a poco pues bueno van pasando poco a poco pero cada
+
+381
+00:19:17,400 --> 00:19:20,520
+día es un día más de estar cerca de volver a salir fuera y estar todos
+
+382
+00:19:20,520 --> 00:19:24,800
+tranquilamente de nuevo como antes y nada invitarte simplemente a que escribas
+
+383
+00:19:24,800 --> 00:19:27,960
+abajo la descripción cualquier duda o consulta que tengas y que podamos
+
+384
+00:19:27,960 --> 00:19:31,280
+compartir gracias a todos los que me escribís y me decís que hoy os está
+
+385
+00:19:31,280 --> 00:19:34,640
+ayudando un montón estos vídeos de seis console ya sea da igual herramienta
+
+386
+00:19:34,640 --> 00:19:38,160
+porque me habéis escrito desde mayento me habéis escrito desde wordpress me habéis escrito
+
+387
+00:19:38,160 --> 00:19:41,200
+un montón de herramientas e incluso por eso voy a empezar a hacer algunos vídeos
+
+388
+00:19:41,200 --> 00:19:43,760
+relacionados con alguna de las necesidades que tiene en este caso
+
+389
+00:19:43,760 --> 00:19:46,920
+wordpress porque muchos me habéis enviado información acerca de ello me
+
+390
+00:19:46,920 --> 00:19:50,200
+habéis comentado acerca de esta información y nada simplemente desearos
+
+391
+00:19:50,200 --> 00:19:54,280
+que tengáis una estupendísima tarde un estupendísimo día y que a donde estéis
+
+392
+00:19:54,280 --> 00:19:59,640
+estéis sanos de acuerdo cuidaros un saludo y hasta pronto
+
