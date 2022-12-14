@@ -275,7 +275,7 @@ El único cambio necesario de cara a que sea adaptable es el de añadir:
 
 ><a href="https://www.bing.com/webmaster/tools/mobile-friendliness">Herramienta 1</a>: 
 La primera herramienta usada es la propia herramienta Bing de Microsoft, después de hacer un pequeño cambio en el comportamiento de los botones de la calculadora pasa sin problema.
-<img src="./Multimedia/Fotos/Screenshot_685.png" alt="Primera herramienta propuesta, Bing"/>
+<img src="./Multimedia/Fotos/Screenshot_23.png" alt="Primera herramienta propuesta, Bing"/>
 
 ><a href="http://responsivetesttool.com/">Herramienta 2</a>: La segunda herramienta no nos da una descripción de los errores pero si nos permite ver la adaptabilidad de nuestra pagina en diferentes dispositivos, por lo que he podido revisar es perfectamente adaptable a estos.
 <img src="./Multimedia/Fotos/Screenshot_4.png" alt="Segunda herramienta propuesta, Responsive Tool"/>
