@@ -294,8 +294,19 @@ La primera herramienta usada es la propia herramienta Bing de Microsoft, despué
 
 >Página 3: 
 ### Trabajo 2 : Sitio web de una comunidad o ciudad autónoma
-#### UO acabado en 2: Escribir una entrada sobre la web de Asturias
+#### Módulo 18 de mi UO es 8: Escribir una entrada sobre la web de Cataluña
 
+Si tuviera que destacar algo de la accesibilidad de esta página sería al inexistencia de la misma. Hay una cantidad de errores y warnings de accesibilidad inmensa, pasando por id repetidos, imágenes sin texto alternativo, falta de labels asociadas con ciertos elementos, labels sin texto... Podría seguir diciendo errores pero está página sería dificilmente navegable por personas con ciertos tipos de problemas o discapacidades. Primero la herramienta wave nos da 71 errores importantes entre los que se encuentran cosas que he mencionado anteriormente. Además también da 61 errores de contraste de color y una inmensa cantidad de warnings.
+
+<img src="./Multimedia/Fotos/Screenshot_24.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+
+<img src="./Multimedia/Fotos/Screenshot_25.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+
+<img src="./Multimedia/Fotos/Screenshot_26.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+
+<img src="./Multimedia/Fotos/Screenshot_27.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+
+<img src="./Multimedia/Fotos/Screenshot_28.png" alt="Tercera herramienta propuesta, Dev Tools"/>
 ### Trabajo 3 : Sitio Web de un ayuntamiento asturiano
 #### Comprobar la accesibilidad haciendo uso de las herramientas proporcionadas en el Seminario
 
