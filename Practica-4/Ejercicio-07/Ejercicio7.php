@@ -12,7 +12,7 @@
     <meta name="keywords" content="Una calculadora científica" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pruebas de Usabilidad</title>
+    <title>Tienda de Videojuegos</title>
     <link rel="stylesheet" type="text/css" href="./Ejercicio7.css" />
 </head>
 
@@ -21,13 +21,14 @@
 
     echo "
  <header>
-     <h1> Videojuegos </h1>
+     <h1> Tienda de Videojuegos </h1>
      <form action='#' method='post'> 
          <button type='submit' name='iniciar_sesion'> Iniciar Sesión </button>
          <button type='submit' name='cerrar_sesion'> Cerrar Sesión </button>
-         <button type='submit' name='buscar videojuego'> Buscar Videojuego </button>
+         <button type='submit' name='escaparate'> Ver Videojuegos en posesión </button>
          <button type='submit' name='filtrar_por_genero'> Filtrar Videojuegos por género </button>
          <button type='submit' name='filtrar_por_goty'> Filtrar Videojuegos que han ganado un GOTY </button>
+         <button type='submit' name='filtrar_por_desarrolladora'> Filtrar Videojuegos por Desarrolladora </button>
      </form>
  </header>";
 
@@ -52,6 +53,7 @@
 
             $_SESSION['videojuegos'] = array();
             $_SESSION['generos'] = array();
+            $_SESSION['desarrolladoras'] = array();
 
             if (!isset($_SESSION['es_sesion_iniciada'])) {
                 $_SESSION['es_sesion_iniciada'] = false;
@@ -72,11 +74,10 @@
                 $_SESSION['filtrar_por_goty'] = false;
             }
 
-            if (!isset($_SESSION['buscar_videojuego_id'])) {
-                $_SESSION['buscar_videojuego_id'] = false;
+            if (!isset($_SESSION['filtrar_por_desarrolladora'])) {
+                $_SESSION['filtrar_por_desarrolladora'] = false;
             }
 
-            // Manejamos el menú
             if (count($_POST) > 0) {
                 if (isset($_POST['formulario_iniciar_sesion'])) {
                     $this->iniciar_sesion();
@@ -87,12 +88,6 @@
                 if (isset($_POST['cerrar_sesion'])) {
                     $this->cerrar_sesion();
                 }
-                if (isset($_POST['formulario_buscar_videojuego'])) {
-                    //$this->insertar_en_tabla_gui();
-                }
-                if (isset($_POST['buscar_videojuego'])) {
-                    $this->buscar_videojuego_gui();
-                }
                 if (isset($_POST['crear_cuenta'])) {
                     $this->crear_cuenta();
                 }
@@ -101,6 +96,12 @@
                 }
                 if (isset($_POST['filtrar_por_goty'])) {
                     $this->filtrar_por_goty();
+                }
+                if (isset($_POST['filtrar_por_desarrolladora'])) {
+                    $this->filtrar_por_desarrolladora();
+                }
+                if (isset($_POST['escaparate'])) {
+                    $this->escaparate();
                 }
             }
 
@@ -119,6 +120,7 @@
         {
             $this->añadir_generos();
             $this->añadir_videojuegos();
+            $this->añadir_desarrolladoras();
 
             $this->usuario_gui();
 
@@ -149,10 +151,40 @@
                 $select_query->close();
 
                 if ($resultado->num_rows > 0)
-                    while ($fila = $resultado->fetch_assoc()) // Añadimos la categoría
+                    while ($fila = $resultado->fetch_assoc())
                         $_SESSION['generos'][] = new Genero(
                             $fila['id'],
                             $fila['tipo']
+                        );
+            } catch (Error $e) {
+                $this->error(
+                    "ERROR: ",
+                    $e->getMessage()
+                );
+            }
+            $this->db->close();
+        }
+
+        private function añadir_desarrolladoras()
+        {
+            $this->conectarse_db();
+
+            try {
+                $select_query = $this->db->prepare("
+                SELECT * FROM desarrolladoras"
+                );
+
+                $select_query->execute();
+                $resultado = $select_query->get_result();
+                $select_query->close();
+
+                if ($resultado->num_rows > 0)
+                    while ($fila = $resultado->fetch_assoc())
+                        $_SESSION['desarrolladoras'][] = new Desarrolladora(
+                            $fila['nombre'],
+                            $fila['fundación'],
+                            $fila['empleados'],
+                            $fila['web']
                         );
             } catch (Error $e) {
                 $this->error(
@@ -183,6 +215,7 @@
                             $fila['genero_id'],
                             $fila['director'],
                             $fila['distribuidora'],
+                            $fila['desarrolladora'],
                             $fila['portada'],
                             $fila['ha_ganado_goty']
                         );
@@ -196,26 +229,15 @@
             $this->db->close();
         }
 
-        private function buscar_videojuego_gui()
-        {
-            echo "
-        <form action='#' method='post'>
-            <h2>Buscar Videojuego</h2>
-            <label for='buscar_videojuego_id'>Nombre del Videojuego:</label>
-            <input type='text' id='buscar_videojuego_id' name='buscar_videojuego_id' />
-            <input type='submit' name='buscar_videojuego_form' value='buscar videojuego' />
-        </form>
-        ";
-        }
-
         private function videojuego_gui($videojuego)
         {
             echo "
             <section>
-                <h3> $videojuego->titulo </h3>
-                <h4> $videojuego->director </h4>
+                <h3> $videojuego->titulo | $videojuego->referencia </h3>
+                <h4> Director: $videojuego->director </h4>
                 <img src='$videojuego->portada' alt='$videojuego->titulo'/>
-                <p> $videojuego->distribuidora </p>
+                <p> Distribuidora: $videojuego->distribuidora </p>
+                <p> Desarrolladora: $videojuego->desarrolladora </p>
                 <form action='#' method='post'>
                     <input type='submit' name='$videojuego->referencia' value='Comprar' />
                 </form>
@@ -232,36 +254,56 @@
 
             if ($_SESSION['filtrar_por_goty'])
                 foreach ($_SESSION['videojuegos'] as $videojuego) {
-                    if ($videojuego->ha_ganado_goty === 1)
+                    if ($videojuego->ha_ganado_goty === 1) {
                         $videojuegos[] = $videojuego;
-                } else
+                    }
+                } else 
                 $videojuegos = $_SESSION['videojuegos'];
 
-            if ($_SESSION['filtrar_por_genero']) {
-                foreach ($_SESSION['generos'] as $genero) {
-                    $numero_de_videojuegos = 0;
+                if ($_SESSION['filtrar_por_genero']) {
+                    foreach ($_SESSION['generos'] as $genero) {
+                        $numero_de_videojuegos = 0;
 
-                    foreach ($videojuegos as $videojuego)
-                        if ($videojuego->genero_id === $genero->id) {
-                            if ($numero_de_videojuegos === 0) {
-                                echo "<h2> $genero->tipo </h2>";
-                                echo "<main>";
+                        foreach ($videojuegos as $videojuego)
+                            if ($videojuego->genero_id === $genero->id) {
+                                if ($numero_de_videojuegos === 0) {
+                                    echo "<h2> $genero->tipo </h2>";
+                                    echo "<main>";
+                                }
+                                $this->videojuego_gui($videojuego);
+                                $numero_de_videojuegos++;
                             }
-                            $this->videojuego_gui($videojuego);
-                            $numero_de_videojuegos++;
+
+                        if ($numero_de_videojuegos > 0) {
+                            echo "</main>";
                         }
-
-                    if ($numero_de_videojuegos > 0)
-                        echo "</main>";
+                    }
                 }
-            } else {
-                echo "<main>";
+                else if ($_SESSION['filtrar_por_desarrolladora']) {
+                    foreach ($_SESSION['desarrolladoras'] as $desarolladora) {
+                        $numero_de_videojuegos = 0;
+                        foreach ($videojuegos as $videojuego)
+                            if ($videojuego->desarrolladora === $desarolladora->nombre) {
+                                if ($numero_de_videojuegos === 0) {
+                                    echo "<h2> $desarolladora->nombre </h2>";
+                                    echo "<main>";
+                                }
+                                $this->videojuego_gui($videojuego);
+                                $numero_de_videojuegos++;
+                            }
 
-                foreach ($videojuegos as $videojuego)
-                    $this->videojuego_gui($videojuego);
+                        if ($numero_de_videojuegos > 0) {
+                            echo "</main>";
+                        }
+                    }
+                } else {
+                    echo "<main>";
+                    foreach ($videojuegos as $videojuego)
+                        $this->videojuego_gui($videojuego);
 
-                echo "</main>";
-            }
+                    echo "</main>";
+                }
+            
         }
 
         private function comprar($referencia)
@@ -328,6 +370,46 @@
             $this->db->close();
         }
 
+        private function escaparate()
+        {
+            $this->conectarse_db();
+            try {
+                if ($_SESSION['es_sesion_iniciada'] === true) {
+                    $select_query = $this->db->prepare("
+                    SELECT * 
+                        FROM escaparate 
+                        WHERE cliente_dni = ?"
+                    );
+                    $select_query->bind_param(
+                        's', $_SESSION['dni_usuario_logged']
+                    );
+                    $select_query->execute();
+                    $resultado = $select_query->get_result();
+                    $select_query->close();
+                    if ($resultado->num_rows > 0) {
+                        while ($fila = $resultado->fetch_assoc()) {
+                            echo
+                                '<p>ID del videojuego: ' . $fila["videojuego_referencia"] . ' | 
+                                    Fecha de compra: ' . $fila["dia_comprado"].'</p>';
+                        }
+                    }
+
+                } else
+                    $this->error(
+                        "ERROR: ",
+                        "No has iniciado sesión"
+                    );
+            } catch (Error $e) {
+                $this->error(
+                    "ERROR: ",
+                    $e->getMessage()
+                );
+            }
+
+            $this->db->close();
+        }
+
+
         private function filtrar_por_genero()
         {
             $_SESSION['filtrar_por_genero'] = !$_SESSION['filtrar_por_genero'];
@@ -336,6 +418,11 @@
         private function filtrar_por_goty()
         {
             $_SESSION['filtrar_por_goty'] = !$_SESSION['filtrar_por_goty'];
+        }
+
+        private function filtrar_por_desarrolladora()
+        {
+            $_SESSION['filtrar_por_desarrolladora'] = !$_SESSION['filtrar_por_desarrolladora'];
         }
 
         private function usuario_gui()
@@ -494,6 +581,7 @@
         public $genero_id;
         public $director;
         public $distribuidora;
+        public $desarrolladora;
         public $portada;
         public $ha_ganado_goty;
 
@@ -503,6 +591,7 @@
             $genero_id,
             $director,
             $distribuidora,
+            $desarrolladora,
             $portada,
             $ha_ganado_goty
         )
@@ -512,6 +601,7 @@
             $this->genero_id = $genero_id;
             $this->director = $director;
             $this->distribuidora = $distribuidora;
+            $this->desarrolladora = $desarrolladora;
             $this->portada = $portada;
             $this->ha_ganado_goty = $ha_ganado_goty;
         }
@@ -527,7 +617,25 @@
         public function __construct($id, $tipo)
         {
             $this->id = $id;
-            $this->tipo = $id;
+            $this->tipo = $tipo;
+        }
+
+    }
+
+    class Desarrolladora
+    {
+
+        public $nombre;
+        public $fundación;
+        public $empleados;
+        public $web;
+
+        public function __construct($nombre, $fundación, $empleados, $web)
+        {
+            $this->nombre = $nombre;
+            $this->fundación = $fundación;
+            $this->empleados = $empleados;
+            $this->web = $web;
         }
 
     }
