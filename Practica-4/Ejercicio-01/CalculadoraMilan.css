@@ -1,7 +1,20 @@
 /*Especificidad: 001*/
 body {
   color: black;
-  background-color: orange;
+  background-color: grey;
+}
+
+h1{
+  text-align: center;
+  color:white;
+}
+
+main{
+  background-image: linear-gradient(#865f84, rgb(65, 211, 143));
+  width: fit-content;
+  margin: auto;
+  padding: 0.2em;
+  border-radius: 1em;
 }
 
 /*Especificidad: 011*/
@@ -17,6 +30,7 @@ input[type="text"] {
 
   grid-column-end: span 5;
   grid-row-end: span 2;
+  margin:1em;
 }
 
 /*Especificidad: 011*/
@@ -42,7 +56,6 @@ form {
   grid-template-columns: repeat(5, 1fr);
   width: fit-content;
   margin: auto;
-  padding: 1em;
 }
 
 /*Especificidad: 011*/

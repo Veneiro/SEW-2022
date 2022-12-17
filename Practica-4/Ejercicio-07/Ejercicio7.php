@@ -13,12 +13,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pruebas de Usabilidad</title>
-    <link rel="stylesheet" type="text/css" href="./Ejercicio6.css" />
+    <link rel="stylesheet" type="text/css" href="./Ejercicio7.css" />
 </head>
 
 <body>
     <?php
-    
+
     echo "
  <header>
      <h1> Videojuegos </h1>
@@ -53,20 +53,28 @@
             $_SESSION['videojuegos'] = array();
             $_SESSION['generos'] = array();
 
-            if (!isset($_SESSION['es_sesion_iniciada']))
+            if (!isset($_SESSION['es_sesion_iniciada'])) {
                 $_SESSION['es_sesion_iniciada'] = false;
-
-            if (!isset($_SESSION['dni_usuario_logged']))
+            }
+            if (!isset($_SESSION['dni_usuario_logged'])) {
                 $_SESSION['dni_usuario_logged'] = '';
+            }
 
-            if (!isset($_SESSION['hay_que_crear_cuenta']))
+            if (!isset($_SESSION['hay_que_crear_cuenta'])) {
                 $_SESSION['hay_que_crear_cuenta'] = false;
+            }
 
-            if (!isset($_SESSION['filtrar_por_genero']))
+            if (!isset($_SESSION['filtrar_por_genero'])) {
                 $_SESSION['filtrar_por_genero'] = false;
+            }
 
-            if (!isset($_SESSION['filtrar_por_goty']))
+            if (!isset($_SESSION['filtrar_por_goty'])) {
                 $_SESSION['filtrar_por_goty'] = false;
+            }
+
+            if (!isset($_SESSION['buscar_videojuego_id'])) {
+                $_SESSION['buscar_videojuego_id'] = false;
+            }
 
             // Manejamos el menú
             if (count($_POST) > 0) {
@@ -83,7 +91,7 @@
                     //$this->insertar_en_tabla_gui();
                 }
                 if (isset($_POST['buscar_videojuego'])) {
-                    //$this->insertar_en_tabla_gui();
+                    $this->buscar_videojuego_gui();
                 }
                 if (isset($_POST['crear_cuenta'])) {
                     $this->crear_cuenta();
@@ -95,12 +103,16 @@
                     $this->filtrar_por_goty();
                 }
             }
+
             $this->init();
 
-            if (count($_POST) > 0)
+            if (count($_POST) > 0) {
                 foreach ($_SESSION['videojuegos'] as $videojuego)
-                    if (isset($_POST[$videojuego->referencia]))
+                    if (isset($_POST[$videojuego->referencia])) {
                         $this->comprar($videojuego->referencia);
+                    }
+            }
+
         }
 
         private function init()
@@ -109,6 +121,7 @@
             $this->añadir_videojuegos();
 
             $this->usuario_gui();
+
             $this->videojuegos_gui();
         }
 
@@ -188,9 +201,9 @@
             echo "
         <form action='#' method='post'>
             <h2>Buscar Videojuego</h2>
-            <label for='buscar_videojuego_id'>ID de la película:</label>
+            <label for='buscar_videojuego_id'>Nombre del Videojuego:</label>
             <input type='text' id='buscar_videojuego_id' name='buscar_videojuego_id' />
-            <input type='submit' name='buscar_videojuego_form' value='buscar película' />
+            <input type='submit' name='buscar_videojuego_form' value='buscar videojuego' />
         </form>
         ";
         }
@@ -198,16 +211,16 @@
         private function videojuego_gui($videojuego)
         {
             echo "
-        <li>
-            <h3> $videojuego->titulo </h3>
-            <h4> $videojuego->director </h4>
-            <img src='$videojuego->portada' alt='$videojuego->titulo'/>
-            <p> $videojuego->distribuidora </p>
-            <form action='#' method='post'>
-                <input type='submit' name='$videojuego->referencia' value='Comprar' />
-            </form>
-        </li>
-    ";
+            <section>
+                <h3> $videojuego->titulo </h3>
+                <h4> $videojuego->director </h4>
+                <img src='$videojuego->portada' alt='$videojuego->titulo'/>
+                <p> $videojuego->distribuidora </p>
+                <form action='#' method='post'>
+                    <input type='submit' name='$videojuego->referencia' value='Comprar' />
+                </form>
+            </section>
+            ";
         }
 
         private function videojuegos_gui()
@@ -232,23 +245,22 @@
                         if ($videojuego->genero_id === $genero->id) {
                             if ($numero_de_videojuegos === 0) {
                                 echo "<h2> $genero->tipo </h2>";
-                                echo "<ul>";
+                                echo "<main>";
                             }
-
                             $this->videojuego_gui($videojuego);
                             $numero_de_videojuegos++;
                         }
 
                     if ($numero_de_videojuegos > 0)
-                        echo "</ul>";
+                        echo "</main>";
                 }
             } else {
-                echo "<ul>";
+                echo "<main>";
 
                 foreach ($videojuegos as $videojuego)
                     $this->videojuego_gui($videojuego);
 
-                echo "</ul>";
+                echo "</main>";
             }
         }
 
@@ -265,7 +277,6 @@
                             and videojuego_referencia = ?"
                     );
 
-                    // Comprobamos si ha sido comprado alguna vez
                     $check_ha_sido_comprado->bind_param('ss', $_SESSION['dni_usuario_logged'], $referencia);
                     $check_ha_sido_comprado->execute();
 
@@ -273,7 +284,6 @@
 
                     $check_ha_sido_comprado->close();
 
-                    // Si no ha sido comprado, ni está siendo comprado --> INSERT
                     if (
                         empty($ha_sido_comprado->fetch_assoc())
                     ) {
@@ -375,7 +385,7 @@
         private function iniciar_sesion()
         {
             // Guardamos el DNI que acabamos de escrbir en el formulario
-            if(!empty($_POST['iniciar_sesion_dni'])){
+            if (!empty($_POST['iniciar_sesion_dni'])) {
                 $_SESSION['dni_usuario_logged'] = $_POST['iniciar_sesion_dni'];
                 // Comprobamos si la cuenta existe o no
                 $this->check_crear_cuenta();
@@ -383,10 +393,10 @@
                     $this->crear_cuenta_gui();
                 else
                     $_SESSION['es_sesion_iniciada'] = true;
-            } else{
+            } else {
                 echo "El dni introducido está vacío, inténtalo de nuevo";
             }
-            
+
         }
 
         private function cerrar_sesion()

@@ -73,15 +73,32 @@ INSERT INTO `videojuegos` (`referencia`, `titulo`, `genero_id`, `director`, `dis
 ('000X', 'Overwatch', 'HS', 'Aaron Keller', 'Blizzard', 'media/overwatch.jpg', 1),
 ('001X', 'Metal Slug', 'AR', 'SNK', 'SNK', 'media/metal_slug.jpg', 0),
 ('002X', 'Grand Theft Auto V', 'MA', 'Steve Martin', 'Rockstar Games', 'media/gtav.jpg', 1),
-('003X', 'Horizon Zero Dawn', 'MA', 'Mathijs de Jonge', 'Guerrilla Games', 'media/horizon.jpg', 0),
+('003X', 'Horizon Zero Dawn', 'MA', 'Mathijs de Jonge', 'Sony Interactive Entertainment', 'media/horizon.jpg', 0),
 ('004X', 'Alien Isolation', 'TE', 'Alistair Hope', 'Sega 20th Century Fox', 'media/alien.jpg', 0),
 ('005X', 'Call of Duty: Black Ops 3', 'SH', 'Jason Blundel', 'Activision', 'media/bo3.jpg', 0),
 ('006X', 'BioShock', 'AC', 'Ken Levine', '2K Games', 'media/bioshock.jpg', 1),
 ('007X', 'FIFA 23', 'DE', 'EA', 'EA', 'media/fifa.jpg', 0),
 ('008X', 'Sea Of Thieves', 'AC', 'Gregg Mayles', 'Xbox Game Studios', 'media/piratas.jpg', 0),
 ('009X', 'Red Dead Redemption', 'MA', 'Kevin Hoare / Rod Edge', 'Rockstar Games', 'media/rdr.jpg', 1),
-('010X', 'The Legend of Zelda: Breath of the Wild', 'AC', 'Hidemaro Fujibayashi', 'Nintendo', 'media/botw.jpg', 1),
+('010X', 'The Legend of Zelda: BOTW', 'AC', 'Hidemaro Fujibayashi', 'Nintendo', 'media/botw.jpg', 1),
 ('011X', 'Mario Bros Wii', 'PL', 'Shigeyuki Asuke', 'Nintendo', 'media/mario_bros.jpg', 0);
+
+DROP TABLE IF EXISTS `desarrolladoras`;
+CREATE TABLE IF NOT EXISTS `desarrolladoras` (
+  `nombre` varchar(9) COLLATE utf8_spanish_ci NOT NULL,
+  `fundación` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
+  `empleados` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  `web` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`nombre`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `desarrolladora` (nombre, fundación, empleados, web) VALUES
+('Blizzard', '1991', '4600', 'www.blizzard.com'),
+('SNK', '1978', '199', 'www.snk-corp.co.jp'),
+('Rockstar North', '1988', 'N', 'www.rockstarnorth.com'),
+('Guerrilla Games', '2000', '1920', 'www.guerrilla-games.com'),
+('The Creative Assembly', '1987', '550', 'www.creative-assembly.com'),
+('Treyarch', '1996', '250', 'www.treyarch.com');
 
 ALTER TABLE `escaparate`
   ADD CONSTRAINT `escaparate_ibfk_1` FOREIGN KEY (`cliente_dni`) REFERENCES `clientes` (`dni`),

@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>Calculadora Milán</title>
-    <link rel="stylesheet" type="text/css" href="./CalculadoraMilan.css" />
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" type="text/css" href="./CalculadoraCientifica.css" />
 </head>
 
 <body>
-    <h1>Calculadora Milán</h1>
+
     <?php
     session_start();
 
@@ -15,9 +15,15 @@
         $_SESSION['screen_session'] = '';
     }
 
+    if (!isset($_SESSION['es_radianes']))
+        $_SESSION['es_radianes'] = false;
+
     if (!isset($_SESSION['memory_session'])) {
         $_SESSION['memory_session'] = 0;
     }
+
+    if (!isset($_SESSION['es_funcion_circular']))
+        $_SESSION['es_funcion_circular'] = false;
 
     class CalculadoraMilán
     {
@@ -100,8 +106,6 @@
                 if (!isset($_SESSION['memory_session'])) {
                     $_SESSION['memory_session'] = 0;
                 }
-
-
                 $_SESSION['screen_session'] .= $this->screen;
             }
 
@@ -109,7 +113,19 @@
 
         public function porcentaje()
         {
-
+            if (isset($_SESSION['screen_session']))
+                try {
+                    $expresion = $_SESSION['screen_session'];
+                    $_SESSION['screen_session'] = eval("return $expresion ;") / 100;
+                } catch (Exception $e) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                } catch (ParseError $p) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                } catch (DivisionByZeroError $d) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                } catch (Error $e) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                }
         }
         public function mrc()
         {
@@ -222,16 +238,20 @@
 
                 if (isset($_POST['pi'])) {
                     $this->addToScreen(M_PI);
+                    $_SESSION['screen_session'] .= $this->screen;
                 }
                 if (isset($_POST['e'])) {
                     $this->addToScreen(M_E);
+                    $_SESSION['screen_session'] .= $this->screen;
                 }
 
                 if (isset($_POST['parentesis_izquierdo'])) {
                     $this->addToScreen('(');
+                    $_SESSION['screen_session'] .= $this->screen;
                 }
                 if (isset($_POST['parentesis_derecho'])) {
                     $this->addToScreen(')');
+                    $_SESSION['screen_session'] .= $this->screen;
                 }
 
                 if (isset($_POST['cuadrado'])) {
@@ -239,6 +259,7 @@
                 }
                 if (isset($_POST['potencia'])) {
                     $this->addToScreen('**');
+                    $_SESSION['screen_session'] .= $this->screen;
                 }
                 if (isset($_POST['raiz_cuadrada'])) {
                     $this->unary_operation(fn($x) => sqrt($x));
@@ -254,6 +275,7 @@
                 }
                 if (isset($_POST['modulo'])) {
                     $this->addToScreen('%');
+                    $_SESSION['screen_session'] .= $this->screen;
                 }
                 if (isset($_POST['mas_menos'])) {
                     $this->unary_operation(fn($x) => $x * (-1));
@@ -295,6 +317,7 @@
                 if (isset($_POST['backspace'])) {
                     $this->backspace();
                 }
+                
             }
         }
 
@@ -406,13 +429,13 @@
     $screen = $_SESSION['screen_session'];
 
     $angulo = $calculator->get_angulo();
-
     $seno = $calculator->get_seno();
     $coseno = $calculator->get_coseno();
     $tangente = $calculator->get_tangente();
 
     echo "
     <main>
+    <h1>Calculadora Científica</h1>
     <form action='#' method='post'>
     <input type='text' name='screen' value='$screen' disabled/>
     <input type='submit' value='x^2'       name='cuadrado' />

@@ -7,7 +7,6 @@
 </head>
 
 <body>
-    <h1>Calculadora Milán</h1>
     <?php
     session_start();
 
@@ -108,7 +107,19 @@
         }
 
         public function porcentaje(){
-            
+            if (isset($_SESSION['screen_session']))
+                try {
+                    $expresion = $_SESSION['screen_session'];
+                    $_SESSION['screen_session'] = eval("return $expresion ;") / 100;
+                } catch (Exception $e) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                } catch (ParseError $p) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                } catch (DivisionByZeroError $d) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                } catch (Error $e) {
+                    $_SESSION['screen_session'] = 'SYNTAX ERROR';
+                }
         }
         public function mrc()
         {
@@ -212,6 +223,7 @@
 
     echo "
     <main>
+    <h1>Calculadora Milán</h1>
     <form action='#' method='post'>
         <input type='text' name='screen' value='$screen' disabled/>
             <input type='submit' name='clear' value='C'/>
