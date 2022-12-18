@@ -288,27 +288,88 @@ La primera herramienta usada es la propia herramienta Bing de Microsoft, despué
 ## Fecha - 04 / 11 / 2022
 ### Trabajo 1 : Entrada a la bitácora sobre "Accesibilidad en la Web"
 #### UO acabado en 2 : Entrada sobre 3 sitios Web especializados en accesibilidad en la Web
->Página 1: 
+><a href="https://www.iberdrola.com/innovacion/que-es-accesibilidad-web">Página 1</a>: Creo que esta página es interesante de cara a entender un poco la accesibilidad en la web. Nos explica qué es, las pautas a seguir para implementarla en nuestros proyectos como son la accesibilidad del contenido, de las herramientas de autor y los agentes de usuario, nos habla un poco de los niveles de accesibilidad que existen y acaba presentandonos algunas herramientas para medir el nivel de accesibilidad de una página que en este caso son TAW y HERA.
 
->Página 2: 
+><a href="http://accesibilidadweb.dlsi.ua.es/">Página 2</a>: En este caso tenemos la página de la universidad de alicante. En esta página podemos ver de manera estructurada los siguiente:
+>- Definición de Accesibilidad
+>- Introducción a la accesibilidad
+>- Por qué es importante la accesibilidad 
+>- Por qué en muchos casos no se implementa
+>- Quienes son los beneficiarios de la implementación de sitios web accesibles
+>- Mitos acerca de la accesibilidad
+>- Beneficios de los sitios accesibles
+>- Cómo se logra tener un sitio accesible
+>- Las pautas a seguir para conseguir la accesibilidad en el contenido web
+>- Diversa bibliografía acerca del tema como libros, revistas, congresos y otros
 
->Página 3: 
+><a href="https://www.seoenmexico.com.mx/blog/accesibilidad-web/">Página 3</a>: En esta última página tras darnos una pequeña definición se nos pasa a comentar los diferentes elementos de la accesibilidad web o puntos clave. Seguidamente nos muestra diferentes herramientas para comprobar la accesibilidad de un contenido web y termina dándonos unas recomendaciones básicas como tipografía clara, buen contraste de colores, describir imágenes o audios, usar enlaces de hipertexto y organizar las páginas con encabezados, listas...
+
 ### Trabajo 2 : Sitio web de una comunidad o ciudad autónoma
 #### Módulo 18 de mi UO es 8: Escribir una entrada sobre la web de Cataluña
 
-Si tuviera que destacar algo de la accesibilidad de esta página sería al inexistencia de la misma. Hay una cantidad de errores y warnings de accesibilidad inmensa, pasando por id repetidos, imágenes sin texto alternativo, falta de labels asociadas con ciertos elementos, labels sin texto... Podría seguir diciendo errores pero está página sería dificilmente navegable por personas con ciertos tipos de problemas o discapacidades. Primero la herramienta wave nos da 71 errores importantes entre los que se encuentran cosas que he mencionado anteriormente. Además también da 61 errores de contraste de color y una inmensa cantidad de warnings.
+Si tuviera que destacar algo de la accesibilidad de esta página sería al inexistencia de la misma. Hay una cantidad de errores y warnings de accesibilidad inmensa, pasando por id repetidos, imágenes sin texto alternativo, falta de labels asociadas con ciertos elementos, labels sin texto... Podría seguir diciendo errores pero está página sería dificilmente navegable por personas con ciertos tipos de problemas o discapacidades. 
 
-<img src="./Multimedia/Fotos/Screenshot_24.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+Primero la herramienta **Wave** nos da 71 errores importantes entre los que se encuentran cosas que he mencionado anteriormente. Además también da 61 errores de contraste de color y una inmensa cantidad de warnings.
 
-<img src="./Multimedia/Fotos/Screenshot_25.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+<img src="./Multimedia/Fotos/Screenshot_24.png" alt="Wave Tool"/>
 
-<img src="./Multimedia/Fotos/Screenshot_26.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+<img src="./Multimedia/Fotos/Screenshot_25.png" alt="Wave Tool"/>
 
-<img src="./Multimedia/Fotos/Screenshot_27.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+En la herramienta de **AChecker** al igual que en la anterior nos da una cantidad considerable de errores y warnings. Entre estos se encuentran más o menos los mismo fallos que en la anterior herramienta, id repetidos, elementos que necesitan texto vacíos, imágenes sin el texto alternativo...
 
-<img src="./Multimedia/Fotos/Screenshot_28.png" alt="Tercera herramienta propuesta, Dev Tools"/>
+<img src="./Multimedia/Fotos/Screenshot_26.png" alt="AChecker"/>
+
+<img src="./Multimedia/Fotos/Screenshot_27.png" alt="AChecker"/>
+
+<img src="./Multimedia/Fotos/Screenshot_28.png" alt="Achecker"/>
+
+En la última herramienta propuesta, la herramienta **Taw** tenemos un comportamiento parecido, 207 problemas graves, 331 advertencias y 14 criterios no verificados. He de decir que en este caso tuve que usar la versión en catalán de la página ya que la versión en español se cayó durante el transcurso de las pruebas por lo que podemos ver perfectamente que la página no está precisamente cuidada al detalle.
+
+<img src="./Multimedia/Fotos/Screenshot_63.png" alt="Taw"/>
+
+Debajo tenemos la lista de errores detallados que nos proporciona la herramienta Taw separados en Perceptibles, Operables, Comprensibles y Robustos.
+
+<img src="./Multimedia/Fotos/Screenshot_36.png" alt="Taw"/>
+
+<img src="./Multimedia/Fotos/Screenshot_37.png" alt="Taw"/>
+
+<img src="./Multimedia/Fotos/Screenshot_38.png" alt="Taw"/>
+
+<img src="./Multimedia/Fotos/Screenshot_39.png" alt="Taw"/>
+
 ### Trabajo 3 : Sitio Web de un ayuntamiento asturiano
+
 #### Comprobar la accesibilidad haciendo uso de las herramientas proporcionadas en el Seminario
+
+En la primera herramienta probada, **AChecker** principalmente tenemos errores de labels vacías, imágenes a las que les falta el texto alternativo, labels asociadas a inputs vacías y elementos de estilo mezclados dentro del html como etiquetas ```<i>``` para poner elementos en cursiva o etiquetas ```<b>``` para ponerlo en negrita. Además también hay un error de verificación debido a que se usa una lista para formatear texto de manera incorrecta.
+
+<img src="./Multimedia/Fotos/Screenshot_29.png" alt="Achecker"/>
+
+<img src="./Multimedia/Fotos/Screenshot_30.png" alt="Achecker"/>
+
+<img src="./Multimedia/Fotos/Screenshot_31.png" alt="Achecker"/>
+
+En la herramienta **Wave** obtenemos 17 errores y 5 errores de contraste. Entre estos están principalmente los mismos que encontrabamos en el Achecker.
+
+<img src="./Multimedia/Fotos/Screenshot_64.png" alt="Wave"/>
+
+<img src="./Multimedia/Fotos/Screenshot_65.png" alt="Wave"/>
+
+En la herramienta Taw entontramos 29 errores graves, 93 advertencias y 17 no verificados que necesitan comprobación manual
+
+<img src="./Multimedia/Fotos/Screenshot_66.png" alt="Taw"/>
+
+Aquí tenemos la lista detallada de los errores que proporciona Taw separados en Perceptibles, Operables, Comprensibles y Robustos.
+
+<img src="./Multimedia/Fotos/Screenshot_32.png" alt="Taw"/>
+
+<img src="./Multimedia/Fotos/Screenshot_33.png" alt="Taw"/>
+
+<img src="./Multimedia/Fotos/Screenshot_34.png" alt="Taw"/>
+
+<img src="./Multimedia/Fotos/Screenshot_35.png" alt="Taw"/>
+
+La accesibilidad del sitio web parece más o menos aceptable si tenemos en cuenta la cantidad de errores que tenía por ejemplo, la página de cataluña. Lo que si parece es que la plantilla usada para la página es común para al menos una gran parte de los ayuntamientos asturianos por lo que puede que modificar estos errores no sea una cosa que puedan hacer con facilidad. Esto no ocurre en todas las páginas pero si en muchas de las que he podido comprobar por lo que puede ser una plantilla genérica que utilizan.
 
 # Seminario 5
 
@@ -316,14 +377,670 @@ Si tuviera que destacar algo de la accesibilidad de esta página sería al inexi
 ### Trabajo 1 : Prueba de usabilidad de la calculadora RPN
 #### Escribir una entrada haciendo una prueba de usabilidad a un grupo de usuarios con respecto al uso de la calculadora RPN
 
+### Tanda 1
+
+- **Tanda 1 Primera Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |62|
+| Sexo                        |Hombre|
+| Nivel Informático           |4|
+| Comentarios                 |Las operaciones son bastante complejas de entender al comienzo debido a la costumbre de usar calculadoras en las que se introducen los signos de operación entre medias. Al principio sin información es complejo entender como operar con la calculadora hasta que se te explica. El orden de las opearaciones en la pantalla es confuso ya que las operaciones complejas se deben leer de derecha a izquierda en vez de derecha a izquierda por el orden de los numeros|
+| Propuestas                  |Consideraría añadir un alguna opción de información para entender el uso básico de la calculadora y cambiar el color del enter por algo que destaque más|
+| Valoración de la APP        |6|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 349 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_40.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/IMG_0125.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-16-50-29-609_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 54 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_42.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/IMG_0123.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-16-49-32-823_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 416 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_44.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_45.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_46.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_47.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_48.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/IMG_0126.png" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-16-51-03-970_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+- **Tanda 1 Segunda Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |17|
+| Sexo                        |Mujer|
+| Nivel Informático           |6|
+| Comentarios                 |No entendía como se realizaban las operaciones, intentaba realizarlas como en una calculadora convencional. Acabó cansada porque no era capaz de realizar ningún calculo correctamente|
+| Propuestas                  |Estaría bien tener algún tipo de ayuda de cara al aprendizaje de uso|
+| Valoración de la APP        |5|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+- **Tanda 1 Tercera Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |86|
+| Sexo                        |Mujer|
+| Nivel Informático           |5|
+| Comentarios                 |Le costó adaptarse al principio pero acabó pudiendo realizar algunas operaciones. Le hubiera gustado tener algo más de ayuda para saber como funcionaba|
+| Propuestas                  |Añadir algo de ayuda|
+| Valoración de la APP        |8 - Le gustaba el diseño|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 243 |
+|Realización de la tarea       | SI |
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/IMG_0123.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-16-49-32-823_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+- **Tanda 1 Cuarta Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |58|
+| Sexo                        |Mujer|
+| Nivel Informático           |7|
+| Comentarios                 |La colocación de algunos botones no le convencía mucho y le gustaría haber tenído unos botones algo más grandes|
+| Propuestas                  |Consideraría modificar un poco la botonera de la calculadora|
+| Valoración de la APP        |7|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 298 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_40.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/IMG_0125.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-16-50-29-609_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 78 |
+|Realización de la tarea       | SI |
+
+<img src="./Multimedia/Fotos/Screenshot_42.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/IMG_0123.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-16-49-32-823_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+
+### Tanda 2
+- **Tanda 2 Primera Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |96|
+| Sexo                        |Hombre|
+| Nivel Informático           |2|
+| Comentarios                 |La calculadora era demasiado difícil de comprender y a pesar de la información de ayuda el bajo nivel informático le imposibilita realizar las operaciones|
+| Propuestas                  |Una calculadora de toda la vida mejor|
+| Valoración de la APP        |3|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+- **Tanda 2 Segunda Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |38|
+| Sexo                        |Mujer|
+| Nivel Informático           |9|
+| Comentarios                 |La calculadora está aceptablemente estructurada y el botón de ayuda provee información básica necesaria|
+| Propuestas                  |Ninguna objeción, quizás para otro usuario se necesitaría algo más de información en la parte de ayuda|
+| Valoración de la APP        |6|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 150 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-42-55-616_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/88B76E2F-7A56-45FE-BE95-93F993447E93.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 10 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-03-860_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/3F41AEDE-9A99-4D1C-A1A2-5B6F83DF20F6.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 200 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_48.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-17-741_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+<img src="./Multimedia/Fotos/3F9BFAD5-B354-4CCD-99E5-378C3FA44C69.png" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+
+- **Tanda 2 Tercera Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |46|
+| Sexo                        |Hombre|
+| Nivel Informático           |1|
+| Comentarios                 |La ayuda proporcionada es insuficiente|
+| Propuestas                  |El apartado de ayuda necesita algo más de información|
+| Valoración de la APP        |7|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+
+- **Tanda 2 Cuarta Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |12|
+| Sexo                        |Hombre|
+| Nivel Informático           |8|
+| Comentarios                 |La calculadora le resultó un poco extraña de primeras pero después de acostumbrarse tras la primera tarea pudo completar la segunda. La tercera tarea se le resistió y acabó cansándose antes de que acabara el tiempo|
+| Propuestas                  |Un poco más de información en la ventana de ayuda|
+| Valoración de la APP        |8|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 496 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-42-55-616_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/88B76E2F-7A56-45FE-BE95-93F993447E93.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 40 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-03-860_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/3F41AEDE-9A99-4D1C-A1A2-5B6F83DF20F6.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 200 |
+|Realización de la tarea       | NO  |
+
+### Tanda 3
+
+- **Tanda 3 Primera Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |6|
+| Sexo                        |Mujer|
+| Nivel Informático           |3|
+| Comentarios                 |Comenta que le resulta muy extraña y que no entiende lo que dice la ayuda, puede que tenga un lenguaje muy técnico|
+| Propuestas                  |Mejoral contenido de la parte de ayuda|
+| Valoración de la APP        |2|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+- **Tanda 3 Segunda Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |48|
+| Sexo                        |Hombre|
+| Nivel Informático           |5|
+| Comentarios                 |La calculadora es entendible aunque puede que compleja de primeras para gente que no sepa manejarla, el apartado de ayuda contiene bastante información que parece ser suficiente para las tareas propuestas y otras operaciones básicas|
+| Propuestas                  |Está suficientemente bien para las tareas propuestas|
+| Valoración de la APP        |9|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 113 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-42-55-616_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/88B76E2F-7A56-45FE-BE95-93F993447E93.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 32 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-03-860_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/3F41AEDE-9A99-4D1C-A1A2-5B6F83DF20F6.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 256 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_48.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-17-741_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+<img src="./Multimedia/Fotos/3F9BFAD5-B354-4CCD-99E5-378C3FA44C69.png" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+- **Tanda 3 Tercera Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |56|
+| Sexo                        |Mujer|
+| Nivel Informático           |4|
+| Comentarios                 |El apartado de ayuda es un poco complejo de entender por el vocabulario pero se puede sacar más o menos el resultado con tiempo|
+| Propuestas                  |Mejorar el texto contenido en ayuda, la cantidad es suficiente pero quizás debería ser un poco más "para todos" y no tanto para gente más puesta|
+| Valoración de la APP        |6|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 338 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-42-55-616_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/88B76E2F-7A56-45FE-BE95-93F993447E93.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 243 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-03-860_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/3F41AEDE-9A99-4D1C-A1A2-5B6F83DF20F6.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 500 |
+|Realización de la tarea       | NO  |
+
+- **Tanda 3 Cuarta Persona**
+
+|#                            |Datos|
+|-----------------------------|:---:|
+| Edad                        |26|
+| Sexo                        |Hombre|
+| Nivel Informático           |8|
+| Comentarios                 |La calculadora funciona como se espera, cree que es una buena interpretación de una calculadora RPN|
+| Propuestas                  |Ningún comentario, funcionamiento correcto|
+| Valoración de la APP        |9|
+
+|Tarea 1||
+|--|---|
+|Tiempo empleado (en segundos) | 69 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_41.png" alt="RPN Proceso persona 1 tarea 1"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-42-55-616_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+<img src="./Multimedia/Fotos/88B76E2F-7A56-45FE-BE95-93F993447E93.png" alt="RPN Proceso persona 1 tarea 1" width="300"/>
+
+|Tarea 2||
+|--|---|
+|Tiempo empleado (en segundos) | 23 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_43.png" alt="RPN Proceso persona 1 tarea 2"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-03-860_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+<img src="./Multimedia/Fotos/3F41AEDE-9A99-4D1C-A1A2-5B6F83DF20F6.png" alt="RPN Proceso persona 1 tarea 2" width="300"/>
+
+|Tarea 3||
+|--|---|
+|Tiempo empleado (en segundos) | 232 |
+|Realización de la tarea       | SI  |
+
+<img src="./Multimedia/Fotos/Screenshot_48.png" alt="RPN Proceso persona 1 tarea 3"/>
+
+<img src="./Multimedia/Fotos/Screenshot_2022-12-18-17-43-17-741_com.opera.touch.jpg" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+<img src="./Multimedia/Fotos/3F9BFAD5-B354-4CCD-99E5-378C3FA44C69.png" alt="RPN Proceso persona 1 tarea 3" width="300"/>
+
+### Mejoras implementadas
+#### Tanda 1
+- Poner el botón de enter de un color más llamativo: Uno de los primeros errores recalcados y si que es verdad que el hechod e ver el botón más llamativo ha ayudado al menos a que la gente tratara de darle como segunda opción cuando veían que la calculadora no funcionaba como una normal.
+- Botón de ayuda: Fue una petición general, aunque ya me lo esperaba debido a que este tipo de calculadoras no es muy común entre la gran mayoría de gente.
+- Recolocación de algunos elementos de la botonera: Algunas personas se me quejaron que era un poco raro la colocación de algunos botones. Reorganicé principalemente un poquito la parte del '.', el '0' y el 'ENTER' y parece que con eso se ha simplificado el uso.
+- Aumento del tamaño de los botones: Esto parece simple pero de cara a el uso en dispositivos más pequeños como la tablet y el móvil la verdad que en general me agradecieron haber agrandado el tamaño de los botones y la fuente de estos para que fuera más facil de pulsarlos
+#### Tanda 2
+- Aumento del apartado de ayuda: A pesar de haber añadido un apartado de ayuda parece ser que era insuficiente por lo que añadí algo más de información
+#### Tanda 3
+- Perfeccionamiento de texto de la sección de ayuda: Las personas más experimentadas o con mayor vocabulario no han tenido tanto problema pero si que es verdad que no todo el mundo es capaz de entender el mismo vocabulario el cual era más tecnico de cara a la primera versión que implementé del botón de ayuda, esto se mejoró y en general los usuarios han quedado bastante contentos.
+
+
+### Estadísticas
+- Edad Media de los usuarios: 45,917 años
+- Frecuencias de % de intervalos de edad:
+  - De 18 a 25: 25%
+  - De 25 a 50: 33,33%
+  - De 50 a 75: 25%
+  - 75 o más: 16,67%
+- Freciencias del % de cada tipo de género de usuarios:
+  - Hombres: 50%
+  - Mujeres: 50%
+- Tiempo medio de cada tarea:
+  - Tarea 1: 359,41
+  - Tarea 2: 226,91
+  - Tarea 3: 400,33
+- Porcentaje de usuarios que han realizado correctamente la tarea:
+  - Tarea 1: 58,33%
+  - Tarea 2: 66,67%
+  - Tarea 3: 25%
+- Valor medio de la aplicación: 6,33
+
+### Gráficos
+
+<img src="./Multimedia/Fotos/Screenshot_49.png" alt="Frecuencia Edades" width="480"/>
+<img src="./Multimedia/Fotos/Screenshot_50.png" alt="Frecuencia Géneros" width="480"/>
+<img src="./Multimedia/Fotos/Screenshot_51.png" alt="Tiempo medio de tareas" width="480"/>
+<img src="./Multimedia/Fotos/Screenshot_52.png" alt="Porcentaje de realización correcta" width="480"/>
+
+### Conclusiones
+En parte me sentí extraño realizando esta prueba ya que nunca había mostrado a personas ajenas a la universidad ninguno de mis proyectos. En general la respuesta de los usuarios ha sido más o menos positiva pero este acercamiento de mi trabajo a usuarios ajenos a mi carrera me ha hecho darme cuenta de lo importante que es explicar todo poniendome en el lugar de una persona que no entiende de informática o no tiene un conocimiento tan técnico. Me ha hecho darme cuenta de que en una aplicación no todo es apariencia ya que por muy bonito que sea un proyecto si no hace bien su funcionalidad o no es capaz de transmitirle a los usuarios con facilidad lo que deben hacer no sirve de nada.
+
+Estoy satisfecho de manera general con las pruebas que he realizado y agradecido con la gente que me ha ayudado en la realización de todas estas pruebas participando como "conejillos de indias" de mi trabajo.
+
 # Seminario 6
 
 ## Fecha - 02 / 12 / 2022
 ### Trabajo 1 : Nuevas entradas en la bitácora sobre servidores Web
 #### Crear 3 nuevas entradas en la bitácora sobre servidores Web
+>- Protocolo HTTP:
+>
+>   ¿Qué es?
+>   
+>   Todas las direcciones en Internet comienzan por http:// (o https://). Estas siglas hacen referencia al protocolo HTTP, que es el que utiliza el navegador para acceder a una página web. ¿Qué es HTTP, en qué se diferencian las distintas versiones y qué otros conceptos están relacionados con el protocolo?
+>   
+>   ¿Qué significa?
+>   
+>   HTTP son las siglas de Hypertext Transfer Protocol, es decir, Protocolo de Transferencia de Hipertexto. Este concepto es uno de los que Tim Berners-Lee desarrolló en el CERN (Suiza) y formaron la base de la World Wide Web: los otros dos son HTML y URI. Mientras que HTML (Hypertext Markup Language) define la estructura de las páginas web, la dirección URL (Uniform Resource Locator), una forma derivada del URI, define cómo se localiza a un recurso (p. ej., una página web) en Internet. El protocolo HTTP, en cambio, regula cómo el servidor envía este recurso al cliente.
+>
+>   Pero ¿qué significa hipertexto, ese término que forma parte de las siglas HTTP y HTML? Se trata de un concepto que en realidad todos conocemos: el enlace a otros archivos, como los hiperenlaces que se usan en las páginas web para redirigir a otras páginas.
+>
+>   ¿Qué funciones comple HTTP?
+>   
+>   Cuando escribes una dirección web en tu navegador y se abre la página que deseas, es porque tu navegador se ha comunicado con el servidor web por HTTP. Dicho de otra manera, el protocolo HTTP es el código o lenguaje en el que el navegador le comunica al servidor qué página quiere visualizar.
+>
+>   ¿Cómo funciona HTTP?
+>   
+>   1. En la barra de direcciones del navegador, el usuario teclea example.com.
+>   2. El navegador envía esa solicitud, es decir, la petición HTTP, al servidor web que administre el dominio example.com. Normalmente, la solicitud del cliente dice algo así como “Envíame este archivo”, pero también puede ser simplemente “¿Tienes este archivo?”.
+>   3. El servidor web recibe la solicitud HTTP, busca el archivo en cuestión (en nuestro ejemplo, la página de inicio de example.com, que corresponde al archivo index.html) y envía en primer lugar una cabecera o header. Esta cabecera le comunica al cliente, mediante un código de estado, el resultado de la búsqueda. Para conocer más detalles acerca de los códigos de estado, no te pierdas nuestro artículo al respecto.
+>   4. Si se ha encontrado el archivo solicitado y el cliente ha solicitado recibirlo (y no solo saber si existe), el servidor envía, tras el header, el message bodyo cuerpo del mensaje, es decir, el contenido solicitado: en nuestro ejemplo, el archivo index.html.
+>   5. El navegador recibe el archivo y lo abre en forma de página web.
+>
+>   ¿Para qué se usa HTTP?
+>   
+>   - Cuando se creó, el protocolo HTTP solo servía para solicitar documentos HTML a un servidor web. Hoy en día, en cambio, se usa con gran variedad de fines:
+>   - Los navegadores usan HTTP para solicitar cualquier tipo de archivo habitual en las webs modernas: de texto, de vídeo, de código de programación, etc.
+>   - Los programas de aplicación utilizan HTTP para cargar archivos y actualizaciones de servidores lejanos.
+>   - La API basada en REST es una solución que utiliza HTTP para controlar servicios web.
+>   - Otra tecnología que se basa en HTTP es WebDAV.
+>   - En la comunicación de máquina a máquina se utiliza HTTP como protocolo de comunicación entre servicios web.
+>   - Los reproductores multimedia también utilizan HTTP.
+>   - Las operaciones de acceso a bases de datos en la web y, por lo tanto, también las operaciones CRUD, pueden realizarse también mediante HTTP.
 
+>- **Apache**
+>   
+>   **¿Qué es un servidor Web?**
+>   
+>   Un servidor web es un programa de tipo informático que se encarga de procesar una aplicación del lado del servidor, cada una de las cuales puede acceder a archivos almacenados en un servidor físico y usarlos para diferentes propósitos, mediante conexiones bidireccionales o unidireccionales con la máquina del cliente, tras lo cual se genera una respuesta del lado del cliente.
+>   
+>   El trabajo de un servidor es servir sitios web en Internet. Para lograr ese objetivo, actúa como un intermediario entre el servidor y las máquinas de los clientes. Extrae el contenido del servidor en cada solicitud de usuario y lo envía a la web.
+>   
+>   El mayor desafío de un servidor es servir a muchos usuarios diferentes de la web al mismo tiempo, cada uno de los cuales solicita diferentes páginas. Los servidores web procesan archivos escritos en diferentes lenguajes de programación como PHP, Python, Java y otros.
+>   
+>   Los convierten en archivos HTML estáticos y le entregan estos archivos al navegador de los usuarios de la web. Cuando escuches la palabra servidor web, piensa que es la herramienta responsable de la comunicación adecuada entre el servidor y el cliente.
+>
+>   **¿Cómo funciona Apache?**
+>   
+>   Aunque llamamos a Apache un servidor web, no es un servidor físico, sino un software que se ejecuta en un servidor. Su trabajo es establecer una conexión entre un servidor y los navegadores de los visitantes del sitio web (Firefox, Google Chrome, Safari, etc.) mientras envían archivos entre ellos (estructura cliente-servidor). Apache es un software multiplataforma, por lo cual funciona tanto en servidores Unix como en Windows.
+>   
+>   Cuando un visitante quiere cargar una página de tu sitio web, por ejemplo la página de inicio o tu página «Acerca de nosotros», su navegador le envía una solicitud a tu servidor y Apache le devuelve una respuesta con todos los archivos solicitados (texto, imágenes, etc. ) El servidor y el cliente se comunican a través del protocolo HTTP y Apache es responsable de garantizar una comunicación fluida y segura entre las dos máquinas.
+>   
+>   Apache es altamente personalizable, ya que tiene una estructura basada en módulos. Los módulos le permiten a los administradores del servidor activar y desactivar funcionalidades adicionales. Apache tiene módulos de seguridad, almacenamiento en caché, reescritura de URL, autenticación de contraseña y más. También puedes ajustar tus propias configuraciones del servidor a través de un archivo llamado .htaccess
+>
+>   **¿Pros y contras de Apache?**
+>   
+>   Un servidor web Apache puede ser una excelente opción para ejecutar tu sitio web en una plataforma estable y versátil. Sin embargo, también presenta algunas desventajas a las que debes prestarle atención.
+>   
+>   *Pros:*
+>   
+>   - De código abierto y gratuito, incluso para uso comercial.
+>   - Software confiable y estable.
+>   - Parches de seguridad regulares y actualizados con frecuencia.
+>   - Flexible debido a su estructura basada en módulos.
+>   - Fácil de configurar para principiantes.
+>   - Multiplataforma (funciona tanto en servidores Unix como en Windows).
+>   - Viene listo para trabajar con sitios de WordPress.
+>   - Enorme comunidad y soporte fácilmente disponible en caso de cualquier problema.
+>
+>   *Contras:*
+>   
+>   - Problemas de rendimiento en sitios web con demasiado tráfico.
+>   - Demasiadas opciones de configuración pueden generar vulnerabilidades de seguridad.
+>   
+>   **Entonces resumidamente, ¿Qué es Apache?**
+>   
+>   Apache es uno de los servidores web más populares que te permite ejecutar un sitio web seguro sin demasiados dolores de cabeza. Es la opción más común de los emprendedores en solitario y pequeñas empresas que desean tener presencia en la web.
+>   
+>   Puedes instalar un sitio web de WordPress en un servidor web Apache sin ninguna personalización. Además, Apache funciona excelentemente con muchos otros sistemas de administración de contenido (Joomla, Drupal, etc.), marcos web (Django, Laravel, etc.) y lenguajes de programación. Esto lo convierte en una elección sólida para todo tipo de plataformas de hosting web, como VPS o hosting barato compartido.
+>
+> - **PHP**
+>
+>   El término PHP es un acrónimo de PHP: Hypertext Preprocessor. PHP es un lenguaje de scripting del lado del servidor diseñado específicamente para el desarrollo web. Es de código abierto, lo que significa que es gratis para descargar y usar. Es muy simple de aprender y usar. Los archivos tienen la extensión ".php".
+>
+>   Rasmus Lerdorf inspiró la primera versión de PHP y participó en las versiones posteriores. Es un lenguaje interpretado y no requiere un compilador.
+>   - El código PHP se ejecuta en el servidor.
+>   - Se puede integrar con muchas bases de datos como Oracle, Microsoft SQL Server, MySQL, PostgreSQL, Sybase e Informix.
+>   - Es poderoso para mantener un sistema de gestión de contenido como WordPress y se puede utilizar para controlar el acceso de los usuarios.
+>   - Es compatible con los principales protocolos como HTTP Basic, HTTP Digest, IMAP, FTP y otros.
+>   - Los sitios web como www.facebook.com y www.yahoo.com también se basan en PHP.
+>   - Una de las principales razones detrás de esto es que PHP se puede incrustar fácilmente en archivos HTML y los códigos HTML también se pueden escribir en un archivo PHP.
+>   - Lo que diferencia a PHP del lenguaje del lado del cliente como HTML es que los códigos PHP se ejecutan en el servidor, mientras que los códigos HTML se representan directamente en el navegador. Los códigos PHP se ejecutan primero en el servidor y luego el resultado se devuelve al navegador.
+>   - La única información que el cliente o navegador conoce es el resultado devuelto después de ejecutar el script PHP en el servidor y no los códigos PHP reales presentes en el archivo PHP. Además, los archivos PHP pueden admitir otros lenguajes de scripting del lado del cliente como CSS y JavaScript.
+>
+>   *Otras características de PHP*
+>    - Simple y rápido
+>    - Eficaz
+>    - Asegurado
+>    - Flexible
+>    - Multiplataforma, funciona con los principales sistemas operativos como Windows, Linux y macOS.
+>    - Código abierto
+>    - Potente compatibilidad con bibliotecas
+>    - Conectividad de base de datos
+>
+>   *Porqué usar PHP*
+>
+>   PHP puede hacer cualquier cosa relacionada con el scripting del lado del servidor o más popularmente conocido como el backend de un sitio web. Por ejemplo, PHP puede recibir datos de formularios, generar contenido dinámico de páginas, puede trabajar con bases de datos, crear sesiones, enviar y recibir cookies, enviar correos electrónicos, etc. También hay muchas funciones hash disponibles en PHP para cifrar los datos de los usuarios, lo que hace que PHP sea seguro y confiable para ser utilizado como un lenguaje de scripting del lado del servidor. Así que estas son algunas de las habilidades de PHP que lo hacen adecuado para ser utilizado como un lenguaje de scripting del lado del servidor. Conocerás más de estas habilidades en otros tutoriales.
+Incluso si las habilidades anteriores no lo convencen de PHP, hay algunas características más de PHP. PHP puede ejecutarse en todos los principales sistemas operativos como Windows, Linux, Unix, Mac OS X, etc. Casi todos los principales servidores disponibles hoy en día como Apache soportan PHP. PHP permite utilizar una amplia gama de bases de datos. Y el factor más importante es que es de uso y descarga gratuitos y cualquiera puede descargar PHP desde su fuente oficial: www.php.net.
+Consulte la configuración del entorno de desarrollo y la sintaxis básica de PHP en artículos posteriores.
+>
+>   *Desventajas de PHP*
+>    - PHP no es seguro ya que es de código abierto.
+>    - No es bueno crear aplicaciones de escritorio.
+>    - No es adecuado para aplicaciones web grandes: el código PHP es difícil de mantener ya que no es muy modular.
+>    - Problema de modificación: PHP no permite el cambio en el comportamiento central de las aplicaciones web.
 ### Trabajo 2 : Crear un servidor Web Apache con Ubuntu Linux en Azure
 #### Documentar la creación del servidor Web Apache
 
+1. Primero creo la máquina virual al igual que habíamos hecho para el seminario 1. Me da validación correcta y me conecto mediante el uso de ssh y la clave pem
+<img src="./Multimedia/Fotos/Screenshot_53.png" alt="Máquina Azure"/>
+<img src="./Multimedia/Fotos/Screenshot_54.png" alt="Máquina Azure"/>
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_19-53-40.png" alt="Máquina Azure"/>
+
+2. Para realizar la instalación de apache primero procedo a realizar un sudo apt update para evitar problemas
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_19-54-45.png" alt="Máquina Azure"/>
+
+3. Seguidamente procedo a instalar apache en la máquina
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_19-55-04.png" alt="Máquina Azure"/>
+
+4. Compruebo con este comando si apache está correctamente configurado en el firewall de la máquina, vemos que aparece correctamente permitido.
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_19-55-30.png" alt="Máquina Azure"/>
+
+5. Con el siguiente comando comprobamos el estado del apache y vemos que está corriendo
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_19-56-04.png" alt="Máquina Azure"/>
+
+6. Con estos comandos podemos revisar en que dirección se va a localizar nuestra página, en este caso la dirección  usada será 20.77.4.206
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_19-56-54.png" alt="Máquina Azure"/>
+
+7. Finalmente en la carpeta ```/var/www/html``` tendremos el html que la página usará al entrar, aquí es donde deberemos crear los html y css con la misma estructura que teníamos en la práctica
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_20-34-02.png" alt="Máquina Azure"/>
+
+8. Y aquí tenemos el resultado final
+<img src="./Multimedia/Fotos/Screenshot_58.png" alt="Máquina Azure"/>
+
 ### Trabajo 3 : Instalar LAMP con Ubuntu Linux en Azure
 #### Documentar la instalación de LAMP en la máquina Ubuntu Linux de Azure
+
+El proceso de instalación de LAMP está realizado en la misma sesión que el anterior proceso para el HTML por lo que me ahorro toda la parte de la creación de la máquina.
+
+1. Instalamos el lamp con el siguiente comando, el cual instala lamp y todo lo necesario para su uso
+<img src="./Multimedia/Fotos/Captura_de_pantalla_de_2022-12-18_21-01-54.png" alt="Máquina Azure"/>
+
+2. En la carpeta en la que previamente habíamos subido el html subimos en este caso el php de la misma manera, ya sea creando los archivo en consola o en este caso como he hecho yo subiendolos mediante filezilla
+<img src="./Multimedia/Fotos/Screenshot_62.png" alt="Máquina Azure"/>
+
+3. Abrimos la página de la misma manera que antes y se nos mostrará perfectamente
+<img src="./Multimedia/Fotos/Screenshot_61.png" alt="Máquina Azure"/>
+
+4. Eliminamos la máquina virtual y con esto abremos acabado
+<img src="./Multimedia/Fotos/Screenshot_67.png" alt="Máquina Azure"/>
+<img src="./Multimedia/Fotos/Screenshot_68.png" alt="Máquina Azure" width="700"/>
