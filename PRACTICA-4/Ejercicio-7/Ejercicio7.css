@@ -1,0 +1,45 @@
+main{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1em;
+    background-color: gray;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+h1{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+header{
+    background-color: rgb(128, 0, 0);
+    padding: 1em;
+}
+button{
+    background-color: white;
+    color:black;
+}
+button:hover{
+    background-color: rgb(179, 179, 179);
+    color:black;
+}
+input[type=submit]{
+    background-color: white;
+    color:black;
+}
+input[type=submit]:hover{
+    background-color: rgb(179, 179, 179);
+    color:black;
+}
+
+p:nth-child(6){
+    grid-row-start: 5;
+}
+body{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    background-color: black;
+    color:white;
+    text-shadow: 0.1em 0.1em black;
+}
