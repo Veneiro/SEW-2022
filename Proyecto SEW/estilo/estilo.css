@@ -1,0 +1,96 @@
+/****************************
+Mateo Rico Iglesias - UO277172
+Descripción de los estilos
+****************************/
+/*Especificidad 001*/
+header{
+    background-color: rgb(138, 189, 0);
+    color: black;
+    padding: 1em;
+    font-style: italic;
+    text-transform: uppercase;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+  }
+  t1{
+    font-weight: bold;
+    font-size: 2em;
+  }
+  t2{
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  t3{
+    font-weight: bold;
+    font-size: 1em;
+  }
+  /*Especificidad 002*/
+  header a{
+    color: black;
+  }
+  /*Especificidad 001*/
+  nav{
+    padding: 1em;
+  }
+  /*Especificidad 001*/
+  body {
+      background-color: white;
+      color:black;
+      margin: 3em;
+      border: 0.5em solid;
+  }
+  p {
+    width: 100%;
+  }
+  /*Especificidad 002*/
+  body main{
+    padding: 1em;
+    width: 95%;
+    text-align: justify;
+  }
+  /*Especificidad 002*/
+  body section{
+    padding: 1em;
+  }
+  /*Especificidad 002*/
+  main video{
+    width: 100%;
+    height: auto;
+  }
+  /*Especificidad 001*/
+  a{ 
+    color: black;
+  }
+  a:hover{
+    color: rgb(138, 189, 0);
+    background-color: black;
+  }
+  body main section table{
+    background-color: rgb(138, 189, 0);
+    color: black;
+  }
+  
+  body main section table caption{
+    color: black;
+  }
+  
+  body main section table, th, td{
+    border: 0.1em solid;
+    border-color: black;
+  }
+  
+  body footer img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  body footer{
+    color: black;
+    border: 0.3em solid;
+    border-color: rgb(138, 189, 0);
+    padding: 1em;
+  }
+  body footer img{
+    width: 14%;
+    height: auto;
+  }

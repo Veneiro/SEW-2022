@@ -1,0 +1,39 @@
+/****************************
+Mateo Rico Iglesias - UO277172
+Descripción de los estilos
+****************************/
+@media (min-width: 600px){
+    /*Especificidad 001*/
+    body {
+        display: grid;
+        grid:"h h h"
+            "a b c"
+            "f f f"
+    }
+    header{
+        grid-area: h;
+    }
+    header h1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header p{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    nav{
+        grid-area:a;
+    }
+    body main{
+        grid-area: b;
+    }
+    footer{
+        grid-area: f;
+    }
+
+    form fieldset:first-of-type{
+        display: grid;
+    }
+}
