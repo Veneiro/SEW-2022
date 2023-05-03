@@ -94,3 +94,14 @@ header{
     width: 14%;
     height: auto;
   }
+
+  [name = carousel] {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  [name = carousel] img {
+    width:100%;
+  }
+  
+ 
