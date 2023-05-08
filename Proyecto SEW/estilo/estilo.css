@@ -47,6 +47,7 @@ header{
     padding: 1em;
     width: 95%;
     text-align: justify;
+    overflow: auto;
   }
   /*Especificidad 002*/
   body section{
@@ -103,5 +104,11 @@ header{
   [name = carousel] img {
     width:100%;
   }
-  
+
+  [name = route] {
+    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    text-align: center;
+  }
  
