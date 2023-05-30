@@ -18,7 +18,7 @@ class Meteo {
       "¡Todo correcto! XML recibido de <a href='http://openweathermap.org/'>OpenWeatherMap</a>";
   }
   cargarDatos() {
-    debugger;
+    //debugger;
     $.ajax({
       dataType: "xml",
       url: this.url,
@@ -128,7 +128,7 @@ class Meteo {
 
   iniciar() {
     this.cargarDatos();
-    setInterval(() => this.cargarDatos(), 15000);
+    //setInterval(() => this.cargarDatos(), 15000);
   }
 }
 

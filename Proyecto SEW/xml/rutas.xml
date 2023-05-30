@@ -10,26 +10,46 @@
         <nombre>Ruta de los molinos</nombre>
         <tipo>Senderismo</tipo>
         <transporte>A pie</transporte>
-        <duracion></duracion>
+        <duracion>2 horas</duracion>
         <agencia>Sin Agencia</agencia>
         <descripcion>La ruta, tal y como se publicita, permitiría la visita a 10 molinos, pero eso no es del todo cierto, ya que el primer molino estaría en Santolaya, mientas que la ruta como tal empieza en el núcleo del Molín de la Ponte, a más de 5 km por carretera, por lo que en realidad podrían visitarse 9 molinos, de los cuales , los dos últimos, no son molinos de agua, sino molinos "de sangre", llamados así porque su accionamiento era manual. Vamos, que la ruta se queda en un máximo de 7 molinos, que tampoco es que esté mal.
         La ruta puede plantearse lineal, subiendo hasta Busloñe y volviendo por el mismo itinerario, o circular regresando por la carretera.
         </descripcion>
-        <destinadoA>Se puede ir con niños</destinadoA>
+        <destinadoA>Se puede ir con niños, Dificultad Fácil</destinadoA>
         <inicio>
-            <fecha></fecha>
-            <hora></hora>
-            <lugar>Plaza del ayuntamiento</lugar>
-            <direccion></direccion>
+            <fecha>10/08/2010</fecha>
+            <hora>07:00</hora>
+            <lugar>Molín de la Ponte</lugar>
+            <direccion>33161 La Vara, Asturias</direccion>
             <coordenadas latitud="3" longitud="3" altura="100"/>
         </inicio>
         <referencias>
-            <referencia></referencia>
+            <referencia>https://pelescaleyes.blogspot.com/2010/08/ruta-de-los-molinos-de-morcin.html</referencia>
         </referencias>
         <puntuacion>6</puntuacion>
         <hitos>
             <hito>
-                <nombre></nombre>
+                <nombreHito>Molín de la Ponte</nombreHito>
+                <descripcionHito>El Molín de la Ponte en Morcín, Asturias, es un molino de agua restaurado que 
+                representa una parte importante de la historia local. Tanto por su valor 
+                arquitectónico como por su ubicación en un entorno natural encantador, 
+                es un lugar digno de visita para aquellos interesados en la cultura 
+                asturiana y en la tradición molinera.</descripcionHito>
+                <coordenadas lat="-5.9136092" lon="43.26436274"></coordenadas>
+                <distanciaAnterior></distanciaAnterior>
+                <galeriaFotos>
+                    <foto></foto>
+                    <foto></foto>
+                    <foto></foto>
+                </galeriaFotos>
+                <galeriaVideos>
+                    <video></video>
+                    <video></video>
+                    <video></video>
+                </galeriaVideos>
+            </hito>
+            <hito>
+                <nombreHito>Embalse de los Afilorios</nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -45,23 +65,7 @@
                 </galeriaVideos>
             </hito>
             <hito>
-                <nombre></nombre>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombre></nombre>
+                <nombreHito>Monsacro</nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -369,9 +373,9 @@
         <tipo>Montañismo y senderismo</tipo>
         <transporte>A pie</transporte>
         <duracion>2-3 horas</duracion>
-        <agencia></agencia>
+        <agencia>Sin Agencia</agencia>
         <descripcion>El acceso a ambas cumbres, extraordinarios miradores sobre la zona central de Asturias, se realiza desde rutas fáciles y bien marcadas, todas ellas desde Morcín. El acceso más normal es tomando la carretera desde La Piñera hasta la aldea de La Vara; y desde ésta, una pista de hormigón hasta su final en la vega Bobies; desde aquí, y ya por praderías y la majada de Brañacé con cabañas de piedra, se gana el paso fundamental del Pan de la Forcá. Tomando la dirección Norte, a la derecha, por un sencillo sendero se gana en poco tiempo la cumbre del pico La Vara o Mostayal (1.310 m). Y tomando la dirección Sur, por praderías con buenas fuentes, en vista a Quirós y Proaza, se sube a la vega de Fontazán (1.500 m) y ya, por repisas y pedreros, se gana la cumbre de La Gamonal (1.713 m), en donde está colocada una antena de Protección Civil.</descripcion>
-        <destinadoA>Facil</destinadoA>
+        <destinadoA>Dificultad Fácil</destinadoA>
         <inicio>
             <fecha></fecha>
             <hora></hora>
@@ -385,7 +389,7 @@
         <puntuacion>8,5</puntuacion>
         <hitos>
             <hito>
-                <nombre></nombre>
+                <nombreHito></nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -401,7 +405,7 @@
                 </galeriaVideos>
             </hito>
             <hito>
-                <nombre></nombre>
+                <nombreHito></nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -417,7 +421,7 @@
                 </galeriaVideos>
             </hito>
             <hito>
-                <nombre></nombre>
+                <nombreHito></nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -1221,10 +1225,10 @@
         <tipo>Montaña y Senderismo</tipo>
         <transporte>A pie</transporte>
         <duracion>1 h y 30 minutos</duracion>
-        <agencia></agencia>
+        <agencia>Sin Agencia</agencia>
         <descripcion>Desde La Puente, en La Foz, se toma la carretera a la aldea de La Figar y, desde ella, una pista hormigonada que se remonta a dar vista al valle del Caudal (mirador de Pando); siguiendo la arista del cordal, de modo fácil, se gana la cumbre geodésica del Llusoriu, que divide los concejos de Mieres, Riosa y Morcín.
 Gran visibilidad sobre Mieres, la cordillera y el Aramo.</descripcion>
-        <destinadoA>Media</destinadoA>
+        <destinadoA>Dificultad Media</destinadoA>
         <inicio>
             <fecha></fecha>
             <hora></hora>
@@ -1238,7 +1242,7 @@ Gran visibilidad sobre Mieres, la cordillera y el Aramo.</descripcion>
         <puntuacion></puntuacion>
         <hitos>
             <hito>
-                <nombre></nombre>
+                <nombreHito></nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -1254,7 +1258,7 @@ Gran visibilidad sobre Mieres, la cordillera y el Aramo.</descripcion>
                 </galeriaVideos>
             </hito>
             <hito>
-                <nombre></nombre>
+                <nombreHito></nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
@@ -1270,7 +1274,7 @@ Gran visibilidad sobre Mieres, la cordillera y el Aramo.</descripcion>
                 </galeriaVideos>
             </hito>
             <hito>
-                <nombre></nombre>
+                <nombreHito></nombreHito>
                 <descripcion></descripcion>
                 <coordenadas></coordenadas>
                 <distanciaAnterior></distanciaAnterior>
