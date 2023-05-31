@@ -21,7 +21,7 @@ class Noticias {
         const articles = data.articles;
         const noticiasContainer = document.getElementsByName("noticias")[0];
 
-        articles.forEach(article => {
+        articles.slice(0,10).forEach(article => {
           const section = document.createElement("section");
           const pSource = document.createElement("p");
           const h3Title = document.createElement("h3");

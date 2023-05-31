@@ -111,4 +111,17 @@ header{
     box-sizing: border-box;
     text-align: center;
   }
+
+  [name = concejo]{
+    width : 100%;
+  }
+
+  [name = map]{
+    width:100%;
+    height:25em;
+  }
+
+  [name = meteo]{
+    text-align: center;
+  }
  

@@ -76,8 +76,7 @@ class ProcesaXML {
   
       const article = document.querySelector('article[name="kmlRuta' + rutaInt + '"]');
       let mapElement = document.createElement('article');
-      mapElement.style.width = '100%';
-      mapElement.style.height = '25em';
+      mapElement.setAttribute("name", "map");
       article.appendChild(mapElement);
   
       let map = new google.maps.Map(mapElement, {

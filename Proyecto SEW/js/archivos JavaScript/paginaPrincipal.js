@@ -41,38 +41,9 @@ class Carousel {
       $('[name=lastModified]').html('Modificado por última vez: ' + fechaHora);
     }
   }
-
-  class Mapa {
-    constructor() {
-      this.initializeMap();
-    }
-  
-    initializeMap() {
-        const mapElement = document.querySelector('article[name="map"]');
-      const mapOptions = {
-        center: { lat: 43.2737, lng: -5.8056 },
-        zoom: 14,
-        mapTypeId: google.maps.MapTypeId.SATELLITE
-      };
-  
-      const map = new google.maps.Map(mapElement, mapOptions);
-  
-      const imageOptions = {
-        url: 'https://maps.googleapis.com/maps/api/staticmap?center=43.2737,-5.8056&zoom=14&size=800x600&maptype=satellite&key=AIzaSyCB6chQKcq3mMf5jRlVVV-O-OO0Vkw711k',
-        size: new google.maps.Size(800, 600)
-      };
-  
-      const imageOverlay = new google.maps.GroundOverlay(imageOptions.url, map.getBounds(), imageOptions);
-      imageOverlay.setMap(map);
-    }
-  }
   
   $(document).ready(() => {
     const carousel = new Carousel();
     const lastModified = new LastModified();
-    const mapa = new Mapa();
-
-    // Llama a la función initializeMap una vez que la API de Google Maps esté cargada
-    google.maps.event.addListenerOnce(mapa.map, 'idle', mapa.initializeMap.bind(mapa));
   });
   

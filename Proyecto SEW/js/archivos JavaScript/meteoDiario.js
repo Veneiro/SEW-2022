@@ -113,7 +113,8 @@ class Meteo {
         stringDatos += "<p>Descripción: " + descripcion + "</p>";
         stringDatos += "<p>Hora de la medida: " + horaMedidaLocal + "</p>";
         stringDatos += "<p>Fecha de la medida: " + fechaMedidaLocal + "</p>";
-        $('[name = meteo]').html(stringDatos);
+        //$('[name = meteo]').html(stringDatos);
+        $('[name = meteo]').text(new XMLSerializer().serializeToString(datos));
       },
       error: function () {
         $("h3").html(
