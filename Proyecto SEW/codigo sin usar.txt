@@ -1,0 +1,196 @@
+/*
+  convierteKML(xml) {
+    let rutaInt = 1;
+    $("ruta", xml).each((i, ruta) => {
+      const nombre = $("nombre", ruta).text();
+      const descripcion = $("descripcion", ruta).text();
+
+      let placemarks = "";
+      $("trkpt", ruta).each((i, trkpt) => {
+        const lat = $(trkpt).attr("lat");
+        const lon = $(trkpt).attr("lon");
+
+        placemarks += "<Placemark>";
+        placemarks += "<name>" + nombre + "</name>";
+        placemarks += "<description> Punto " + i + "</description>";
+        placemarks +=
+          "<Point><coordinates>" + lon + "," + lat + ",0</coordinates></Point>";
+        placemarks += "</Placemark>";
+      });
+
+      let kml = "";
+      kml += '<?xml version="1.0" encoding="UTF-8"?>';
+      kml += '<kml xmlns="http://earth.google.com/kml/2.0">';
+      kml += "<Document>";
+      kml += placemarks;
+      kml += "</Document>";
+      kml += "</kml>";
+
+      const article = document.querySelector(
+        'article[name="kmlRuta' + rutaInt + '"]'
+      );
+
+      let mapElement = document.createElement("article");
+      mapElement.style.width = "100%";
+      mapElement.style.height = "25em";
+
+      article.appendChild(mapElement);
+
+      let map = new google.maps.Map(mapElement, {
+        center: { lat: 0, lng: 0 },
+        zoom: 1,
+      });
+
+      let kmlLayer = new google.maps.KmlLayer({
+        map: map,
+      });
+
+      kmlLayer.addListener("status_changed", () => {
+        if (kmlLayer.getStatus() === "OK") {
+          const parser = new DOMParser();
+          const kmlDocument = parser.parseFromString(kml, "text/xml");
+          kmlLayer.parseKmlString(
+            new XMLSerializer().serializeToString(kmlDocument)
+          );
+        }
+      });
+
+      rutaInt++;
+    });
+  }
+*/
+
+/*
+convierteKML(xml) {
+    let rutaInt = 1;
+    $('ruta', xml).each((i, ruta) => {
+      const nombre = $('nombre', ruta).text();
+      const descripcion = $('descripcion', ruta).text();
+  
+      let placemarks = [];
+      $('trkpt', ruta).each((i, trkpt) => {
+        const lat = parseFloat($(trkpt).attr('lat'));
+        const lon = parseFloat($(trkpt).attr('lon'));
+  
+        const placemark = {
+          name: nombre,
+          description: descripcion,
+          lat: lat,
+          lng: lon
+        };
+  
+        placemarks.push(placemark);
+      });
+  
+      const article = document.querySelector('article[name="kmlRuta' + rutaInt + '"]');
+      let mapElement = document.createElement('article');
+      mapElement.style.width = '100%';
+      mapElement.style.height = '25em';
+      article.appendChild(mapElement);
+  
+      let map = new google.maps.Map(mapElement, {
+        center: { lat: placemarks[0].lat, lng: placemarks[0].lng },
+        zoom: 14
+      });
+  
+      let pathCoordinates = placemarks.map((placemark) => {
+        return { lat: placemark.lat, lng: placemark.lng };
+      });
+  
+      let polyline = new google.maps.Polyline({
+        path: pathCoordinates,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+  
+      polyline.setMap(map);
+  
+      let firstMarker = new google.maps.Marker({
+        position: { lat: placemarks[0].lat, lng: placemarks[0].lng },
+        map: map,
+        title: placemarks[0].name,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'green',
+          fillOpacity: 1,
+          strokeWeight: 0,
+          scale: 6
+        }
+      });
+  
+      let lastMarker = new google.maps.Marker({
+        position: { lat: placemarks[placemarks.length - 1].lat, lng: placemarks[placemarks.length - 1].lng },
+        map: map,
+        title: placemarks[placemarks.length - 1].name,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'red',
+          fillOpacity: 1,
+          strokeWeight: 0,
+          scale: 6
+        }
+      });
+  
+      placemarks.forEach((placemark, index) => {
+        if (index !== 0 && index !== placemarks.length - 1) {
+          let marker = new google.maps.Marker({
+            position: { lat: placemark.lat, lng: placemark.lng },
+            map: map,
+            title: placemark.name,
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: 'yellow',
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 3
+            }
+          });
+  
+          let infoWindow = new google.maps.InfoWindow({
+            content: '<h3>' + placemark.name + '</h3>' + '<p>' + placemark.description + '</p>'
+          });
+  
+          marker.addListener('click', () => {
+            infoWindow.open(map, marker);
+          });
+        }
+      });
+  
+      rutaInt++;
+    });
+  }
+  */
+
+  /**
+  cargarDatos() {
+    $.ajax({
+      dataType: "json",
+      url: this.url,
+      method: "GET",
+      success: function (datos) {
+        $("h5").text(JSON.stringify(datos));
+        var articles = datos.articles;
+        var stringDatos = "";
+        
+        for(var i = 0; i < articles.length; i++){
+            stringDatos += "<section><p>" + articles[i].source.name;
+            stringDatos += " - " + articles[i].author + "</p>";
+            stringDatos += "<h3>" + articles[i].title + "</h3>";
+            stringDatos += "<p>" + articles[i].description + "</p></section>";
+            
+        }
+        $('[name = noticias]').html(stringDatos);
+      },
+      error: function () {
+        $("h3").html(
+          "¡Tenemos problemas!"
+        );
+        $("h4").remove();
+        $("h5").remove();
+        $("p").remove();
+      },
+    });
+  }
+  */

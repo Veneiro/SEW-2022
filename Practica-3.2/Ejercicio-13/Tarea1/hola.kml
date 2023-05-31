@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+    <Document>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 0</description>
+            <Point>
+                <coordinates>-5.912426,43.265483,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 1</description>
+            <Point>
+                <coordinates>-5.913154,43.264658,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 2</description>
+            <Point>
+                <coordinates>-5.913303,43.264092,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 3</description>
+            <Point>
+                <coordinates>-5.914028,43.264372,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 4</description>
+            <Point>
+                <coordinates>-5.915082,43.263506,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 5</description>
+            <Point>
+                <coordinates>-5.914654,43.263132,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 6</description>
+            <Point>
+                <coordinates>-5.914518,43.262091,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 7</description>
+            <Point>
+                <coordinates>-5.914736,43.261674,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 8</description>
+            <Point>
+                <coordinates>-5.914536,43.261397,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 9</description>
+            <Point>
+                <coordinates>-5.914545,43.261162,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 10</description>
+            <Point>
+                <coordinates>-5.915005,43.259473,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 11</description>
+            <Point>
+                <coordinates>-5.915331,43.258926,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 12</description>
+            <Point>
+                <coordinates>-5.915365,43.258361,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 13</description>
+            <Point>
+                <coordinates>-5.915203,43.258284,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 14</description>
+            <Point>
+                <coordinates>-5.915317,43.258381,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 15</description>
+            <Point>
+                <coordinates>-5.915521,43.258264,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 16</description>
+            <Point>
+                <coordinates>-5.915404,43.258005,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 17</description>
+            <Point>
+                <coordinates>-5.915697,43.257689,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 18</description>
+            <Point>
+                <coordinates>-5.915572,43.257017,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 19</description>
+            <Point>
+                <coordinates>-5.915662,43.256746,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 20</description>
+            <Point>
+                <coordinates>-5.916028,43.256239,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 21</description>
+            <Point>
+                <coordinates>-5.916419,43.256021,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 22</description>
+            <Point>
+                <coordinates>-5.916877,43.255502,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 23</description>
+            <Point>
+                <coordinates>-5.916019,43.256145,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 24</description>
+            <Point>
+                <coordinates>-5.915497,43.256926,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 25</description>
+            <Point>
+                <coordinates>-5.915636,43.257659,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 26</description>
+            <Point>
+                <coordinates>-5.915391,43.258012,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 27</description>
+            <Point>
+                <coordinates>-5.915467,43.258255,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 28</description>
+            <Point>
+                <coordinates>-5.915277,43.258606,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 29</description>
+            <Point>
+                <coordinates>-5.915328,43.258846,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 30</description>
+            <Point>
+                <coordinates>-5.915585,43.258983,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 31</description>
+            <Point>
+                <coordinates>-5.915871,43.258734,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 32</description>
+            <Point>
+                <coordinates>-5.916295,43.258659,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 33</description>
+            <Point>
+                <coordinates>-5.916527,43.258936,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 34</description>
+            <Point>
+                <coordinates>-5.917153,43.258985,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 35</description>
+            <Point>
+                <coordinates>-5.917129,43.259174,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 36</description>
+            <Point>
+                <coordinates>-5.917678,43.259547,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 37</description>
+            <Point>
+                <coordinates>-5.917675,43.260119,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 38</description>
+            <Point>
+                <coordinates>-5.917812,43.260383,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 39</description>
+            <Point>
+                <coordinates>-5.918541,43.261032,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 40</description>
+            <Point>
+                <coordinates>-5.918619,43.261577,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 41</description>
+            <Point>
+                <coordinates>-5.918834,43.261599,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 42</description>
+            <Point>
+                <coordinates>-5.918775,43.261382,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 43</description>
+            <Point>
+                <coordinates>-5.919942,43.261338,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 44</description>
+            <Point>
+                <coordinates>-5.920548,43.262457,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 45</description>
+            <Point>
+                <coordinates>-5.921425,43.262548,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 46</description>
+            <Point>
+                <coordinates>-5.922005,43.262848,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 47</description>
+            <Point>
+                <coordinates>-5.921718,43.263109,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 48</description>
+            <Point>
+                <coordinates>-5.921933,43.263462,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 49</description>
+            <Point>
+                <coordinates>-5.922651,43.263814,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 50</description>
+            <Point>
+                <coordinates>-5.923530,43.263662,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 51</description>
+            <Point>
+                <coordinates>-5.923734,43.263984,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 52</description>
+            <Point>
+                <coordinates>-5.922104,43.264265,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 53</description>
+            <Point>
+                <coordinates>-5.921047,43.264297,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 54</description>
+            <Point>
+                <coordinates>-5.920271,43.264127,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 55</description>
+            <Point>
+                <coordinates>-5.919280,43.264260,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 56</description>
+            <Point>
+                <coordinates>-5.917381,43.264063,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 57</description>
+            <Point>
+                <coordinates>-5.916456,43.264297,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 58</description>
+            <Point>
+                <coordinates>-5.915994,43.264170,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 59</description>
+            <Point>
+                <coordinates>-5.915772,43.264296,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 60</description>
+            <Point>
+                <coordinates>-5.915706,43.264537,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 61</description>
+            <Point>
+                <coordinates>-5.914670,43.265028,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 62</description>
+            <Point>
+                <coordinates>-5.914473,43.265296,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 63</description>
+            <Point>
+                <coordinates>-5.914536,43.265572,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 64</description>
+            <Point>
+                <coordinates>-5.914300,43.266088,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 65</description>
+            <Point>
+                <coordinates>-5.913704,43.266335,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 66</description>
+            <Point>
+                <coordinates>-5.912875,43.267426,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 67</description>
+            <Point>
+                <coordinates>-5.912660,43.266956,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 68</description>
+            <Point>
+                <coordinates>-5.912794,43.266505,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 69</description>
+            <Point>
+                <coordinates>-5.912261,43.265793,0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ruta de los molinos</name>
+            <description> Punto 70</description>
+            <Point>
+                <coordinates>-5.912323,43.265589,0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

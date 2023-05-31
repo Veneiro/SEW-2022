@@ -2,43 +2,64 @@
 class Noticias {
   constructor() {
     this.apikey = "94e6d98833514e95bcaba5a45dd357f4";
-    this.search = "asturias";
+    this.search = "Principado de Asturias";
     this.url =
       "https://newsapi.org/v2/everything?q=" 
       + this.search 
-      + "&from=2023-04-29&sortBy=publishedAt&apiKey=" 
+      + "&sortBy=publishedAt&apiKey=" 
       + this.apikey;
     this.correcto =
       "¡Todo correcto!";
   }
+  
+
   cargarDatos() {
-    $.ajax({
-      dataType: "json",
-      url: this.url,
-      method: "GET",
-      success: function (datos) {
-        console.log(datos);
-        $("h5").text(JSON.stringify(datos));
-        var articles = datos.articles;
-        var stringDatos = "";
-        
-        for(var i = 0; i < articles.length; i++){
-            stringDatos += "<section><p>" + articles[i].source.name;
-            stringDatos += " - " + articles[i].author + "</p>";
-            stringDatos += "<h3>" + articles[i].title + "</h3>";
-            stringDatos += "<p>" + articles[i].description + "</p></section>";
-        }
-        $('[name = noticias]').html(stringDatos);
-      },
-      error: function () {
-        $("h3").html(
-          "¡Tenemos problemas!"
-        );
-        $("h4").remove();
-        $("h5").remove();
-        $("p").remove();
-      },
-    });
+    fetch(this.url)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        const articles = data.articles;
+        const noticiasContainer = document.getElementsByName("noticias")[0];
+
+        articles.forEach(article => {
+          const section = document.createElement("section");
+          const pSource = document.createElement("p");
+          const h3Title = document.createElement("h3");
+          const pDescription = document.createElement("p");
+          const button = document.createElement("button");
+
+          if((article.author) == (null)){
+            pSource.textContent = `${article.source.name}`;
+          }else{
+            pSource.textContent = `${article.source.name} - ${article.author}`;
+          }
+          h3Title.textContent = article.title;
+          pDescription.textContent = article.description;
+          button.textContent = "Leer más";
+
+          button.addEventListener("click", () => {
+            this.cargarNoticiaCompleta(article);
+          });
+
+          section.appendChild(pSource);
+          section.appendChild(h3Title);
+          section.appendChild(pDescription);
+          section.appendChild(button);
+
+          noticiasContainer.appendChild(section);
+        });
+      })
+      .catch(error => {
+        console.error("¡Tenemos problemas!", error);
+        const h3 = document.createElement("h3");
+        h3.textContent = "¡Tenemos problemas!";
+        const noticiasContainer = document.getElementsByName("noticias")[0];
+        noticiasContainer.appendChild(h3);
+      });
+  }
+
+  cargarNoticiaCompleta(article) {
+    window.location.href = article.url;
   }
 
   iniciar() {

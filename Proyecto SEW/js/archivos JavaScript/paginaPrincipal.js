@@ -1,27 +1,78 @@
-let actual = 0;
-function cambiarImagen() {
-    let aMostrar = actual + 1;
-    if ($('[name = carousel] img').length == aMostrar) {
-        aMostrar = 0;
+class Carousel {
+    constructor() {
+      this.actual = 0;
+      this.images = $('[name=carousel] img');
+      this.inicializar();
+      this.startInterval();
     }
-    $('[name = carousel] img').eq(actual).fadeOut(() => {
-        $('[name = carousel] img').eq(aMostrar).fadeIn();
-    });
-    actual = aMostrar;
-}
+  
+    cambiarImagen() {
+      let aMostrar = this.actual + 1;
+      if (aMostrar >= this.images.length) {
+        aMostrar = 0;
+      }
+      this.images.eq(this.actual).fadeOut(() => {
+        this.images.eq(aMostrar).fadeIn();
+      });
+      this.actual = aMostrar;
+    }
+  
+    inicializar() {
+      this.images.hide();
+      this.images.eq(this.actual).show();
+    }
+  
+    startInterval() {
+      this.interval = setInterval(() => this.cambiarImagen(), 3000);
+    }
+  
+    stopInterval() {
+      clearInterval(this.interval);
+    }
+  }
+  
+  class LastModified {
+    constructor() {
+      this.showLastModified();
+    }
+  
+    showLastModified() {
+      const fechaHora = document.lastModified;
+      $('[name=lastModified]').html('Modificado por última vez: ' + fechaHora);
+    }
+  }
 
-function inicializar() {
-    $('[name = carousel] img').hide();
-    $('[name = carousel] img').eq(actual).show();
-}
+  class Mapa {
+    constructor() {
+      this.initializeMap();
+    }
+  
+    initializeMap() {
+        const mapElement = document.querySelector('article[name="map"]');
+      const mapOptions = {
+        center: { lat: 43.2737, lng: -5.8056 },
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+      };
+  
+      const map = new google.maps.Map(mapElement, mapOptions);
+  
+      const imageOptions = {
+        url: 'https://maps.googleapis.com/maps/api/staticmap?center=43.2737,-5.8056&zoom=14&size=800x600&maptype=satellite&key=AIzaSyCB6chQKcq3mMf5jRlVVV-O-OO0Vkw711k',
+        size: new google.maps.Size(800, 600)
+      };
+  
+      const imageOverlay = new google.maps.GroundOverlay(imageOptions.url, map.getBounds(), imageOptions);
+      imageOverlay.setMap(map);
+    }
+  }
+  
+  $(document).ready(() => {
+    const carousel = new Carousel();
+    const lastModified = new LastModified();
+    const mapa = new Mapa();
 
-function showLastModified(){
-    // Obtener la fecha y hora de la última actualización del documento en formato de cadena de texto
-    var fechaHora = document.lastModified;
-
-    $('[name = lastModified]').html('Modificado por última vez: ' + fechaHora);
-}
-
-$(inicializar);
-$(showLastModified);
-setInterval(cambiarImagen, 3000); // Llamar a la función cada 5 segundos
+    // Llama a la función initializeMap una vez que la API de Google Maps esté cargada
+    google.maps.event.addListenerOnce(mapa.map, 'idle', mapa.initializeMap.bind(mapa));
+  });
+  
