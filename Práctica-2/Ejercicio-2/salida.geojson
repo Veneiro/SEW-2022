@@ -1,0 +1,467 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.535092272806634,
+          43.54346143884969,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Mateo Rico Iglesias ",
+        "description": " Luarca "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [
+              -5.848486559535893,
+              43.36586255897024,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -6.550104357409675,
+              43.17804303219015,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -67.496638235799,
+              -29.157483656699927,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -5.662457016986879,
+              43.545138651650305,
+              0
+            ]
+          }
+        ]
+      },
+      "properties": {
+        "name": " Luis Lopez Garcia ",
+        "description": " Oviedo "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.848486559535893,
+          43.36586255897024,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Luis Lopez Garcia ",
+        "description": " Oviedo "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.550104357409675,
+          43.17804303219015,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Benemérito Anacleto Piernavieja ",
+        "description": " Cangas de Narcea "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.550104357409675,
+          43.17804303219015,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Benemérito Anacleto Piernavieja ",
+        "description": " Cangas de Narcea "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.496638235799,
+          -29.157483656699927,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Melito Sacamoco Parahoy ",
+        "description": " Chilecito, Argentina "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.496638235799,
+          -29.157483656699927,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Melito Sacamoco Parahoy ",
+        "description": " Chilecito, Argentina "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.662457016986879,
+          43.545138651650305,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Tomás Socorro Del Pozo ",
+        "description": " Gijón "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.662457016986879,
+          43.545138651650305,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Tomás Socorro Del Pozo ",
+        "description": " Gijón "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [
+              -5.925058936037406,
+              43.559778064949036,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -94.43422808465574,
+              39.127292071569286,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -6.523314120922505,
+              43.534093513630154,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -6.840077544207857,
+              33.96109225832617,
+              0
+            ]
+          }
+        ]
+      },
+      "properties": {
+        "name": " Deseado Sin Tenedor ",
+        "description": " Avilés "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.925058936037406,
+          43.559778064949036,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Deseado Sin Tenedor ",
+        "description": " Avilés "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.43422808465574,
+          39.127292071569286,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Dombina García Garcia ",
+        "description": " EEUU "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.43422808465574,
+          39.127292071569286,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Dombina García Garcia ",
+        "description": " EEUU "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.523314120922505,
+          43.534093513630154,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Nicomeda Zuzunaga Garcia ",
+        "description": " Barcia "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.523314120922505,
+          43.534093513630154,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Nicomeda Zuzunaga Garcia ",
+        "description": " Barcia "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.840077544207857,
+          33.96109225832617,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Simplicia Piesplanos Parraverde ",
+        "description": " Marruecos "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.840077544207857,
+          33.96109225832617,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Simplicia Piesplanos Parraverde ",
+        "description": " Marruecos "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [
+              -6.387731889748422,
+              43.54602659970272,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -6.5451999999999995,
+              43.404795715061766,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              2.1313203730163597,
+              41.388083838141604,
+              0
+            ]
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -3.63146727116394,
+              40.40921803167939,
+              0
+            ]
+          }
+        ]
+      },
+      "properties": {
+        "name": " Vitores Feo Alcoholado ",
+        "description": " Cadavedo "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.387731889748422,
+          43.54602659970272,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Vitores Feo Alcoholado ",
+        "description": " Cadavedo "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.5451999999999995,
+          43.404795715061766,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Armelinda Víbora Sorda ",
+        "description": " Navelgas "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.5451999999999995,
+          43.404795715061766,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Armelinda Víbora Sorda ",
+        "description": " Navelgas "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1313203730163597,
+          41.388083838141604,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Tesifonte Sin Fajardo ",
+        "description": " Barcelona "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1313203730163597,
+          41.388083838141604,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Tesifonte Sin Fajardo ",
+        "description": " Barcelona "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.63146727116394,
+          40.40921803167939,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Galán Anacleto Parahoy ",
+        "description": " Madrid "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.63146727116394,
+          40.40921803167939,
+          0
+        ]
+      },
+      "properties": {
+        "name": " Galán Anacleto Parahoy ",
+        "description": " Madrid "
+      }
+    }
+  ]
+}

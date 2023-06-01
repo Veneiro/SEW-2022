@@ -1,0 +1,21 @@
+/****************************
+Mateo Rico Iglesias - UO277172
+Descripción de los estilos
+****************************/
+/*Especificidad 001*/
+body {
+    background-color: black;
+    color:white;
+    margin: 3em;
+    border: 0.5em solid;
+    padding: 1em;
+}
+/*Especificidad 002*/
+body iframe{
+  width: 50%;
+}
+
+body img{
+  width: 50%;
+  height: auto;
+}

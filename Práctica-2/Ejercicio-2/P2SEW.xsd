@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://ejercicio.com/personas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bornDate" type="xs:date" />
+			  <xs:element name="bornPlace">
+				<xs:simpleType>
+				  <xs:restriction base="xs:string">
+					 <xs:minLength value="2"/>
+				  </xs:restriction>
+				</xs:simpleType>
+			  </xs:element>
+              <xs:element name="bornCoords" type="xs:string" />
+              <xs:element name="from" type="xs:string" />
+              <xs:element name="fromCoords" type="xs:string" />
+              <xs:element name="photos">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                      <xs:element name="photo">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							 <xs:pattern value=".*\.(png|jpg)"/>
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+				<xs:element name="videos">
+				  <xs:complexType>
+					<xs:sequence minOccurs="0">
+					  <xs:element name="video" />
+					</xs:sequence>
+				  </xs:complexType>
+				</xs:element>
+                    <xs:element name="comments">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="0">
+                          <xs:element name="comment" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="persona">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="data">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="bornDate" type="xs:date" />
+					<xs:element name="bornPlace">
+						<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="2"/>
+						</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="bornCoords" type="xs:string" />
+                    <xs:element name="from" type="xs:string" />
+					<xs:element name="fromCoords" type="xs:string" />
+                    <xs:element name="photos">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="0">
+						  <xs:element name="photo">
+							<xs:simpleType>
+							  <xs:restriction base="xs:string">
+								 <xs:pattern value=".*\.(png|jpg)"/>
+							  </xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="videos">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="0">
+                          <xs:element name="video" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="comments">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="0">
+                          <xs:element name="comment" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="persona">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="data">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="bornDate" type="xs:date" />
+						  <xs:element name="bornPlace">
+							<xs:simpleType>
+							  <xs:restriction base="xs:string">
+								 <xs:minLength value="2"/>
+							  </xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="bornCoords" type="xs:string" />
+                          <xs:element name="from" type="xs:string" />
+						  <xs:element name="fromCoords" type="xs:string" />
+                          <xs:element name="photos">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+								  <xs:element name="photo">
+									<xs:simpleType>
+									  <xs:restriction base="xs:string">
+										 <xs:pattern value=".*\.(png|jpg)"/>
+									  </xs:restriction>
+									</xs:simpleType>
+								  </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="videos">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element name="video" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="comments">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element name="comment" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="nombre" type="xs:string" use="required" />
+                  <xs:attribute name="apellidos" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required" />
+            <xs:attribute name="apellidos" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="nombre" type="xs:string" use="required" />
+      <xs:attribute name="apellidos" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

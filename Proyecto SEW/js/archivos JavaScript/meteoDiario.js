@@ -1,19 +1,13 @@
 "use strict";
 class Meteo {
   constructor() {
-    this.apikey = "47b790fd0fc41878c80c57c9846132cb";
+    this.apikey = "ff03cf1de5d47b151a031ab0ff83134d";
     this.ciudad = "Morcín";
     this.tipo = "&mode=xml";
     this.unidades = "&units=metric";
     this.idioma = "&lang=es";
-    this.url =
-      "https://api.openweathermap.org/data/2.5/weather?q=" +
-      this.ciudad +
-      this.tipo +
-      this.unidades +
-      this.idioma +
-      "&APPID=" +
-      this.apikey;
+    //this.url = "https://api.openweathermap.org/data/2.5/forecast/daily?lat=43.2637&lon=-5.8931&cnt=7&appid=" + this.apikey;
+    this.url = "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/038";
     this.correcto =
       "¡Todo correcto! XML recibido de <a href='http://openweathermap.org/'>OpenWeatherMap</a>";
   }
@@ -114,7 +108,8 @@ class Meteo {
         stringDatos += "<p>Hora de la medida: " + horaMedidaLocal + "</p>";
         stringDatos += "<p>Fecha de la medida: " + fechaMedidaLocal + "</p>";
         //$('[name = meteo]').html(stringDatos);
-        $('[name = meteo]').text(new XMLSerializer().serializeToString(datos));
+        console.log(new XMLSerializer().serializeToString(datos));
+        $('[name = meteo]').text(datos);
       },
       error: function () {
         $("h3").html(

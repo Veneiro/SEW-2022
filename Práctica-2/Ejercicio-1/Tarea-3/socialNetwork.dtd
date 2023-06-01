@@ -1,0 +1,15 @@
+<!ELEMENT persona (data,(persona, persona, persona)?)>
+<!ELEMENT data (bornDate, bornPlace, bornCoords, from, fromCoords, photos, videos, comments)>
+<!ELEMENT videos (video*)>
+<!ELEMENT photos (photo*)>
+<!ELEMENT comments (comment*)>
+<!ATTLIST persona nombre CDATA #REQUIRED>
+<!ATTLIST persona apellidos CDATA #REQUIRED>
+<!ELEMENT bornDate (#PCDATA)>
+<!ELEMENT bornPlace (#PCDATA)>
+<!ELEMENT bornCoords (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT fromCoords (#PCDATA)>
+<!ELEMENT video (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>

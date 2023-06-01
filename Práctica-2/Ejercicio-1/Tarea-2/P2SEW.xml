@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona SYSTEM "socialNetwork.dtd">
+
+<persona nombre="Mateo" apellidos="Rico Iglesias">
+	<data>
+		<bornDate>2001-06-26</bornDate>
+		<bornPlace>Luarca</bornPlace>
+		<bornCoords>-6.535092272806634, 43.54346143884969, 0.</bornCoords>
+		<from>Luarca</from>
+		<fromCoords>-6.535092272806634, 43.54346143884969, 0.</fromCoords>
+		<photos>
+		  <photo>1.jpg</photo>
+		</photos>
+		<videos></videos>
+		<comments></comments>
+	</data>	
+	<persona nombre="Luis" apellidos="Lopez Garcia">
+		<data>
+			<bornDate>2003-12-24</bornDate>
+			<bornPlace>Oviedo</bornPlace>
+			<bornCoords>-5.848486559535893, 43.36586255897024, 0.</bornCoords>
+			<from>Oviedo</from>
+			<fromCoords>-5.848486559535893, 43.36586255897024, 0.</fromCoords>
+			<photos>
+				<photo>2.jpg</photo>
+			</photos>
+			<videos></videos>
+			<comments>
+				<comment>Hola me llamo Luis</comment>
+			</comments>
+		</data>
+		<persona nombre="Benemérito" apellidos="Anacleto Piernavieja">
+			<data>
+				<bornDate>2011-11-22</bornDate>
+				<bornPlace>Cangas de Narcea</bornPlace>
+				<bornCoords>-6.550104357409675, 43.17804303219015, 0.</bornCoords>
+				<from>Cangas de Narcea</from>
+				<fromCoords>-6.550104357409675, 43.17804303219015, 0.</fromCoords>
+				<photos>
+					<photo>3.jpg</photo>
+				</photos>
+				<videos></videos>
+				<comments>
+				<comment>Hola me llamo Benemérito</comment>
+				</comments>
+			</data>
+		</persona>
+		<persona nombre="Melito" apellidos="Sacamoco Parahoy">
+			<data>
+				<bornDate>2011-06-04</bornDate>
+				<bornPlace>Chilecito, Argentina</bornPlace>
+				<bornCoords>-67.496638235799, -29.157483656699927, 0.</bornCoords>
+				<from>Bilbao</from>
+				<fromCoords>-2.934252728632616, 43.266802198075716, 0.</fromCoords>
+				<photos></photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Melito</comment>
+				</comments>
+			</data>
+		</persona>
+		<persona nombre="Tomás" apellidos="Socorro Del Pozo">
+			<data>
+				<bornDate>2003-04-11</bornDate>
+				<bornPlace>Gijón</bornPlace>
+				<bornCoords>-5.662457016986879, 43.545138651650305, 0.</bornCoords>
+				<from>Gijón</from>
+				<fromCoords>-5.662457016986879, 43.545138651650305, 0.</fromCoords>
+				<photos>
+					<photo>4.jpg</photo>
+				</photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Tomás</comment>
+				</comments>
+			</data>
+		</persona>
+	</persona>
+	<persona nombre="Deseado" apellidos="Sin Tenedor">
+		<data>
+			<bornDate>1998-01-22</bornDate>
+			<bornPlace>Avilés</bornPlace>
+			<bornCoords>-5.925058936037406, 43.559778064949036, 0.</bornCoords>
+			<from>Avilés</from>
+			<fromCoords>-5.925058936037406, 43.559778064949036, 0.</fromCoords>
+				<photos></photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Deseado</comment>
+				</comments>
+		</data>
+		<persona nombre="Dombina" apellidos="García Garcia">
+			<data>
+				<bornDate>1987-06-03</bornDate>
+				<bornPlace>EEUU</bornPlace>
+				<bornCoords>-94.43422808465574, 39.127292071569286, 0.</bornCoords>
+				<from>Valencia</from>
+				<fromCoords>-0.37490267716320597, 39.474049583642845, 0.</fromCoords>
+				<photos>
+					<photo>5.jpg</photo>
+				</photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Dombina</comment>
+				</comments>
+			</data>
+		</persona>
+		<persona nombre="Nicomeda" apellidos="Zuzunaga Garcia">
+			<data>
+				<bornDate>2001-06-07</bornDate>
+				<bornPlace>Barcia</bornPlace>
+				<bornCoords>-6.523314120922505, 43.534093513630154, 0.</bornCoords>
+				<from>Barcia</from>
+				<fromCoords>-6.523314120922505, 43.534093513630154, 0.</fromCoords>
+				<photos></photos>
+				<videos>
+					<video>https://www.youtube.com/embed/sHkc83XA2dY</video>
+				</videos>
+				<comments>
+					<comment>Hola me llamo Nicomeda</comment>
+				</comments>
+			</data>
+		</persona>
+		<persona nombre="Simplicia" apellidos="Piesplanos Parraverde">
+			<data>
+				<bornDate>2005-09-12</bornDate>
+				<bornPlace>Marruecos</bornPlace>
+				<bornCoords>-6.840077544207857, 33.96109225832617, 0.</bornCoords>
+				<from>Aragón</from>
+				<fromCoords>-0.9539386458745364, 41.61949255585056, 0.</fromCoords>
+				<photos></photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Simplicia</comment>
+				</comments>
+			</data>
+		</persona>
+	</persona>
+	<persona nombre="Vitores" apellidos="Feo Alcoholado">
+		<data>
+			<bornDate>2012-12-08</bornDate>
+			<bornPlace>Cadavedo</bornPlace>
+			<bornCoords>-6.387731889748422, 43.54602659970272, 0.</bornCoords>
+			<from>Cadavedo</from>
+			<fromCoords>-6.387731889748422, 43.54602659970272, 0.</fromCoords>
+			<photos></photos>
+			<videos></videos>
+			<comments>
+				<comment>Hola me llamo Vitores</comment>
+			</comments>
+		</data>
+		<persona nombre="Armelinda" apellidos="Víbora Sorda">
+			<data>
+				<bornDate>1996-11-20</bornDate>
+				<bornPlace>Navelgas</bornPlace>
+				<bornCoords>-6.5451999999999995, 43.404795715061766, 0.</bornCoords>
+				<from>Navelgas</from>
+				<fromCoords>-6.5451999999999995, 43.404795715061766, 0.</fromCoords>
+				<photos></photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Armelinda</comment>
+				</comments>
+			</data>
+		</persona>
+		<persona nombre="Tesifonte" apellidos="Sin Fajardo">
+			<data>
+				<bornDate>2001-06-02</bornDate>
+				<bornPlace>Barcelona</bornPlace>
+				<bornCoords>2.1313203730163597, 41.388083838141604, 0.</bornCoords>
+				<from>Barcelona</from>
+				<fromCoords>2.1313203730163597, 41.388083838141604, 0.</fromCoords>
+				<photos></photos>
+				<videos></videos>
+				<comments>
+					<comment>Hola me llamo Tesifonte</comment>
+				</comments>
+			</data>
+		</persona>
+		<persona nombre="Galán" apellidos="Anacleto Parahoy">
+			<data>
+				<bornDate>2002-03-09</bornDate>
+				<bornPlace>Madrid</bornPlace>
+				<bornCoords>-3.63146727116394, 40.40921803167939, 0.</bornCoords>
+				<from>Madrid</from>
+				<fromCoords>-3.63146727116394, 40.40921803167939, 0.</fromCoords>
+				<photos></photos>
+				<videos>
+					<video>https://www.youtube.com/embed/3wFHOYGWKPc</video>
+				</videos>
+				<comments>
+					<comment>Hola me llamo Galán</comment>
+				</comments>
+			</data>
+		</persona>
+	</persona>
+</persona>
