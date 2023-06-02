@@ -159,11 +159,9 @@ class ProcesaXML {
   }
   
   
-  
-  
   convierteSVG(xml) {
     let svg = "";
-
+  
     $("ruta", xml).each((i, ruta) => {
       let x = 0;
       const nombre = $("nombre", ruta).text();
@@ -182,41 +180,44 @@ class ProcesaXML {
         }
         cont++;
       });
-      svg += "<article name=route>";
-      svg += '<svg height="' + (max - min + 5) + '" width="' + 10 * cont + '">';
+  
+      const svgHeight = max - min + 50;
+      const svgWidth = cont * 10;
+  
+      svg += '<article name="route">';
+      svg += '<svg height="' + svgHeight + '" width="' + svgWidth + '">';
+  
+      let points = ""; // Variable para almacenar los puntos del perfil altimétrico
+  
       $("trkpt", ruta).each((i, trkpt) => {
-        console.log(max + " " + min);
         const alt = parseInt($("ele", trkpt).text());
         let colorFill = "blue";
         let colorStroke = "white";
-        if (alt == min) {
+        if (alt === min) {
           colorFill = "red";
+          svg += '<circle cx="' + x + '" cy="' + (svgHeight - (alt - min + 5)) + '" r="5" fill="red" />';
         }
-
-        if (alt == max) {
+        if (alt === max) {
           colorFill = "green";
+          svg += '<circle cx="' + x + '" cy="' + (svgHeight - (alt - min + 5)) + '" r="5" fill="green" />';
         }
-
-        svg +=
-          '<rect x="' +
-          x +
-          '" y="' +
-          (max - min - (alt - min + 5)) +
-          '" width="10" height="' +
-          (alt - min + 5) +
-          '" stroke="' +
-          colorStroke +
-          '" stroke-width="1" fill="' +
-          colorFill +
-          '"/>';
+        
+        const point = x + "," + (svgHeight - (alt - min + 5));
+        points += point + " ";
+  
         x += 10;
       });
+  
+      // Dibujar el perfil altimétrico como una línea poligonal
+      svg += '<polyline points="' + points + '" fill="none" stroke="blue" stroke-width="2" />';
+  
       svg += "</svg>";
       svg += "</article>";
     });
-
+  
     $('article[name="svg"]').html(svg);
   }
+  
 }
 
 procesa = new ProcesaXML();
