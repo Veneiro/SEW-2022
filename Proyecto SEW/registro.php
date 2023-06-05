@@ -21,32 +21,30 @@ if (isset($_SESSION['usuario'])) {
     exit;
 }
 
-// Verificar si se envió el formulario de inicio de sesión
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    $nombre = $_POST['usuario'];
+// Verificar si se envió el formulario de registro
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registro'])) {
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
     $contrasena = $_POST['contrasena'];
 
-    // Verificar si el usuario y la contraseña son correctos
-    $queryVerificarUsuario = "SELECT id FROM usuarios WHERE nombre = '$nombre' AND password = '$contrasena'";
+    // Verificar si el nombre de usuario ya existe en la base de datos
+    $queryVerificarUsuario = "SELECT id FROM usuarios WHERE nombre = '$nombre'";
     $resultadoVerificarUsuario = mysqli_query($conexion, $queryVerificarUsuario);
 
     if ($resultadoVerificarUsuario && mysqli_num_rows($resultadoVerificarUsuario) > 0) {
-        // El usuario y la contraseña son correctos, iniciar sesión
-        $_SESSION['usuario'] = $nombre;
-
-        // Obtener el ID del usuario actual
-        $queryObtenerUsuarioId = "SELECT id FROM usuarios WHERE nombre = '$nombre'";
-        $resultadoObtenerUsuarioId = mysqli_query($conexion, $queryObtenerUsuarioId);
-
-        if ($resultadoObtenerUsuarioId && mysqli_num_rows($resultadoObtenerUsuarioId) > 0) {
-            $fila = mysqli_fetch_assoc($resultadoObtenerUsuarioId);
-            $_SESSION['usuario_id'] = $fila['id'];
-        }
-
-        header('Location: index.php');
-        exit;
+        $error = 'El nombre de usuario ya está registrado.';
     } else {
-        $error = 'Usuario o contraseña incorrectos.';
+        // Insertar el nuevo usuario en la base de datos
+        $queryInsertarUsuario = "INSERT INTO usuarios (nombre, email, contrasena) VALUES ('$nombre', '$email', '$contrasena')";
+        $resultadoInsertarUsuario = mysqli_query($conexion, $queryInsertarUsuario);
+
+        if ($resultadoInsertarUsuario) {
+            // Registro exitoso, redirigir al formulario de inicio de sesión
+            header('Location: login.php?registro=success');
+            exit;
+        } else {
+            $error = 'Error al registrar el usuario.';
+        }
     }
 }
 ?>
@@ -56,13 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Morcín | Inicio de Sesión</title>
+    <title>Morcín | Registro</title>
     <link rel="stylesheet" type="text/css" href="../Proyecto SEW/estilo/estilo.css" />
 </head>
 
 <body>
     <header>
-        <t1>Iniciar Sesión</t1>
+        <t1>Registro</t1>
         <nav>
             <a href="./index.html">Página Principal</a>
             <a href="./gastronomía.html">Gastronomía</a>
@@ -73,28 +71,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         </nav>
     </header>
     <main>
-        <?php if (isset($_GET['registro']) && $_GET['registro'] === 'success'): ?>
-            <p>Registro exitoso. Inicia sesión con tus credenciales.</p>
-        <?php endif; ?>
-
         <?php if (isset($error)): ?>
             <p>
                 <?php echo $error; ?>
             </p>
         <?php endif; ?>
 
-        <form action="login.php" method="POST">
-            <label for="usuario">Usuario:</label>
-            <input type="text" name="usuario" required><br>
+        <form action="registro.php" method="POST">
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" name="nombre" required><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" required><br>
 
             <label for="contrasena">Contraseña:</label>
             <input type="password" name="contrasena" required><br>
 
-            <input type="submit" name="login" value="Iniciar Sesión">
+            <input type="submit" name="registro" value="Registrarse">
         </form>
     </main>
     <footer>
-        <p>No tienes una cuenta? <a href="registro.php">Regístrate aquí</a></p>
+        <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión aquí</a></p>
     </footer>
 </body>
 

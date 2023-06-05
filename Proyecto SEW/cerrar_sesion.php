@@ -3,7 +3,7 @@
 session_start();
 session_destroy();
 
-header('Location: formulario_login.php');
+header('Location: login.php');
 exit;
 
 ?>

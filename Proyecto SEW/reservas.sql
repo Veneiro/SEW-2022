@@ -12,6 +12,16 @@ CREATE TABLE usuarios (
     password VARCHAR(255) NOT NULL
 );
 
+-- Crear la tabla de recursos
+CREATE TABLE recursos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    ocupacion INT NOT NULL,
+    precio DECIMAL(8, 2) NOT NULL,
+    descripcion TEXT
+);
+
 -- Crear la tabla de reservas
 CREATE TABLE reservas (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -21,16 +31,6 @@ CREATE TABLE reservas (
     hora TIME NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     FOREIGN KEY (recurso_id) REFERENCES recursos(id)
-);
-
--- Crear la tabla de recursos
-CREATE TABLE recursos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
-    tipo VARCHAR(50) NOT NULL,
-    ocupacion INT NOT NULL,
-    precio DECIMAL(8, 2) NOT NULL,
-    descripcion TEXT
 );
 
 -- Insertar datos de ejemplo en la tabla de recursos
