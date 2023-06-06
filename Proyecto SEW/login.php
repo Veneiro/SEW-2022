@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $contrasena = $_POST['contrasena'];
 
     // Verificar si el usuario y la contraseña son correctos
-    $queryVerificarUsuario = "SELECT id FROM usuarios WHERE nombre = '$nombre' AND password = '$contrasena'";
+    $queryVerificarUsuario = "SELECT id FROM usuarios WHERE nombre = '$nombre' AND contrasena = '$contrasena'";
     $resultadoVerificarUsuario = mysqli_query($conexion, $queryVerificarUsuario);
 
     if ($resultadoVerificarUsuario && mysqli_num_rows($resultadoVerificarUsuario) > 0) {

@@ -17,13 +17,45 @@ if (!$conexion) {
 }
 
 // Función para verificar la disponibilidad de un recurso turístico en una fecha y hora específicas
-function verificarDisponibilidad($recurso, $fecha, $hora)
+function verificarDisponibilidad($recurso, $fechaEntrada, $horaEntrada, $fechaSalida, $horaSalida)
 {
-    // Aquí puedes agregar la lógica para verificar la disponibilidad del recurso en la fecha y hora especificadas
-    // Retorna true si está disponible, false si no lo está
-    // Puedes implementar tu propia lógica de verificación de disponibilidad
-    return true;
+    global $conexion;
+
+    $recursoId = $recurso['id'];
+
+    // Verificar la disponibilidad del recurso
+    $queryVerificarDisponibilidad = "SELECT SUM(ocupacion_actual) AS ocupacion_actual, ocupacion_maxima FROM reservas INNER JOIN recursos ON reservas.recurso_id = recursos.id WHERE recursos.id = '$recursoId' AND (fecha_entrada BETWEEN '$fechaEntrada' AND '$fechaSalida' OR fecha_salida BETWEEN '$fechaEntrada' AND '$fechaSalida')";
+    $resultadoVerificarDisponibilidad = mysqli_query($conexion, $queryVerificarDisponibilidad);
+
+    if ($resultadoVerificarDisponibilidad) {
+        $filaVerificarDisponibilidad = mysqli_fetch_assoc($resultadoVerificarDisponibilidad);
+        $ocupacionActual = $filaVerificarDisponibilidad['ocupacion_actual'];
+        $ocupacionMaxima = $filaVerificarDisponibilidad['ocupacion_maxima'];
+
+        // Verificar si se alcanzó la ocupación máxima del recurso
+        if ($ocupacionActual >= $ocupacionMaxima) {
+            // No hay disponibilidad, retorna falso
+            return false;
+        } else {
+            // Verificar si la hora de entrada es anterior a la hora de salida
+            $fechaHoraEntrada = strtotime($fechaEntrada . ' ' . $horaEntrada);
+            $fechaHoraSalida = strtotime($fechaSalida . ' ' . $horaSalida);
+
+            if ($fechaHoraEntrada >= $fechaHoraSalida) {
+                // La hora de entrada es posterior o igual a la hora de salida, no hay disponibilidad
+                return false;
+            }
+
+            // Hay disponibilidad, retorna verdadero
+            return true;
+        }
+    } else {
+        // Error al verificar la disponibilidad en la base de datos
+        return false;
+    }
 }
+
+
 
 // Función para calcular el precio total de una reserva
 function calcularPrecioTotal($reservas)
@@ -36,7 +68,7 @@ function calcularPrecioTotal($reservas)
 }
 
 // Obtener recursos desde la base de datos
-$queryRecursos = "SELECT id, nombre, precio FROM recursos";
+$queryRecursos = "SELECT id, nombre, precio, ocupacion_maxima FROM recursos";
 $resultadoRecursos = mysqli_query($conexion, $queryRecursos);
 
 // Verificar si se obtuvieron resultados
@@ -67,8 +99,10 @@ if (!isset($_SESSION['usuario'])) {
 // Procesar formulario de reserva
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener los datos del formulario
-    $fecha = $_POST['fecha'];
-    $hora = $_POST['hora'];
+    $fechaEntrada = $_POST['fecha_entrada'];
+    $horaEntrada = $_POST['hora_entrada'];
+    $fechaSalida = $_POST['fecha_salida'];
+    $horaSalida = $_POST['hora_salida'];
     $recursoId = isset($_POST['recurso']) ? $_POST['recurso'] : null;
 
     // Verificar la disponibilidad del recurso en la fecha y hora seleccionadas
@@ -83,15 +117,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($recurso !== null) {
         // El recurso fue encontrado, se puede proceder con la reserva
 
-        $disponible = verificarDisponibilidad($recurso, $fecha, $hora);
+        // Verificar si la hora de entrada es posterior o igual a la hora de salida
+        $fechaHoraEntrada = strtotime($fechaEntrada . ' ' . $horaEntrada);
+        $fechaHoraSalida = strtotime($fechaSalida . ' ' . $horaSalida);
 
-        if ($disponible) {
+        $error = '';
+
+        if ($fechaHoraEntrada >= $fechaHoraSalida) {
+            // La hora de entrada es posterior o igual a la hora de salida, asignar mensaje de error correspondiente
+            $error = 'Las horas de entrada y salida seleccionadas son incorrectas.';
+        } else {
+            // Verificar la disponibilidad del recurso en las fechas y horas seleccionadas
+            $disponible = verificarDisponibilidad($recurso, $fechaEntrada, $horaEntrada, $fechaSalida, $horaSalida);
+
+            if (!$disponible) {
+                // Recurso no disponible en las fechas y horas seleccionadas
+                $error = 'La ocupación para ese recurso ha llegado a su límite.';
+            }
+        }
+
+        // Insertar la reserva en la base de datos solo si no hay error
+        if (empty($error)) {
             // Obtener el ID del usuario actual
             $usuarioId = $_SESSION['usuario_id'];
 
-            // Insertar la reserva en la base de datos
-            $queryInsertarReserva = "INSERT INTO reservas (usuario_id, recurso_id, fecha, hora)
-                            VALUES ('$usuarioId', '$recursoId', '$fecha', '$hora')";
+            $queryInsertarReserva = "INSERT INTO reservas (usuario_id, recurso_id, fecha_entrada, hora_entrada, fecha_salida, hora_salida)
+                        VALUES ('$usuarioId', '$recursoId', '$fechaEntrada', '$horaEntrada', '$fechaSalida', '$horaSalida')";
+            $recursoId = $recurso['id'];
+            $queryActualizarOcupacion = "UPDATE recursos SET ocupacion_actual = ocupacion_actual + 1 WHERE id = '$recursoId'";
+            mysqli_query($conexion, $queryActualizarOcupacion);
             $resultadoInsertarReserva = mysqli_query($conexion, $queryInsertarReserva);
 
             if (!$resultadoInsertarReserva) {
@@ -101,9 +155,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Redirigir a la página de confirmación de reserva
             header('Location: confirmacion_reserva.php');
             exit;
-        } else {
-            // Recurso no disponible en la fecha y hora seleccionadas
-            $error = 'El recurso seleccionado no está disponible en la fecha y hora especificadas.';
         }
     } else {
         // No se encontró el recurso seleccionado
@@ -111,24 +162,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+
+
+
+
 // Procesar solicitud de eliminación de reserva
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['eliminar_reserva'])) {
         $reservaId = $_POST['eliminar_reserva'];
 
-        // Realizar la consulta de eliminación de la reserva
-        $queryEliminarReserva = "DELETE FROM reservas WHERE id = '$reservaId'";
-        $resultadoEliminarReserva = mysqli_query($conexion, $queryEliminarReserva);
+        // Obtener los detalles de la reserva antes de eliminarla
+        $queryObtenerReserva = "SELECT recurso_id FROM reservas WHERE id = '$reservaId'";
+        $resultadoObtenerReserva = mysqli_query($conexion, $queryObtenerReserva);
 
-        if (!$resultadoEliminarReserva) {
-            die("Error al eliminar la reserva: " . mysqli_error($conexion));
+        if ($resultadoObtenerReserva && mysqli_num_rows($resultadoObtenerReserva) > 0) {
+            $reserva = mysqli_fetch_assoc($resultadoObtenerReserva);
+
+            // Realizar la consulta de eliminación de la reserva
+            $queryEliminarReserva = "DELETE FROM reservas WHERE id = '$reservaId'";
+            $recursoId = $reserva['recurso_id'];
+            $queryActualizarOcupacion = "UPDATE recursos SET ocupacion_actual = ocupacion_actual - 1 WHERE id = '$recursoId'";
+            mysqli_query($conexion, $queryActualizarOcupacion);
+
+            $resultadoEliminarReserva = mysqli_query($conexion, $queryEliminarReserva);
+
+            if (!$resultadoEliminarReserva) {
+                die("Error al eliminar la reserva: " . mysqli_error($conexion));
+            }
+
+            // Redirigir a la página actual para evitar envío duplicado del formulario
+            header('Location: ' . $_SERVER['PHP_SELF']);
+            exit;
+        } else {
+            // No se encontró la reserva correspondiente
+            die("Error al obtener los detalles de la reserva: " . mysqli_error($conexion));
         }
-
-        // Redirigir a la página actual para evitar envío duplicado del formulario
-        header('Location: ' . $_SERVER['PHP_SELF']);
-        exit;
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -164,11 +235,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-            <label for="fecha">Fecha:</label>
-            <input type="date" name="fecha" required><br>
+            <label for="fecha_entrada">Fecha de Entrada:</label>
+            <input type="date" name="fecha_entrada" required><br>
 
-            <label for="hora">Hora:</label>
-            <input type="time" name="hora" required><br>
+            <label for="hora_entrada">Hora de Entrada:</label>
+            <input type="time" name="hora_entrada" required><br>
+
+            <label for="fecha_salida">Fecha de Salida:</label>
+            <input type="date" name="fecha_salida" required><br>
+
+            <label for="hora_salida">Hora de Salida:</label>
+            <input type="time" name="hora_salida" required><br>
 
             <label for="recurso">Recurso Turístico:</label>
             <select name="recurso" required>
@@ -186,13 +263,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul>
                 <?php foreach ($reservas as $reserva): ?>
                     <li>
-                        <strong>
-                            <?php echo $recursos[array_search($reserva['recurso_id'], array_column($recursos, 'id'))]['nombre']; ?>
-                        </strong><br>
-                        Fecha:
-                        <?php echo $reserva['fecha']; ?><br>
-                        Hora:
-                        <?php echo $reserva['hora']; ?><br>
+                        <?php echo $recursos[array_search($reserva['recurso_id'], array_column($recursos, 'id'))]['nombre']; ?>
+                        <br>
+                        Fecha de entrada:
+                        <?php echo date('Y-m-d', strtotime($reserva['fecha_entrada'])); ?><br>
+                        Hora de entrada:
+                        <?php echo date('H:i', strtotime($reserva['hora_entrada'])); ?><br>
+                        Fecha de salida:
+                        <?php echo date('Y-m-d', strtotime($reserva['fecha_salida'])); ?><br>
+                        Hora de salida:
+                        <?php echo date('H:i', strtotime($reserva['hora_salida'])); ?><br>
+
                         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                             <input type="hidden" name="eliminar_reserva" value="<?php echo $reserva['id']; ?>">
                             <button type="submit">Eliminar reserva</button>
@@ -208,7 +289,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
     </main>
     <footer>
-        <a href="cerrar_sesion.php">Cerrar Sesión</a>
+        <a href="cerrar_sesion.php">Cerrar sesión</a>
     </footer>
 </body>
 

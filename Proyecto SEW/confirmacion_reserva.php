@@ -12,15 +12,6 @@ $conexion = mysqli_connect($host, $usuario, $password, $base_de_datos);
 if (!$conexion) {
     die("Error al conectar a la base de datos: " . mysqli_connect_error());
 }
-// Función para calcular el precio total de una reserva
-function calcularPrecioTotal($reservas)
-{
-    $total = 0;
-    foreach ($reservas as $reserva) {
-        $total += $reserva['precio'];
-    }
-    return $total;
-}
 
 // Verificar si el usuario ha iniciado sesión
 session_start();
@@ -48,6 +39,8 @@ if ($resultadoReserva && mysqli_num_rows($resultadoReserva) > 0) {
     $reserva = null; // Si no se encontró la reserva, asignar null
 }
 
+// Cerrar la conexión a la base de datos
+mysqli_close($conexion);
 ?>
 
 <!DOCTYPE html>
@@ -61,9 +54,7 @@ if ($resultadoReserva && mysqli_num_rows($resultadoReserva) > 0) {
 
 <body>
     <header>
-        <t1>Bienvenido,
-            <?php echo $_SESSION['usuario']; ?>
-        </t1>
+        <t1>Bienvenido, <?php echo $_SESSION['usuario']; ?></t1>
         <nav>
             <a href="./index.html">Página Principal</a>
             <a href="./gastronomía.html">Gastronomía</a>
@@ -79,24 +70,19 @@ if ($resultadoReserva && mysqli_num_rows($resultadoReserva) > 0) {
         <?php if ($reserva): ?>
             <ul>
                 <li>
-                    <strong>
-                        <?php echo $reserva['nombre_recurso']; ?>
-                    </strong><br>
-                    Fecha:
-                    <?php echo $reserva['fecha']; ?><br>
-                    Hora:
-                    <?php echo $reserva['hora']; ?>
+                    <?php echo $reserva['nombre_recurso']; ?><br>
+                    Fecha de entrada: <?php echo $reserva['fecha_entrada']; ?><br>
+                    Hora de entrada: <?php echo $reserva['hora_entrada']; ?><br>
+                    Fecha de salida: <?php echo $reserva['fecha_salida']; ?><br>
+                    Hora de salida: <?php echo $reserva['hora_salida']; ?>
                 </li>
             </ul>
-            <p>Precio Total:
-                <?php echo $reserva['precio']; ?>
-            </p>
+            <p>Precio Total: <?php echo $reserva['precio']; ?></p>
         <?php else: ?>
             <p>No has realizado ninguna reserva.</p>
         <?php endif; ?>
 
-        <a href="index.php">Volver a realizar reservas</a>
-        <br>
+        <a href="index.php">Volver a realizar reservas</a><br>
         <a href="cerrar_sesion.php">Cerrar Sesión</a>
     </main>
 </body>
