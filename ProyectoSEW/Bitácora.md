@@ -41,13 +41,17 @@ En este día, ya finalizada la funcionalidad de la página ya me dedique a comen
 
 Este es el medio de funcionamiento que he usado durante todo el proyecto. Cambié la configuración del servidor Apache para que tomara de ruta raíz la carpeta de mi proyecto y estuve trabajando de esta manera. Esto me facilitó la implementación de la parte de php ya que al estar trabajando desde un inicio en XAMPP cuando llegue a esta parte funcionó todo sin problemas ya que el servidor apache puede cargar correctamente los php.
 
+Como se puede observar si me dirigo a la url podemos ver la página a la perfección:
+
+
+
 ## Funcionamiento en la nube (Azure) con una cuenta de estudiante
 
 
 
 ## Prueba de Usabilidad del Proyecto
 
-Añadir mirar cuando tiempo estimado tiene la ruta
+
 
 **Tanda 1 - Ordenador:**
 

@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cff497e2ae0d8286",
+            "id": "9dec2d06033ce0de",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cff497e2ae0d8286",
+  "active": "9dec2d06033ce0de",
   "lastOpenFiles": [
+    "ImagenesBitácora",
+    "Untitled.md",
+    "Bitácora.md",
     "scriptCorreción.py~",
     "js/ultimaModificación.js",
     "terminos.txt~",
@@ -165,10 +168,8 @@
     "multimedia/SanMag2.jpg",
     "multimedia/SanMag2.jpg.crdownload",
     "multimedia/SanMag1.jpg",
-    "multimedia/SanMag1.jpg.crdownload",
     "multimedia/obispo3.jpg",
     "multimedia/obispo2.jpg",
-    "multimedia/obispo1.jpg",
-    "Bitácora.md"
+    "multimedia/obispo1.jpg"
   ]
 }
