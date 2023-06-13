@@ -1,87 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--DOCTYPE persona SYSTEM "socialNetwork.dtd"-->
 
-<rutas
-  xmlns="http://ejercicio.com/rutas"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://ejercicio.com/rutas P2SEW.xsd">
+<rutas xmlns="http://ejercicio.com/rutas"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ejercicio.com/rutas P2SEW.xsd">
 
-    <ruta>
-        <nombre>Ruta de los molinos</nombre>
-        <tipo>Senderismo</tipo>
-        <transporte>A pie</transporte>
-        <duracion>2 horas</duracion>
-        <agencia>Sin Agencia</agencia>
-        <descripcion>La ruta, tal y como se publicita, permitiría la visita a 10 molinos, pero eso no es del todo cierto, ya que el primer molino estaría en Santolaya, mientas que la ruta como tal empieza en el núcleo del Molín de la Ponte, a más de 5 km por carretera, por lo que en realidad podrían visitarse 9 molinos, de los cuales , los dos últimos, no son molinos de agua, sino molinos "de sangre", llamados así porque su accionamiento era manual. Vamos, que la ruta se queda en un máximo de 7 molinos, que tampoco es que esté mal.
+  <ruta>
+    <nombre>Ruta de los molinos</nombre>
+    <tipo>Senderismo</tipo>
+    <transporte>A pie</transporte>
+    <duracion>2 horas</duracion>
+    <agencia>Sin Agencia</agencia>
+    <descripcion>La ruta, tal y como se publicita, permitiría la visita a 10 molinos, pero eso no es del todo cierto, ya que el primer molino estaría en Santolaya, mientas que la ruta como tal empieza en el núcleo del Molín de la Ponte, a más de 5 km por carretera, por lo que en realidad podrían visitarse 9 molinos, de los cuales , los dos últimos, no son molinos de agua, sino molinos "de sangre", llamados así porque su accionamiento era manual. Vamos, que la ruta se queda en un máximo de 7 molinos, que tampoco es que esté mal.
         La ruta puede plantearse lineal, subiendo hasta Busloñe y volviendo por el mismo itinerario, o circular regresando por la carretera.
-        </descripcion>
-        <destinadoA>Se puede ir con niños, Dificultad Fácil</destinadoA>
-        <inicio>
-            <fecha>10/08/2010</fecha>
-            <hora>07:00</hora>
-            <lugar>Molín de la Ponte</lugar>
-            <direccion>33161 La Vara, Asturias</direccion>
-            <coordenadas latitud="3" longitud="3" altura="100"/>
-        </inicio>
-        <referencias>
-            <referencia>https://pelescaleyes.blogspot.com/2010/08/ruta-de-los-molinos-de-morcin.html</referencia>
-        </referencias>
-        <puntuacion>6</puntuacion>
-        <hitos>
-            <hito>
-                <nombreHito>Molín de la Ponte</nombreHito>
-                <descripcionHito>El Molín de la Ponte en Morcín, Asturias, es un molino de agua restaurado que 
+    </descripcion>
+    <destinadoA>Se puede ir con niños, Dificultad Fácil</destinadoA>
+    <inicio>
+      <fecha>10/08/2010</fecha>
+      <hora>07:00</hora>
+      <lugar>Molín de la Ponte</lugar>
+      <direccion>33161 La Vara, Asturias</direccion>
+      <coordenadas lat="43.2670533" lon="-5.9274145" alt="1312"/>
+    </inicio>
+    <referencias>
+      <referencia>https://pelescaleyes.blogspot.com/2010/08/ruta-de-los-molinos-de-morcin.html</referencia>
+      <referencia>https://es.wikiloc.com/rutas-senderismo/ruta-de-los-molinos-de-morcin-131444268</referencia>
+      <referencia>https://fempa.net/D/post/ruta-los-molinos-de-morcin-rutas-en-familia/</referencia>
+    </referencias>
+    <puntuacion>6</puntuacion>
+    <hitos>
+      <hito>
+        <nombreHito>Molín de la Ponte</nombreHito>
+        <descripcionHito>El Molín de la Ponte en Morcín, Asturias, es un molino de agua restaurado que 
                 representa una parte importante de la historia local. Tanto por su valor 
                 arquitectónico como por su ubicación en un entorno natural encantador, 
                 es un lugar digno de visita para aquellos interesados en la cultura 
                 asturiana y en la tradición molinera.</descripcionHito>
-                <coordenadas lat="-5.9136092" lon="43.26436274"></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombreHito>Embalse de los Afilorios</nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombreHito>Monsacro</nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-        </hitos>
-        <trkseg>
+        <coordenadas lat="43.26436274" lon="-5.9136092" alt="300"></coordenadas>
+        <distanciaAnterior metros="4500"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/molino1.jpg</foto>
+          <foto>./multimedia/molino2.JPG</foto>
+          <foto>./multimedia/molino3.jpeg</foto>
+        </galeriaFotos>
+        <galeriaVideos>
+          <video>./multimedia/molino1.mp4</video>
+          <video>./multimedia/molino2.mp4</video>
+          <video>./multimedia/molino3.mp4</video>
+        </galeriaVideos>
+      </hito>
+      <hito>
+        <nombreHito>Embalse de los Afilorios</nombreHito>
+        <descripcionHito>El Embalse de los Afilorios de Morcín es una infraestructura hidráulica ubicada en el municipio de Morcín, en la región de Asturias, España. Se encuentra en el valle del río Nalón, en la zona central de la región. El embalse fue construido con el propósito de regular el caudal del río y suministrar agua para diversos usos, como el abastecimiento de agua potable, el riego agrícola y la producción de energía hidroeléctrica.</descripcionHito>
+        <coordenadas lat="43.295" lon="-5.916667" alt="67"></coordenadas>
+        <distanciaAnterior metros="5700"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/embalse1.jpg</foto>
+          <foto>./multimedia/embalse2.jpg</foto>
+          <foto>./multimedia/embalse3.jpeg</foto>
+        </galeriaFotos>
+      </hito>
+      <hito>
+        <nombreHito>Monsacro</nombreHito>
+        <descripcionHito>El Monsacro de Morcín es una montaña ubicada en el concejo de Morcín, en la provincia de Asturias, España. Con una altitud de 1.155 metros sobre el nivel del mar, el Monsacro es una prominente elevación que forma parte de la cadena montañosa de la Sierra del Aramo.</descripcionHito>
+        <coordenadas lat="43.259931" lon="-5.895519" alt="1875"></coordenadas>
+        <distanciaAnterior metros="16400"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/monsacro1.JPG</foto>
+          <foto>./multimedia/monsacro2.jpg</foto>
+          <foto>./multimedia/monsacro3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+    </hitos>
+    <trkseg>
       <trkpt lat="43.265483" lon="-5.912426">
         <ele>289.581</ele>
         <time>2022-08-23T16:19:05Z</time>
@@ -367,77 +357,64 @@
         <time>2022-08-23T17:57:11Z</time>
       </trkpt>
     </trkseg>
-    </ruta>
-    <ruta>
-        <nombre>Ruta a la Sierra del Aramo</nombre>
-        <tipo>Montañismo y senderismo</tipo>
-        <transporte>A pie</transporte>
-        <duracion>2-3 horas</duracion>
-        <agencia>Sin Agencia</agencia>
-        <descripcion>El acceso a ambas cumbres, extraordinarios miradores sobre la zona central de Asturias, se realiza desde rutas fáciles y bien marcadas, todas ellas desde Morcín. El acceso más normal es tomando la carretera desde La Piñera hasta la aldea de La Vara; y desde ésta, una pista de hormigón hasta su final en la vega Bobies; desde aquí, y ya por praderías y la majada de Brañacé con cabañas de piedra, se gana el paso fundamental del Pan de la Forcá. Tomando la dirección Norte, a la derecha, por un sencillo sendero se gana en poco tiempo la cumbre del pico La Vara o Mostayal (1.310 m). Y tomando la dirección Sur, por praderías con buenas fuentes, en vista a Quirós y Proaza, se sube a la vega de Fontazán (1.500 m) y ya, por repisas y pedreros, se gana la cumbre de La Gamonal (1.713 m), en donde está colocada una antena de Protección Civil.</descripcion>
-        <destinadoA>Dificultad Fácil</destinadoA>
-        <inicio>
-            <fecha></fecha>
-            <hora></hora>
-            <lugar>La Vara</lugar>
-            <direccion></direccion>
-            <coordenadas latitud="3" longitud="3" altura="100"/>
-        </inicio>
-        <referencias>
-            <referencia>https://</referencia>
-        </referencias>
-        <puntuacion>8,5</puntuacion>
-        <hitos>
-            <hito>
-                <nombreHito></nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombreHito></nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombreHito></nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-        </hitos>
-        <trkseg>
+  </ruta>
+  <ruta>
+    <nombre>Ruta a la Sierra del Aramo</nombre>
+    <tipo>Montañismo y senderismo</tipo>
+    <transporte>A pie</transporte>
+    <duracion>2-3 horas</duracion>
+    <agencia>Sin Agencia</agencia>
+    <descripcion>El acceso a ambas cumbres, extraordinarios miradores sobre la zona central de Asturias, se realiza desde rutas fáciles y bien marcadas, todas ellas desde Morcín. El acceso más normal es tomando la carretera desde La Piñera hasta la aldea de La Vara; y desde ésta, una pista de hormigón hasta su final en la vega Bobies; desde aquí, y ya por praderías y la majada de Brañacé con cabañas de piedra, se gana el paso fundamental del Pan de la Forcá. Tomando la dirección Norte, a la derecha, por un sencillo sendero se gana en poco tiempo la cumbre del pico La Vara o Mostayal (1.310 m). Y tomando la dirección Sur, por praderías con buenas fuentes, en vista a Quirós y Proaza, se sube a la vega de Fontazán (1.500 m) y ya, por repisas y pedreros, se gana la cumbre de La Gamonal (1.713 m), en donde está colocada una antena de Protección Civil.</descripcion>
+    <destinadoA>Dificultad Fácil</destinadoA>
+    <inicio>
+      <fecha>05/06/2023</fecha>
+      <hora>8:00</hora>
+      <lugar>La Vara</lugar>
+      <direccion>33162 La Vara</direccion>
+      <coordenadas lat="43.2670533" lon="-5.9274145" alt="1312"/>
+    </inicio>
+    <referencias>
+      <referencia>https://www.wikiloc.com/hiking-trails/ruta-sierra-del-aramo-1748007</referencia>
+      <referencia>https://www.morcin.es/oficina-de-turismo</referencia>
+      <referencia>https://www.turismoasturias.es/es/descubre/naturaleza/senderismo/rutas/sierra-del-aramo</referencia>
+    </referencias>
+    <puntuacion>8,5</puntuacion>
+    <hitos>
+      <hito>
+        <nombreHito>Gamoniteiro</nombreHito>
+        <descripcionHito>El Pico Gamoniteiro es conocido por su belleza escénica y por ofrecer impresionantes vistas panorámicas de los alrededores. Desde la cima, se puede apreciar la extensa vegetación de montaña, los valles y las montañas circundantes.</descripcionHito>
+        <coordenadas lat="43.267933" lon="-5.927117" alt="1791"></coordenadas>
+        <distanciaAnterior metros="10000"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/gamoniteiro1.jpg</foto>
+          <foto>./multimedia/gamoniteiro2.jpg</foto>
+          <foto>./multimedia/gamoniteiro3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+      <hito>
+        <nombreHito>El Xistras</nombreHito>
+        <descripcionHito>El majestuoso Pico Xistras se alza imponente en el municipio de Morcín, en la provincia de Asturias, España. Con su cumbre en las alturas, este icónico pico forma parte de la cordillera Cantábrica, regalando a los aventureros y amantes de la naturaleza un espectáculo visual inigualable.</descripcionHito>
+        <coordenadas lat="43.22880" lon="-5.96206" alt="1773"></coordenadas>
+        <distanciaAnterior metros="2500"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/xistras1.jpg</foto>
+          <foto>./multimedia/xistras2.jpg</foto>
+          <foto>./multimedia/xistras3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+      <hito>
+        <nombreHito>El Pico Carba</nombreHito>
+        <descripcionHito>El imponente Pico Carba de Morcín, ubicado en el municipio de Morcín, en la provincia de Asturias, España, es una verdadera joya de la cordillera Cantábrica. Con su perfil distintivo y su altitud notable, este majestuoso pico se alza como una prominente figura en el paisaje asturiano.</descripcionHito>
+        <coordenadas lat="43.2467" lon="5.9994" alt="1558"></coordenadas>
+        <distanciaAnterior metros="5000"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/carba1.jpg</foto>
+          <foto>./multimedia/carba2.jpg</foto>
+          <foto>./multimedia/carba3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+    </hitos>
+    <trkseg>
       <trkpt lat="43.221530" lon="-5.942471">
         <ele>1552.631</ele>
         <time>2021-05-07T08:13:57Z</time>
@@ -1219,78 +1196,65 @@
         <time>2021-05-07T15:53:12Z</time>
       </trkpt>
     </trkseg>
-    </ruta>
-    <ruta>
-        <nombre>Ruta a las Capillas del Monsacro</nombre>
-        <tipo>Montaña y Senderismo</tipo>
-        <transporte>A pie</transporte>
-        <duracion>1 h y 30 minutos</duracion>
-        <agencia>Sin Agencia</agencia>
-        <descripcion>Desde La Puente, en La Foz, se toma la carretera a la aldea de La Figar y, desde ella, una pista hormigonada que se remonta a dar vista al valle del Caudal (mirador de Pando); siguiendo la arista del cordal, de modo fácil, se gana la cumbre geodésica del Llusoriu, que divide los concejos de Mieres, Riosa y Morcín.
+  </ruta>
+  <ruta>
+    <nombre>Ruta a las Capillas del Monsacro</nombre>
+    <tipo>Montaña y Senderismo</tipo>
+    <transporte>A pie</transporte>
+    <duracion>1 h y 30 minutos</duracion>
+    <agencia>Sin Agencia</agencia>
+    <descripcion>Desde La Puente, en La Foz, se toma la carretera a la aldea de La Figar y, desde ella, una pista hormigonada que se remonta a dar vista al valle del Caudal (mirador de Pando); siguiendo la arista del cordal, de modo fácil, se gana la cumbre geodésica del Llusoriu, que divide los concejos de Mieres, Riosa y Morcín.
 Gran visibilidad sobre Mieres, la cordillera y el Aramo.</descripcion>
-        <destinadoA>Dificultad Media</destinadoA>
-        <inicio>
-            <fecha></fecha>
-            <hora></hora>
-            <lugar>Plaza del ayuntamiento</lugar>
-            <direccion></direccion>
-            <coordenadas latitud="3" longitud="3" altura="100"/>
-        </inicio>
-        <referencias>
-            <referencia></referencia>
-        </referencias>
-        <puntuacion></puntuacion>
-        <hitos>
-            <hito>
-                <nombreHito></nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombreHito></nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-            <hito>
-                <nombreHito></nombreHito>
-                <descripcion></descripcion>
-                <coordenadas></coordenadas>
-                <distanciaAnterior></distanciaAnterior>
-                <galeriaFotos>
-                    <foto></foto>
-                    <foto></foto>
-                    <foto></foto>
-                </galeriaFotos>
-                <galeriaVideos>
-                    <video></video>
-                    <video></video>
-                    <video></video>
-                </galeriaVideos>
-            </hito>
-        </hitos>
-        <trkseg>
+    <destinadoA>Dificultad Media, para adultos o niños muy acostumbrados a caminar</destinadoA>
+    <inicio>
+      <fecha>17/07/2023</fecha>
+      <hora>6:00</hora>
+      <lugar>Plaza del ayuntamiento</lugar>
+      <direccion>Plaza del ayuntaminto s/n</direccion>
+      <coordenadas lat="43.2639" lon="5.90928" alt="420"/>
+    </inicio>
+    <referencias>
+      <referencia>https://www.morcin.es/oficina-de-turismo</referencia>
+      <referencia>https://guiadeasturias.com/lugar/capillas-del-monte-sacro-monsacro-una-ruta-lugar-sagrado-leyenda/</referencia>
+      <referencia>https://lasendadelhayedo.com/ruta-circular-monsacro/</referencia>
+    </referencias>
+    <puntuacion>9</puntuacion>
+    <hitos>
+      <hito>
+        <nombreHito>La Silla del Obispo</nombreHito>
+        <descripcionHito>La Silla del Obispo es una formación rocosa situada en la ladera del Monsacro que recuerda a una silla. Según la leyenda, el obispo Toribio se sentó a descansar en ella cuando subía portando las Santas Reliquias.</descripcionHito>
+        <coordenadas lat="43.2956" lon="5.9999" alt="1000"></coordenadas>
+        <distanciaAnterior metros="5000"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/obispo1.jpg</foto>
+          <foto>./multimedia/obispo2.jpg</foto>
+          <foto>./multimedia/obispo3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+      <hito>
+        <nombreHito>Las capillas de Santiago y la Magdalena</nombreHito>
+        <descripcionHito>Las capillas de Santiago y la Magdalena son dos pequeñas iglesias situadas en la cima del Monsacro. La Capilla de Santiago es la más antigua y data del siglo XVIII. La Capilla de la Magdalena es más reciente y data del siglo XIX.</descripcionHito>
+        <coordenadas lat="43.2984" lon="5.9988" alt="1100"></coordenadas>
+        <distanciaAnterior metros="6000"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/SanMag1.jpg</foto>
+          <foto>./multimedia/SanMag2.jpg</foto>
+          <foto>./multimedia/SanMag3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+      <hito>
+        <nombreHito>El Pico Romiru o Monsacro</nombreHito>
+        <descripcionHito>El Pico Romiru o Monsacro es una montaña situada en el concejo asturiano de Morcín. Tiene una altitud de 1.159 metros y es conocido por sus capillas y su ermita.</descripcionHito>
+        <coordenadas lat="43.2997" lon="5.9986" alt="1200"></coordenadas>
+        <distanciaAnterior metros="1000"></distanciaAnterior>
+        <galeriaFotos>
+          <foto>./multimedia/romiru1.jpg</foto>
+          <foto>./multimedia/romiru2.jpg</foto>
+          <foto>./multimedia/romiru3.jpg</foto>
+        </galeriaFotos>
+      </hito>
+    </hitos>
+    <trkseg>
       <trkpt lat="43.255446" lon="-5.886640">
         <ele>605.851</ele>
         <time>2013-08-28T07:19:05Z</time>
@@ -1768,5 +1732,5 @@ Gran visibilidad sobre Mieres, la cordillera y el Aramo.</descripcion>
         <time>2013-08-28T10:46:57Z</time>
       </trkpt>
     </trkseg>
-    </ruta>
+  </ruta>
 </rutas>

@@ -11,14 +11,14 @@ class QuizGame {
     this.questions = questions;
     this.score = 0;
     this.currentQuestionIndex = 0;
-    this.questionElement = document.querySelector('[name="question"]');
-    this.optionElements = document.querySelectorAll('[name="option"]');
+    this.questionElement = $('section').first();
+    this.optionElements = $('button');
     this.setupOptionsClickHandler();
   }
 
   setupOptionsClickHandler() {
-    this.optionElements.forEach((optionElement, optionIndex) => {
-      optionElement.addEventListener('click', () => {
+    this.optionElements.each((optionIndex, optionElement) => {
+      $(optionElement).on('click', () => {
         this.handleOptionClick(optionIndex);
       });
     });
@@ -26,13 +26,12 @@ class QuizGame {
 
   displayQuestion() {
     const currentQuestion = this.questions[this.currentQuestionIndex];
-    this.questionElement.textContent = currentQuestion.question;
-    
-    this.optionElements.forEach((optionElement, optionIndex) => {
-      optionElement.textContent = currentQuestion.options[optionIndex];
+    this.questionElement.text(currentQuestion.question);
+
+    this.optionElements.each((optionIndex, optionElement) => {
+      $(optionElement).text(currentQuestion.options[optionIndex]);
     });
 
-    // Ocultar los elementos de pregunta y respuestas si se han mostrado todas las preguntas
     if (this.currentQuestionIndex === this.questions.length) {
       this.hideQuestionAndOptions();
     }
@@ -53,17 +52,16 @@ class QuizGame {
   }
 
   hideQuestionAndOptions() {
-    this.questionElement.style.display = 'none';
-    this.optionElements.forEach(optionElement => {
-      optionElement.style.display = 'none';
-    });
+    this.questionElement.hide();
+    this.optionElements.hide();
+    $('h3').hide(); // Oculta el título del quiz
+    $('ul').hide(); // Oculta los puntos de la lista de respuestas posibles
   }
 
   showFinalScore() {
     const finalScore = (this.score / this.questions.length) * 10;
-    const resultElement = document.createElement('p');
-    resultElement.textContent = `Tu puntuación final es: ${finalScore.toFixed(1)}`;
-    document.body.appendChild(resultElement);
+    const resultElement = $('<p>').text(`Tu puntuación final es: ${finalScore.toFixed(1)}`);
+    $('body').append(resultElement);
     this.hideQuestionAndOptions();
   }
 
@@ -86,103 +84,103 @@ const questions = [
     2
   ),
   new Question(
-    "Pregunta 2: ¿Cuál es el lema del proyecto?",
+    "Pregunta 2: ¿Cuál de estos postres destaca en Morcín?",
     [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
+      "A. La tarda de Afuega'l pitu",
+      "B. Chocolate",
+      "C. Magdalenas de calabaza",
+      "D. Frixuelos",
+      "E. Donuts con zanahoria"
+    ],
+    0
+  ),
+  new Question(
+    "Pregunta 3: ¿Con qué festividad coincide el Certamen del Queso de Afuega'l Pitu?",
+    [
+      "A. Dia de Todos los Santos",
+      "B. San Mateo",
+      "C. Dia de la Almudena",
+      "D. San Antón",
       "E. Excelencia y compromiso"
+    ],
+    3
+  ),
+  new Question(
+    "Pregunta 4: ¿Cual de estas parroquias se encuentra en Morcín?",
+    [
+      "A. Santa María de Llas",
+      "B. Bres",
+      "C. Arciprestazgo de El Fresno",
+      "D. Santianes del Rey Silo",
+      "E. Peñerudes"
+    ],
+    4
+  ),
+  new Question(
+    "Pregunta 5: ¿En que edad se puso en venta la jurisdicción del coto de Morcín?",
+    [
+      "A. Edad de Hierro",
+      "B. Edad Media",
+      "C. Edad Moderna",
+      "D. Edad Contemporánea",
+      "E. Todas las anteriores son falsas"
     ],
     2
   ),
   new Question(
-    "Pregunta 3: ¿Cuál es el lema del proyecto?",
+    "Pregunta 6: ¿Qué limita al norte del concejo?",
     [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
+      "A. Concejo de Quirós",
+      "B. Concejo de Ribera de Arriba",
+      "C. Concejo de Riosa",
+      "D. Concejo de Mieres",
+      "E. Ninguna respuesta es correcta"
     ],
-    2
+    1
   ),
   new Question(
-    "Pregunta 4: ¿Cuál es el lema del proyecto?",
+    "Pregunta 7: ¿Cuantos molinos se pueden visitar en la Ruta de los Molinos?",
     [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
+      "A. 15 molinos",
+      "B. 3 molinos",
+      "C. 10 molinos",
+      "D. 9 molinos",
+      "E. 6 molinos"
     ],
-    2
+    3
   ),
   new Question(
-    "Pregunta 5: ¿Cuál es el lema del proyecto?",
+    "Pregunta 8: ¿Cuanta altitud (en metros) tiene el Pico Gamoniteiro?",
     [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
+      "A. 1792 metros",
+      "B. 1891 metros",
+      "C. 1175 metros",
+      "D. 2486 metros",
+      "E. 1791 metros"
     ],
-    2
+    4
   ),
   new Question(
-    "Pregunta 6: ¿Cuál es el lema del proyecto?",
+    "Pregunta 9: ¿Cuanta distancia existe entre el Pico Xistras y el Pico Gamoniteiro?",
     [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
+      "A. 4567 metros",
+      "B. 2500 metros",
+      "C. 1643 metros",
+      "D. 3625 metros",
+      "E. 1600 metros"
     ],
-    2
+    1
   ),
   new Question(
-    "Pregunta 7: ¿Cuál es el lema del proyecto?",
+    "Pregunta 10: ¿En que año fue la primera edición del Certamen del Queso de Afuega'l Pitu?",
     [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
+      "A. 1946",
+      "B. 1994",
+      "C. 2003",
+      "D. 1981",
+      "E. 1975"
     ],
-    2
-  ),
-  new Question(
-    "Pregunta 8: ¿Cuál es el lema del proyecto?",
-    [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
-    ],
-    2
-  ),
-  new Question(
-    "Pregunta 9: ¿Cuál es el lema del proyecto?",
-    [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
-    ],
-    2
-  ),
-  new Question(
-    "Pregunta 10: ¿Cuál es el lema del proyecto?",
-    [
-      "A. Innovación y calidad",
-      "B. Creciendo juntos",
-      "C. Conexión y colaboración",
-      "D. Hacia un futuro sostenible",
-      "E. Excelencia y compromiso"
-    ],
-    2
+    3
   )
 ];
 

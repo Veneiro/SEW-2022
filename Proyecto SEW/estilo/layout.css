@@ -2,38 +2,119 @@
 Mateo Rico Iglesias - UO277172
 Descripción de los estilos
 ****************************/
-@media (min-width: 600px){
-    /*Especificidad 001*/
-    body {
-        display: grid;
-        grid:"h h h"
-            "a b c"
-            "f f f"
-    }
-    header{
-        grid-area: h;
-    }
-    header h1{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    header p{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    nav{
-        grid-area:a;
-    }
-    body main{
-        grid-area: b;
-    }
-    footer{
-        grid-area: f;
-    }
+/*Especificidad 001*/
+body {
+  display: grid;
+  grid:
+    "h h h"
+    "a a a"
+    "b b b"
+    "f f f";
+}
+header {
+  grid-area: h;
+  padding: 1em;
+}
+header h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*Especificidad 001*/
+nav {
+  grid-area: a;
+  padding: 1em;
+  width: 100%;
+}
+body {
+  margin: 3em;
+  border: 0.5em solid;
+  width: auto;
+}
+body main {
+  grid-area: b;
+}
+footer {
+  grid-area: f;
+}
 
-    form fieldset:first-of-type{
-        display: grid;
-    }
+form fieldset:first-of-type {
+  display: grid;
+}
+body footer img {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+[name=meteoimage]{
+    max-width: 10%;
+    max-height: 10%;
+    background-color: gray;
+}
+
+img {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+[name="concejo"] {
+    justify-self: center;
+    height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+body footer img {
+  justify-self: center;
+  width: 10em;
+  height: 18em;
+}
+
+video{
+    width: 100%;
+    height:auto;
+}
+
+article{
+    justify-content: center;
+}
+
+article:nth-child(2) article {
+    width: 100%;
+  height: 25em;
+}
+article:nth-child(3) article {
+    width: 100%;
+  height: 25em;
+}
+
+article:nth-child(4) article {
+    width: 100%;
+  height: 25em;
+}
+  
+article > article:nth-child(2) svg {
+    height:20em;
+    width:100%;
+}
+article > article:nth-child(4) svg {
+    height:60em;
+    width:100%;
+}
+
+article > article:nth-child(6) svg {
+    height:50em;
+    width:100%;
 }

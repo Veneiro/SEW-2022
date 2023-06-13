@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es" id="html">
+<html lang="es">
   <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
@@ -23,8 +23,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/meteo.js"></script>
-    <script src="./js/noticias.js"></script>
-    <script src="./js/paginaPrincipal.js"></script>
+    <script src="./js/noticiasConcejo.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB6chQKcq3mMf5jRlVVV-O-OO0Vkw711k&libraries=places"></script>
   </head>
   <body>
@@ -45,32 +44,29 @@
         Bienvenido a la página principal del concejo de Morcín, aquí podrás
         encontrar toda la información disponible acerca del concejo.
       </p>
-      <p name="carousel">
+      <audio src="./multimedia/morcin.mp3" controls></audio>
+      <p>
+        <button name="prevButton">Anterior</button>
+        <button name="nextButton">Siguiente</button>
         <img
-          src="./multimedia/2ff50463f390c832f8e7ab1aad07b0ac-2246696920.png"
+          src="./multimedia/2ff50463f390c832f8e7ab1aad07b0ac-2246696920.png" alt="Carousel con imagenes de morcín"
         />
-        <img
-          src="./multimedia/3988_1190708513-2366469228.png"
-        />
-        <img src="./multimedia/morcin-2119726635.png" />
-        <img
-          src="./multimedia/santa-eulalia-morcin-1342017553-16-1652275958.png"
-        />
-        <img src="./multimedia/penerudes-morcin.png" />
       </p>
       <h3>Mapa del Concejo</h3>
-      <p>
-        <img
-          name="concejo"
-          src="https://maps.googleapis.com/maps/api/staticmap?center=43.2737,-5.8056&zoom=14&size=800x500&maptype=satellite&key=AIzaSyCB6chQKcq3mMf5jRlVVV-O-OO0Vkw711k"
-          alt="Imagen del concejo de Morcín"/>
-      </p>
-      <h3>El tiempo</h3>
-      <p name="meteo"></p>
-      <h3>Noticias</h3>
-      <p name="noticias"></p>
+      <img
+        name="concejo"
+        src="https://maps.googleapis.com/maps/api/staticmap?center=43.2737,-5.8056&zoom=14&size=800x500&maptype=satellite&key=AIzaSyCB6chQKcq3mMf5jRlVVV-O-OO0Vkw711k"
+        alt="Imagen del concejo de Morcín"/>
+      <article>
+        <h3>El tiempo</h3>
+        <p></p>
+      </article>
+      <article>
+        <h3>Noticias</h3>
+        <p></p>
+      </article>
       <video src="./multimedia/morcin.mp4" controls>
-        Tu navegador no soporta el elemento de video.
+        Tu navegador no soporta el elemento de video, esto es un video con información de Morcín.
       </video>
       <h3>Información del Concejo</h3>
       <ul>
@@ -260,13 +256,15 @@
           </ul>
         </li>
       </ul>
+      <p></p>
     </main>
     <footer>
       <img
         src="./multimedia/Escudo_de_Morcín.svg.png"
         alt="Escudo de Morcín"
       />
-      <p name="lastModified"></p>
+      <script src="./js/ultimaModificación.js"></script>
+      <script src="./js/paginaPrincipal.js"></script>
     </footer>
   </body>
 </html>

@@ -21,8 +21,7 @@ class KML {
   processData(data) {
     var coordenadas = [];
 
-    var parser = new DOMParser();
-    var dom = parser.parseFromString(data, "text/xml");
+    var dom = $.parseXML(data, "text/xml");
     var domCoord = dom.getElementsByTagName("coordinates");
 
     for (var element of domCoord) coordenadas.push(element.innerHTML.trim());

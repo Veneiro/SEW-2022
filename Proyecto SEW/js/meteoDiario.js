@@ -100,7 +100,7 @@ class Meteo {
       });
     });
     html += "</table>";
-    $("p[name='meteo']").html(html);
+    $('p').eq(0).html(html);
   }
 
   iniciar() {

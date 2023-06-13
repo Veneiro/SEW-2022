@@ -6,7 +6,6 @@ Descripción de los estilos
 header{
     background-color: rgb(138, 189, 0);
     color: black;
-    padding: 1em;
     font-style: italic;
     text-transform: uppercase;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -28,16 +27,12 @@ header{
   header a{
     color: black;
   }
-  /*Especificidad 001*/
-  nav{
-    padding: 1em;
-  }
+  
   /*Especificidad 001*/
   body {
       background-color: white;
       color:black;
-      margin: 3em;
-      border: 0.5em solid;
+      
   }
   p {
     width: 100%;
@@ -47,16 +42,10 @@ header{
     padding: 1em;
     width: 95%;
     text-align: justify;
-    overflow: auto;
   }
   /*Especificidad 002*/
   body section{
     padding: 1em;
-  }
-  /*Especificidad 002*/
-  main video{
-    width: 100%;
-    height: auto;
   }
   /*Especificidad 001*/
   a{ 
@@ -79,49 +68,14 @@ header{
     border: 0.1em solid;
     border-color: black;
   }
-  
-  body footer img{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
   body footer{
     color: black;
     border: 0.3em solid;
     border-color: rgb(138, 189, 0);
     padding: 1em;
   }
-  body footer img{
-    width: 14%;
-    height: auto;
-  }
-
-  [name = carousel] {
-    width: 100%;
-    overflow: hidden;
-  }
   
-  [name = carousel] img {
-    width:100%;
-  }
 
-  [name = route] {
-    width: 100%;
-    overflow: auto;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  [name = concejo]{
-    width : 100%;
-  }
-
-  [name = map]{
-    width:100%;
-    height:25em;
-  }
-
-  [name = meteo]{
-    text-align: center;
-  }
+  
  
