@@ -83,6 +83,10 @@ class Index{
         var tag_id = document.getElementById('html');
         document.getElementById("Exercise1Txt").value = tag_id.innerHTML;
     }
+
+    extraordinaria(){
+        window.location.href = './Proyecto SEW/index.html';
+    }
 }
 
 var index = new Index();
