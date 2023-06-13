@@ -1,7 +1,4 @@
-[name = "question"]{
-    text-align: left;
-}
-
+/* Especificidad 001 */
 li{
     padding:0.5em;
 }

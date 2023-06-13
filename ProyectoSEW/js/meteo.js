@@ -77,7 +77,8 @@ class Meteo {
         var stringDatos =
           "<p>Número de elementos del XML: " + totalNodos + "</p>";
         var aux = '"http://openweathermap.org/img/wn/' + icon;
-        stringDatos = "<img name=meteoimage src= " + aux  + '@2x.png"' + "/>";
+        stringDatos = "<img alt='Representación gráfica del tiempo' src= " + aux  + '@2x.png"' + "/>";
+        stringDatos += "<h3>Predicción Meteorológica</h3>"
         stringDatos += "<p>Ciudad: " + ciudad + "</p>";
         stringDatos += "<p>Longitud: " + longitud + " grados</p>";
         stringDatos += "<p>Latitud: " + latitud + " grados</p>";
@@ -113,7 +114,7 @@ class Meteo {
         stringDatos += "<p>Descripción: " + descripcion + "</p>";
         stringDatos += "<p>Hora de la medida: " + horaMedidaLocal + "</p>";
         stringDatos += "<p>Fecha de la medida: " + fechaMedidaLocal + "</p>";
-        $('p').eq(2).html(stringDatos);
+        $('article').eq(1).html(stringDatos);
       },
       error: function () {
         $("h3").html(
@@ -128,7 +129,6 @@ class Meteo {
 
   iniciar() {
     this.cargarDatos();
-    //setInterval(() => this.cargarDatos(), 15000);
   }
 }
 

@@ -36,71 +36,59 @@ class Meteo {
   }
 
   mostrarDatos(datos) {
-    let html = "<table>";
+    let html = "";
     datos.forEach((e) => {
       e.prediccion.dia.forEach((dia) => {
-        html += "<tr>";
-        html += `<td colspan="2">${dia.fecha}</td>`;
-        html += "</tr>";
-        html += "<tr>";
-        
-        html += "</tr>";
+        html += `<h2>${dia.fecha}</h2>`;
         if ((dia.temperatura.dato.length == 0)) {
-          html += "<tr>";
-          html += "<th>" + "Media del día" + "</th>";
+          html += "<h3>" + "Media del día" + "</h3>";
           html +=
-            "<td> Máxima: " +
+            "<p> Máxima: " +
             dia.temperatura.maxima +
             "°C Mínima: " +
             dia.temperatura.minima +
-            "°C</td>";
-          html += "</tr>";
+            "°C</p>";
         } else {
+          html += "<h3>Por Horas</h3>"
           dia.temperatura.dato.forEach((dato) => {
-            html += "<tr>";
-            html += "<th>Hora</th>";
-            html += "<td>" + dato.hora + ":00</td>";
-            html += "<th>Temperatura</th>";
-            html += "<td>" + dato.value + "°C</td>";
-            html += "</tr>";
+            html += "<p>";
+            html += "<p> Hora: " + dato.hora + ":00 - Temperatura: " + dato.value + "°C</p>";
+            html += "</p>";
           });
         }
-        html += "<tr><th>Precipitación</th>";
+        html += "<h3>Precipitación</h3>";
           dia.probPrecipitacion.forEach((prob) => {
             if(prob.periodo == undefined){
               html +=
-              "<td>" + prob.value + "%</td>";
+              "<p>" + prob.value + "%</p>";
             } else{
               html +=
-              "<td>" + prob.value + "% - Horas: " + prob.periodo + "</td>";
+              "<p>" + prob.value + "% - Horas: " + prob.periodo + "</p>";
             }
           });
-          html += "</tr>";
-          html += "<tr><th>Estado del cielo</th>";
+          html += "<h3>Estado del cielo</h3>";
           dia.estadoCielo.forEach((cielo) => {
             if(cielo.periodo == undefined){
               html +=
-              "<td>" +
+              "<p>" +
               cielo.value +
               " - " +
               cielo.descripcion +
-              "</td>";
+              "</p>";
             } else{
               html +=
-              "<td>" +
+              "<p>" +
               cielo.value +
               "% - Horas: " +
               cielo.periodo +
               " - " +
               cielo.descripcion +
-              "</td>";
+              "</p>";
             }
           });
-          html += "</tr>";
       });
     });
-    html += "</table>";
-    $('p').eq(0).html(html);
+    $('article').eq(0).html(html);
   }
 
   iniciar() {

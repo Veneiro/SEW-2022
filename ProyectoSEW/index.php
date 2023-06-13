@@ -208,14 +208,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Morcín | Central de Reservas</title>
-    <link rel="stylesheet" type="text/css" href="../Proyecto SEW/estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../ProyectoSEW/estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../ProyectoSEW/estilo/layout.css" />
 </head>
 
 <body>
     <header>
-        <t1>Bienvenido,
+        <h1>Bienvenido,
             <?php echo $_SESSION['usuario']; ?>
-        </t1>
+        </h1>
         <nav>
             <a href="./index.html">Página Principal</a>
             <a href="./gastronomía.html">Gastronomía</a>
@@ -226,7 +227,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </nav>
     </header>
     <main>
-        <t2>Realizar Reserva</t2>
+        <h2>Realizar Reserva</h2>
 
         <?php if (isset($error)): ?>
             <p>

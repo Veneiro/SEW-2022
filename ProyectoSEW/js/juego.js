@@ -26,7 +26,7 @@ class QuizGame {
 
   displayQuestion() {
     const currentQuestion = this.questions[this.currentQuestionIndex];
-    this.questionElement.text(currentQuestion.question);
+    this.questionElement.html("<h3>" + currentQuestion.question + "</h3>");
 
     this.optionElements.each((optionIndex, optionElement) => {
       $(optionElement).text(currentQuestion.options[optionIndex]);

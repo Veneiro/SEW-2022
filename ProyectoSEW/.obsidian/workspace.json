@@ -11,11 +11,9 @@
             "id": "9dec2d06033ce0de",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Bitácora.md",
-                "mode": "source",
-                "source": false
+                "file": "ImagenesBitácora/gastronomiahtml.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bitácora.md",
+                "file": "ImagenesBitácora/gastronomiahtml.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bitácora.md",
+                "file": "ImagenesBitácora/gastronomiahtml.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bitácora.md"
+                "file": "ImagenesBitácora/gastronomiahtml.png"
               }
             }
           }
@@ -148,28 +146,28 @@
   },
   "active": "9dec2d06033ce0de",
   "lastOpenFiles": [
+    "ImagenesBitácora/otroscss.png",
+    "ImagenesBitácora/Screenshot_1.png",
+    "ImagenesBitácora/layoutcss.png",
+    "ImagenesBitácora/estilocss.png",
+    "ImagenesBitácora/indexphp.png",
+    "ImagenesBitácora/registrophp.png",
+    "ImagenesBitácora/confirmphp.png",
+    "ImagenesBitácora/loginphp.png",
+    "ImagenesBitácora/Screenshot_2.png",
+    "scriptCorreción.py~",
+    "ImagenesBitácora/juegohtml.png",
+    "ImagenesBitácora/meteohtml.png",
+    "terminos.txt~",
+    "Bitácora.md",
     "ImagenesBitácora",
     "Untitled.md",
-    "Bitácora.md",
-    "scriptCorreción.py~",
     "js/ultimaModificación.js",
-    "terminos.txt~",
     "terminos.txt",
     "scriptCorreción.py",
-    "multimedia/SanMag3.jpg",
-    "multimedia/romiru3.jpg",
     "multimedia/romiru3.jpg.crdownload",
-    "multimedia/romiru2.jpg",
     "multimedia/romiru2.jpg.crdownload",
-    "multimedia/romiru1.jpg",
     "multimedia/romiru1.jpg.crdownload",
-    "multimedia/SanMan3.jpg",
-    "multimedia/SanMan3.jpg.crdownload",
-    "multimedia/SanMag2.jpg",
-    "multimedia/SanMag2.jpg.crdownload",
-    "multimedia/SanMag1.jpg",
-    "multimedia/obispo3.jpg",
-    "multimedia/obispo2.jpg",
-    "multimedia/obispo1.jpg"
+    "multimedia/SanMan3.jpg.crdownload"
   ]
 }

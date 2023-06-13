@@ -49,12 +49,13 @@ mysqli_close($conexion);
 <head>
     <meta charset="UTF-8">
     <title>Morcín | Reserva Confirmada</title>
-    <link rel="stylesheet" type="text/css" href="../Proyecto SEW/estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../ProyectoSEW/estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../ProyectoSEW/estilo/layout.css" />
 </head>
 
 <body>
     <header>
-        <t1>Bienvenido, <?php echo $_SESSION['usuario']; ?></t1>
+        <h1>Bienvenido, <?php echo $_SESSION['usuario']; ?></h1>
         <nav>
             <a href="./index.html">Página Principal</a>
             <a href="./gastronomía.html">Gastronomía</a>

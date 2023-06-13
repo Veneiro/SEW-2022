@@ -16,7 +16,7 @@ class ProcesaXML {
       const descripcion = $("descripcion", ruta).text();
       const destinadoA = $("destinadoA", ruta).text();
 
-      html += "<h1>" + nombre + "</h1>";
+      html += "<h2>" + nombre + "</h2>";
       html += "<p><h3>Tipo:</h3><br>";
       html += tipo + "<br>";
       html += "<h3>Transporte:</h3><br>";
@@ -109,61 +109,53 @@ class ProcesaXML {
     $("ruta", xml).each((i, ruta) => {
       const nombre = $("nombre", ruta).text();
       const descripcion = $("descripcion", ruta).text();
-
+  
       let placemarks = [];
       $("trkpt", ruta).each((i, trkpt) => {
         const lat = parseFloat($(trkpt).attr("lat"));
         const lon = parseFloat($(trkpt).attr("lon"));
-
+  
         const placemark = {
           name: nombre,
           description: descripcion,
           lat: lat,
           lng: lon,
         };
-
+  
         placemarks.push(placemark);
       });
-
+  
       // Generar el KML
-      let kml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-      kml += '<kml xmlns="http://earth.google.com/kml/2.0">\n';
-      kml += "  <Document>\n";
-
+      let kml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+      kml += `<kml xmlns="http://earth.google.com/kml/2.0">\n`;
+      kml += `  <Document>\n`;
+  
       placemarks.forEach((placemark) => {
-        kml += "    <Placemark>\n";
-        kml += "      <name>" + placemark.name + "</name>\n";
-        kml +=
-          "      <description>" + placemark.description + "</description>\n";
-        kml += "      <Point>\n";
-        kml +=
-          "        <coordinates>" +
-          placemark.lng +
-          "," +
-          placemark.lat +
-          "</coordinates>\n";
-        kml += "      </Point>\n";
-        kml += "    </Placemark>\n";
+        kml += `    <Placemark>\n`;
+        kml += `      <name>${placemark.name}</name>\n`;
+        kml += `      <description>${placemark.description}</description>\n`;
+        kml += `      <Point>\n`;
+        kml += `        <coordinates>${placemark.lng},${placemark.lat}</coordinates>\n`;
+        kml += `      </Point>\n`;
+        kml += `    </Placemark>\n`;
       });
-
-      kml += "  </Document>\n";
-      kml += "</kml>";
-
+  
+      kml += `  </Document>\n`;
+      kml += `</kml>`;
+  
       // Realizar el parseo del string KML
-      const parser = new DOMParser();
-      const kmlDocument = parser.parseFromString(kml, "text/xml");
-
-      const article = document.querySelector("article:nth-child("+ rutaInt +")");
-      let mapElement = document.createElement("article");
-      mapElement.setAttribute("name", "map");
-      article.appendChild(mapElement);
-
-      let map = new google.maps.Map(mapElement, {
+      const kmlDocument = $.parseXML(kml, "text/xml");
+  
+      const article = document.querySelector(`article:nth-child(${rutaInt})`);
+      let mapElement = `<article></article>`;
+      article.innerHTML += mapElement;
+  
+      let map = new google.maps.Map(article.lastChild, {
         center: { lat: placemarks[0].lat, lng: placemarks[0].lng },
         zoom: 14,
         mapTypeId: google.maps.MapTypeId.SATELLITE,
       });
-
+  
       // Obtener las coordenadas del documento KML parseado
       const coordinates = Array.from(
         kmlDocument.getElementsByTagName("coordinates")
@@ -171,9 +163,9 @@ class ProcesaXML {
         const [lng, lat] = coord.textContent.trim().split(",");
         return { lat: parseFloat(lat), lng: parseFloat(lng) };
       });
-
+  
       let pathCoordinates = coordinates;
-
+  
       let polyline = new google.maps.Polyline({
         path: pathCoordinates,
         geodesic: true,
@@ -181,9 +173,9 @@ class ProcesaXML {
         strokeOpacity: 1.0,
         strokeWeight: 2,
       });
-
+  
       polyline.setMap(map);
-
+  
       let firstMarker = new google.maps.Marker({
         position: { lat: placemarks[0].lat, lng: placemarks[0].lng },
         map: map,
@@ -196,7 +188,7 @@ class ProcesaXML {
           scale: 6,
         },
       });
-
+  
       let lastMarker = new google.maps.Marker({
         position: {
           lat: placemarks[placemarks.length - 1].lat,
@@ -212,7 +204,7 @@ class ProcesaXML {
           scale: 6,
         },
       });
-
+  
       placemarks.forEach((placemark, index) => {
         if (index !== 0 && index !== placemarks.length - 1) {
           let marker = new google.maps.Marker({
@@ -227,26 +219,21 @@ class ProcesaXML {
               scale: 3,
             },
           });
-
+  
           let infoWindow = new google.maps.InfoWindow({
-            content:
-              "<h3>" +
-              placemark.name +
-              "</h3>" +
-              "<p>" +
-              placemark.description +
-              "</p>",
+            content: `<h3>${placemark.name}</h3><p>${placemark.description}</p>`,
           });
-
+  
           marker.addListener("click", () => {
             infoWindow.open(map, marker);
           });
         }
       });
-
+  
       rutaInt++;
     });
   }
+  
 
   convierteSVG(xml) {
     let svg = "";

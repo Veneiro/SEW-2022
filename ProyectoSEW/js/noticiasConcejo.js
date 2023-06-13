@@ -35,7 +35,8 @@ class NewscatcherAPI {
   }
   
   // Crea una instancia de la clase NewscatcherAPI
-  const apiKey = "IdFG208B66QyTNEOBEw7kb2fYy1Z12LBB4orS6VZ2Tk";
+  //IdFG208B66QyTNEOBEw7kb2fYy1Z12LBB4orS6VZ2Tk
+  const apiKey = "";
   const newscatcherApi = new NewscatcherAPI(apiKey);
   
   // Realiza la solicitud de noticias utilizando la instancia
